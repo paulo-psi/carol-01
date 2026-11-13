@@ -243,30 +243,6 @@ section[id] {
   flex-shrink: 0;
 }
 
-.btn-tapete-nav {
-  white-space: nowrap !important;
-  font-family: var(--font-title);
-  font-weight: 700;
-  font-size: 0.88rem;
-  padding: 8px 18px;
-  border-radius: var(--radius-pill);
-  border: 1.5px solid var(--carol-vibrant-teal);
-  color: var(--carol-deep-teal);
-  background: #FFFFFF;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: var(--shadow-sm);
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.btn-tapete-nav:hover {
-  background: var(--carol-ice-mint);
-  border-color: var(--carol-deep-teal);
-  transform: translateY(-1px);
-}
-
 /* Indicador de Leitura no Topo */
 .scroll-progress-bar {
   position: absolute;
@@ -1024,8 +1000,7 @@ section[id] {
   .navbar-actions {
     gap: 6px;
   }
-  .navbar-actions .btn,
-  .navbar-actions .btn-tapete-nav {
+  .navbar-actions .btn {
     padding: 6px 10px;
     font-size: 0.8rem;
   }
@@ -1064,8 +1039,7 @@ section[id] {
     height: 30px;
     padding: 1px;
   }
-  .navbar-actions .btn,
-  .navbar-actions .btn-tapete-nav {
+  .navbar-actions .btn {
     padding: 4px 8px;
     font-size: 0.72rem;
   }
@@ -1097,40 +1071,7 @@ section[id] {
   }
 }
 
-/* 17. MODO TAPETE (LEITURA CONFORTÁVEL A 1,5M) */
-body.tapete-mode {
-  font-size: 1.25rem;
-  line-height: 1.82;
-}
-
-body.tapete-mode .container {
-  width: min(100% - 24px, 1260px);
-}
-
-body.tapete-mode .hero-title {
-  font-size: clamp(2.8rem, 5vw, 4.2rem);
-}
-
-body.tapete-mode .ritual-suspiro-card,
-body.tapete-mode .torcao-interactive-card,
-body.tapete-mode .mini-lab-card {
-  border: 3px solid var(--carol-vibrant-teal);
-  box-shadow: 0 0 28px rgba(49, 151, 149, 0.28);
-}
-
-body.tapete-mode .torcao-step-item {
-  padding: 20px 24px;
-  font-size: 1.2rem;
-}
-
-body.tapete-mode #btn-toggle-tapete {
-  background: var(--carol-vibrant-teal);
-  color: #FFFFFF !important;
-  border-color: var(--carol-vibrant-teal);
-  box-shadow: 0 0 14px rgba(49, 151, 149, 0.4);
-}
-
-/* 18. GLOSSÁRIO VIVO DO CORPO (ACORDEÃO <details>) */
+/* 17. GLOSSÁRIO VIVO DO CORPO (ACORDEÃO <details>) */
 .section-glossario {
   padding: clamp(60px, 8vw, 96px) 0;
   background: #FFFFFF;
@@ -1287,7 +1228,6 @@ body.tapete-mode #btn-toggle-tapete {
   #audio-sintonizacao,
   #btn-play-suspiro,
   #btn-audio-carol,
-  #btn-toggle-tapete,
   #btn-print-page,
   .diario-actions,
   .footer-carol {

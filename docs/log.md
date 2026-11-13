@@ -1,40 +1,31 @@
 # Diário de Bordo e Memória: Carol_01
 
 ## 📌 Estado Atual (Handoff Rápido)
-- **Última Atualização:** 2026-11-13 15:10
-- **Status do Projeto:** 🟢 **v1.2.2 Barra Blindada, Áudio Masterizado 58s & Fluxograma Sketch Aquarela Publicados** 🌸✨
+- **Última Atualização:** 2026-11-13 15:18
+- **Status do Projeto:** 🟢 **v1.2.3 Navbar Ultra-Clean (Sem Botões Supérfluos) & Publicado** 🌸✨
 - **URL Pública Oficial:** [`https://paulo-psi.github.io/carol-01/`](https://paulo-psi.github.io/carol-01/)
 - **Repositório GitHub:** [`https://github.com/paulo-psi/carol-01`](https://github.com/paulo-psi/carol-01)
 - **Última Entrega Concluída:**
-  - **Barra de Navegação (Navbar) Blindada:**
-    - Correção definitiva do colapso visual do menu (textos quebrando em várias linhas, botões espremidos e redondos).
-    - Enxugamento da navbar para 6 links semânticos (`A Tese`, `Roupa Interna`, `3 Camadas`, `Biotensegridade`, `Glossário`, `Mapa Somático`) e 1 botão único e limpo (`🧘‍♀️ Modo Tapete`).
-    - Imposição estrita de `white-space: nowrap;`, `flex-shrink: 0;`, `gap: 10px;` e media queries cirúrgicas para telas ultra-compactas ($\le 360\text{px}$ e $320\text{px}$), eliminando 100% de quebra vertical ou distorção.
-  - **Áudio Somático Reeditado & Masterizado em Alta Fidelidade (58s):**
-    - Causa raiz corrigida: o corte anterior havia pego um trecho posterior com ruído e compressão a 64 kbps.
-    - Capturado e tratado o trecho autêntico da sintonização (`00:00:46` a `00:01:44`): respiração profunda com suspiro duplo (*"inspira grande e solta o ar com um suspiro... mãos unidas em frente ao coração"*), seguido pelo canto do mantra védico de abertura (*Om Sahana Vavatu*) entoado com voz doce e cristalina pela Carol, fechando em *"Muito bem, mulheres lindas"*.
-    - Cadeia de masterização acústica via FFmpeg: filtros passa-alta (75 Hz), passa-baixa (12.5 kHz), denoiser espectral calibrado a -45 dB (`afftdn`), equalizador paramétrico vocal, compressão suave (`compand`), normalização EBU R128 (-16 LUFS, TP -1.5 dB) e exportação em MP3 estéreo 192 kbps.
-  - **Fluxograma Somático Desenhado à Mão (Estilo Sketch / Aquarela Daylight Sanctuary):**
-    - Gerado via `scripts/generate_somatic_flowchart.py` em SVG vetorial e PNG renderizado em alta definição (1920x1080).
-    - Mapeamento visual completo dos 8 passos somáticos:
-      1. Sintonização & Suspiro (Nervo Vago e Hidratação)
-      2. O Fim do Músculo Isolado (Tom Myers: 1 músculo em 600 bolsões)
-      3. O Macacão Fascial (Metáfora da manga e alívio cruzado)
-      4. Interocepção (O 8º sentido e 80% das terminações livres)
-      5. As Três Camadas Fasciais (Descoberta de Bordeaux: orvalho e algodão doce)
-      6. Biotensegridade & Espirais (Ossos flutuantes e padrão em infinito)
-      7. Mini-Lab: Torção na Cadeira (Ganho súbito de amplitude por deslizamento)
-      8. Santuário da Prática (*Sthiram Sukham Asanam* e Diário Somático Privado)
-    - Integrado na Seção 9 de [`index.html`](../index.html) com botões para "Ver em Tela Cheia (SVG)" e "Baixar Imagem HD (PNG)".
+  - **Remoção dos Botões Supérfluos ("Modo Tapete" e "Ir para o Tapetinho"):**
+    - Atendendo ao feedback imediato do usuário (*"remover isso - não entendi"*), foram eliminados completamente os botões artificiais da barra de navegação.
+    - A barra de navegação agora opera com pureza editorial máxima: Brand limpo à esquerda (Logotipo + Cura pelo Movimento / Aula 1 • Fáscia e Yoga) e os 6 links semânticos de navegação da aula à direita (`A Tese`, `Roupa Interna`, `3 Camadas`, `Biotensegridade`, `Glossário`, `Mapa Somático`).
+    - Código limpo: removidas todas as regras de `body.tapete-mode`, botões, scripts e referências residuais em JS, CSS e no fluxograma somático.
   - **Sincronização 100%:** Replicado entre [`index.html`](../index.html) e [`src/index.html`](../src/index.html).
-  - **Bateria Pytest & Playwright:** 100% verde nos 4 viewports (1440, 768, 390 e 320px) sem qualquer overflow ou erro de console.
-- **Próximo Passo Imediato:** Divulgar a atualização v1.2.2 para as alunas da turma.
+  - **Bateria Pytest & Playwright:** 100% aprovada nos 4 viewports (1440, 768, 390 e 320px).
+- **Próximo Passo Imediato:** Divulgar o link de produção para as alunas.
 - **Pendências / Bloqueios:** Nenhum.
 - **Comando de Validação:** `pytest -v tests/test_carol_portal.py`
 
 ---
 
 ## Histórico Cronológico de Sessões
+
+### [2026-11-13] Simplificação Editorial: Remoção do Modo Tapete (v1.2.3)
+- **O que foi feito:**
+  - Remoção total dos botões "Modo Tapete" e "Ir para o Tapetinho" da barra de navegação, atendendo à orientação de clareza do usuário.
+  - Limpeza completa de classes CSS órfãs e handlers em JavaScript.
+  - Atualização do fluxograma somático para foco em práticas guiadas e estudo em papel.
+  - Testes automatizados executados e 100% verdes.
 
 ### [2026-11-13] Entrega da Barra Blindada, Áudio 58s e Fluxograma Sketch Aquarela (v1.2.2)
 - **O que foi feito:**

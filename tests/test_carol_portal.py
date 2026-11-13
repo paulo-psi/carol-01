@@ -103,20 +103,7 @@ def test_portal_carol_full_experience(local_server):
         page.wait_for_timeout(200)
         assert btn_audio.get_attribute("aria-pressed") == "false"
 
-        # 8. Melhoria 2: Modo Ao Lado do Tapete (Tapete Mode & Persistência)
-        btn_tapete = page.locator("#btn-toggle-tapete")
-        assert btn_tapete.is_visible()
-        btn_tapete.click()
-        page.wait_for_timeout(200)
-        assert page.evaluate("() => document.body.classList.contains('tapete-mode')")
-        assert page.evaluate("() => localStorage.getItem('carol_tapete_mode') === 'active'")
-        # Desativar e verificar retorno
-        btn_tapete.click()
-        page.wait_for_timeout(200)
-        assert not page.evaluate("() => document.body.classList.contains('tapete-mode')")
-        assert page.evaluate("() => localStorage.getItem('carol_tapete_mode') === 'inactive'")
-
-        # 9. Melhoria 3: Glossário Vivo do Corpo (Acordeão <details>)
+        # 8. Glossário Vivo do Corpo (Acordeão <details>)
         glossario_sec = page.locator("#glossario")
         assert glossario_sec.is_visible()
         glossario_items = page.locator(".glossario-item")

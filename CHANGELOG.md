@@ -2,6 +2,14 @@
 
 Todas as mudanças relevantes deste projeto serão documentadas neste arquivo.
 
+## [1.2.3] - 2026-11-13
+### Removido
+- **Botões Supérfluos da Barra de Navegação:** Remoção definitiva dos botões "Modo Tapete" e "Ir para o Tapetinho", atendendo ao feedback de clareza do usuário.
+- **Classes e Lógica de Modo Tapete:** Limpeza completa de regras CSS órfãs (`body.tapete-mode`), remoção de handlers em JavaScript e sanitização do fluxograma somático para foco em práticas guiadas.
+
+### Modificado
+- **Barra de Navegação Ultra-Clean:** Layout de alta elegância composto exclusivamente pelo Brand oficial à esquerda e os 6 links temáticos essenciais à direita, com respiração visual e zero distrações.
+
 ## [1.2.2] - 2026-11-13
 ### Adicionado
 - **Fluxograma Somático em Sketch / Aquarela:** Mapa mental de síntese da Aula 1 gerado em SVG vetorial e PNG renderizado em alta definição (1920x1080), contendo os 8 passos somáticos interconectados, botões de ação para download em PNG e visualização em tela cheia com SVG nativo.

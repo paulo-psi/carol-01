@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCottonMiniLab();
   initBreathingRitual();
   initAudioCarol();
-  initModoTapete();
   initDiarioSomatico();
 });
 
@@ -167,27 +166,7 @@ function initAudioCarol() {
   });
 }
 
-/* 7. Modo Ao Lado do Tapete (Tapete Mode) */
-function initModoTapete() {
-  const btnToggle = document.getElementById('btn-toggle-tapete');
-  if (!btnToggle) return;
-
-  const savedState = localStorage.getItem('carol_tapete_mode');
-  if (savedState === 'active') {
-    document.body.classList.add('tapete-mode');
-    btnToggle.setAttribute('aria-pressed', 'true');
-    btnToggle.innerHTML = '🧘‍♀️ Modo Tapete (Ativo)';
-  }
-
-  btnToggle.addEventListener('click', () => {
-    const isActive = document.body.classList.toggle('tapete-mode');
-    btnToggle.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-    btnToggle.innerHTML = isActive ? '🧘‍♀️ Modo Tapete (Ativo)' : '🧘‍♀️ Modo Tapete';
-    localStorage.setItem('carol_tapete_mode', isActive ? 'active' : 'inactive');
-  });
-}
-
-/* 8. Diário Somático da Aluna (Persistência Local) */
+/* 7. Diário Somático da Aluna (Persistência Local) */
 function initDiarioSomatico() {
   const textarea = document.getElementById('diario-textarea');
   const statusBadge = document.getElementById('diario-status');

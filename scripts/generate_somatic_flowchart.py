@@ -198,7 +198,7 @@ svg_content = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080"
     <text x="18" y="98" class="node-desc">Postura firme e simultaneamente</text>
     <text x="18" y="120" class="node-desc">doce, confortável e acolhedora.</text>
     <text x="18" y="146" class="node-desc node-highlight">📝 Registro no Diário Somático Privado</text>
-    <text x="18" y="168" class="node-desc node-highlight">🖨️ Estudo em papel / Modo Tapete.</text>
+    <text x="18" y="168" class="node-desc node-highlight">🖨️ Estudo em papel &amp; Práticas guiadas.</text>
     <text x="185" y="30" class="hand-note" transform="rotate(3, 185, 30)">"Durmam com os anjinhos!"</text>
   </g>
 
