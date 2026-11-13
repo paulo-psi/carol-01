@@ -4,12 +4,12 @@
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Nunito:wght@400;600;700&amp;family=Quicksand:wght@600;700&amp;display=swap');
       
       .bg { fill: #FAF7F0; }
-      .title-main { font-family: 'Quicksand', sans-serif; font-size: 38px; font-weight: 700; fill: #234E52; }
-      .title-sub { font-family: 'Caveat', cursive; font-size: 26px; font-weight: 700; fill: #9B457B; }
-      .node-title { font-family: 'Quicksand', sans-serif; font-size: 20px; font-weight: 700; fill: #0F172A; }
-      .node-desc { font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 600; fill: #4A5568; line-height: 1.4; }
-      .bubble-text { font-family: 'Caveat', cursive; font-size: 21px; font-weight: 700; }
-      .badge-text { font-family: 'Quicksand', sans-serif; font-size: 13px; font-weight: 700; fill: #234E52; letter-spacing: 0.05em; }
+      .title-main { font-family: 'Quicksand', sans-serif; font-size: 34px; font-weight: 700; fill: #234E52; }
+      .title-sub { font-family: 'Caveat', cursive; font-size: 20px; font-weight: 700; fill: #823866; }
+      .node-title { font-family: 'Quicksand', sans-serif; font-size: 18px; font-weight: 700; fill: #0F172A; }
+      .node-desc { font-family: 'Nunito', sans-serif; font-size: 13.5px; font-weight: 600; fill: #4A5568; line-height: 1.45; }
+      .bubble-text { font-family: 'Caveat', cursive; font-size: 19px; font-weight: 700; }
+      .badge-text { font-family: 'Quicksand', sans-serif; font-size: 11.5px; font-weight: 700; fill: #234E52; letter-spacing: 0.06em; }
 
       /* Nó Dark (Santuário - Nó 8) com contraste AAA */
       .node-dark .node-title { fill: #E6FFFA !important; }
@@ -20,11 +20,11 @@
 
     <!-- Filtro de Sombras e Textura de Papel Aquarela -->
     <filter id="soft-shadow" x="-8%" y="-8%" width="120%" height="124%">
-      <feDropShadow dx="2" dy="8" stdDeviation="12" flood-color="#234E52" flood-opacity="0.06"/>
+      <feDropShadow dx="2" dy="6" stdDeviation="10" flood-color="#234E52" flood-opacity="0.05"/>
     </filter>
 
     <filter id="bubble-shadow" x="-8%" y="-8%" width="120%" height="130%">
-      <feDropShadow dx="1" dy="4" stdDeviation="5" flood-color="#234E52" flood-opacity="0.08"/>
+      <feDropShadow dx="1" dy="3" stdDeviation="4" flood-color="#234E52" flood-opacity="0.07"/>
     </filter>
 
     <!-- Marcador de Seta Desenhada à Mão -->
@@ -40,19 +40,19 @@
   <!-- Fundo Texturizado Daylight Sanctuary -->
   <rect width="100%" height="100%" class="bg" />
 
-  <!-- Formas Orgânicas de Fundo (Aquarela Abstrata) -->
-  <path d="M -80 120 C 180 -40, 420 80, 520 280 C 620 480, 240 680, 40 620 C -120 580, -200 320, -80 120 Z" fill="#E6FFFA" opacity="0.65" />
-  <path d="M 1520 720 C 1720 580, 1980 640, 2020 860 C 2060 1080, 1820 1180, 1640 1120 C 1460 1060, 1380 840, 1520 720 Z" fill="#FDF2F8" opacity="0.75" />
-  <circle cx="960" cy="540" r="460" fill="#FFFDF8" opacity="0.9" />
+  <!-- Formas Orgânicas de Fundo (Aquarela Suave & Minimalista) -->
+  <path d="M -80 120 C 180 -40, 420 80, 520 280 C 620 480, 240 680, 40 620 C -120 580, -200 320, -80 120 Z" fill="#E6FFFA" opacity="0.45" />
+  <path d="M 1520 720 C 1720 580, 1980 640, 2020 860 C 2060 1080, 1820 1180, 1640 1120 C 1460 1060, 1380 840, 1520 720 Z" fill="#FDF2F8" opacity="0.5" />
+  <circle cx="960" cy="540" r="460" fill="#FFFDF8" opacity="0.75" />
 
   <!-- ======================================================================
        CABEÇALHO DO MAPA SOMÁTICO (COM RESPIRO VERTICAL REFORÇADO)
        ====================================================================== -->
   <g transform="translate(960, 40)" text-anchor="middle">
-    <rect x="-240" y="0" width="480" height="32" rx="16" fill="#E6FFFA" stroke="#B2F5EA" stroke-width="1.2" />
-    <text y="21" class="badge-text" text-anchor="middle">🌸 CURA PELO MOVIMENTO • MAPA INTEGRAL DA AULA 1</text>
-    <text y="68" class="title-main">A Jornada Somática da Fáscia: Do Suspiro à Biotensegridade</text>
-    <text y="104" class="title-sub">"A fáscia precisa de carinho e relaxamento; o músculo faz força, a fáscia desliza." — Carol Langowski</text>
+    <rect x="-230" y="0" width="460" height="28" rx="14" fill="#E6FFFA" stroke="#B2F5EA" stroke-width="1.2" />
+    <text y="19" class="badge-text" text-anchor="middle">🌸 CURA PELO MOVIMENTO • MAPA INTEGRAL DA AULA 1</text>
+    <text y="58" class="title-main">A Jornada Somática da Fáscia: Do Suspiro à Biotensegridade</text>
+    <text y="90" class="title-sub">"A fáscia precisa de carinho e relaxamento; o músculo faz força, a fáscia desliza." — Carol Langowski</text>
   </g>
 
   <!-- ======================================================================
@@ -60,182 +60,182 @@
        ====================================================================== -->
   
     <!-- Balão de Fala da Carol -->
-    <g transform="translate(175, 162)" filter="url(#bubble-shadow)">
-      <path d="M 17 0 L 213 0 A 17 17 0 0 1 230 17 A 17 17 0 0 1 213 34 L 123.0 34 L 115.0 42 L 107.0 34 L 17 34 A 17 17 0 0 1 0 17 A 17 17 0 0 1 17 0 Z" fill="#F0FDFA" stroke="#287E7C" stroke-width="1.8" />
-      <text x="115.0" y="22" class="bubble-text" fill="#0F766E" text-anchor="middle">"Solte o ar com suspiro!"</text>
+    <g transform="translate(225.0, 175)" filter="url(#bubble-shadow)">
+      <path d="M 16 0 L 184 0 A 16 16 0 0 1 200 16 A 16 16 0 0 1 184 32 L 106.0 32 L 100.0 38 L 94.0 32 L 16 32 A 16 16 0 0 1 0 16 A 16 16 0 0 1 16 0 Z" fill="#F0FDFA" stroke="#319795" stroke-width="1.3" />
+      <text x="100.0" y="21" class="bubble-text" fill="#0F766E" text-anchor="middle">"Solte o ar com suspiro!"</text>
     </g>
   
     <!-- Balão de Fala da Carol -->
-    <g transform="translate(665, 162)" filter="url(#bubble-shadow)">
-      <path d="M 17 0 L 198 0 A 17 17 0 0 1 215 17 A 17 17 0 0 1 198 34 L 115.5 34 L 107.5 42 L 99.5 34 L 17 34 A 17 17 0 0 1 0 17 A 17 17 0 0 1 17 0 Z" fill="#FFFDF8" stroke="#D97706" stroke-width="1.8" />
-      <text x="107.5" y="22" class="bubble-text" fill="#92400E" text-anchor="middle">"Tudo está conectado!"</text>
+    <g transform="translate(655.8, 175)" filter="url(#bubble-shadow)">
+      <path d="M 16 0 L 169 0 A 16 16 0 0 1 185 16 A 16 16 0 0 1 169 32 L 98.5 32 L 92.5 38 L 86.5 32 L 16 32 A 16 16 0 0 1 0 16 A 16 16 0 0 1 16 0 Z" fill="#FFFDF8" stroke="#D97706" stroke-width="1.3" />
+      <text x="92.5" y="21" class="bubble-text" fill="#92400E" text-anchor="middle">"Tudo está conectado!"</text>
     </g>
   
     <!-- Balão de Fala da Carol -->
-    <g transform="translate(1120, 162)" filter="url(#bubble-shadow)">
-      <path d="M 17 0 L 243 0 A 17 17 0 0 1 260 17 A 17 17 0 0 1 243 34 L 138.0 34 L 130.0 42 L 122.0 34 L 17 34 A 17 17 0 0 1 0 17 A 17 17 0 0 1 17 0 Z" fill="#F0FDFA" stroke="#287E7C" stroke-width="1.8" />
-      <text x="130.0" y="22" class="bubble-text" fill="#0F766E" text-anchor="middle">"Onde dói ≠ Onde começou"</text>
+    <g transform="translate(1064.2, 175)" filter="url(#bubble-shadow)">
+      <path d="M 16 0 L 199 0 A 16 16 0 0 1 215 16 A 16 16 0 0 1 199 32 L 113.5 32 L 107.5 38 L 101.5 32 L 16 32 A 16 16 0 0 1 0 16 A 16 16 0 0 1 16 0 Z" fill="#F0FDFA" stroke="#319795" stroke-width="1.3" />
+      <text x="107.5" y="21" class="bubble-text" fill="#0F766E" text-anchor="middle">"Onde dói ≠ Onde começou"</text>
     </g>
   
     <!-- Balão de Fala da Carol -->
-    <g transform="translate(1615, 162)" filter="url(#bubble-shadow)">
-      <path d="M 17 0 L 183 0 A 17 17 0 0 1 200 17 A 17 17 0 0 1 183 34 L 108.0 34 L 100.0 42 L 92.0 34 L 17 34 A 17 17 0 0 1 0 17 A 17 17 0 0 1 17 0 Z" fill="#FDF2F8" stroke="#DB2777" stroke-width="1.8" />
-      <text x="100.0" y="22" class="bubble-text" fill="#9D174D" text-anchor="middle">"A escuta interna!"</text>
+    <g transform="translate(1510.0, 175)" filter="url(#bubble-shadow)">
+      <path d="M 16 0 L 154 0 A 16 16 0 0 1 170 16 A 16 16 0 0 1 154 32 L 91.0 32 L 85.0 38 L 79.0 32 L 16 32 A 16 16 0 0 1 0 16 A 16 16 0 0 1 16 0 Z" fill="#FDF2F8" stroke="#DB2777" stroke-width="1.3" />
+      <text x="85.0" y="21" class="bubble-text" fill="#9D174D" text-anchor="middle">"A escuta interna!"</text>
     </g>
 
   <!-- ======================================================================
-       ETAPAS DA JORNADA (LINHA 1: PASSOS 1 A 4)
+       ETAPAS DA JORNADA (LINHA 1: PASSOS 1 A 4 - LARGURA: 330px, GAPS: 93px)
        ====================================================================== -->
 
-  <!-- NÓ 1: SINTONIZAÇÃO & SUSPIRO (X: 110, Y: 215) -->
-  <g transform="translate(110, 215)" filter="url(#soft-shadow)">
-    <rect x="0" y="0" width="360" height="185" rx="22" fill="#FFFFFF" stroke="#70D3C7" stroke-width="2" />
-    <rect x="18" y="14" width="70" height="24" rx="12" fill="#E6FFFA" />
-    <text x="53" y="30" class="badge-text" text-anchor="middle">PASSO 1</text>
-    <text x="18" y="68" class="node-title">🌬️ Sintonização &amp; Suspiro</text>
-    <text x="18" y="98" class="node-desc">Mãos unidas no coração e canto de</text>
-    <text x="18" y="120" class="node-desc">abertura védico (Om Sahana Vavatu).</text>
-    <text x="18" y="150" class="node-desc" font-weight="700" fill="#287E7C">➔ Ativa o nervo vago e a hidratação.</text>
+  <!-- NÓ 1: SINTONIZAÇÃO & SUSPIRO (X: 160, Y: 220) -->
+  <g transform="translate(160, 220)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="330" height="175" rx="20" fill="#FFFFFF" stroke="#70D3C7" stroke-width="1.8" />
+    <rect x="18" y="14" width="65" height="22" rx="11" fill="#E6FFFA" />
+    <text x="50.5" y="29" class="badge-text" text-anchor="middle">PASSO 1</text>
+    <text x="18" y="66" class="node-title">🌬️ Sintonização &amp; Suspiro</text>
+    <text x="18" y="94" class="node-desc">Mãos unidas no coração e canto de</text>
+    <text x="18" y="115" class="node-desc">abertura védico (Om Sahana Vavatu).</text>
+    <text x="18" y="144" class="node-desc" font-weight="700" fill="#287E7C">➔ Ativa o nervo vago e a hidratação.</text>
   </g>
 
-  <!-- SETA 1 -> 2 -->
-  <path d="M 470 305 C 510 305, 530 305, 570 305" fill="none" stroke="#287E7C" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrow-sketch)" />
+  <!-- SETA 1 -> 2 (Comprimento: 88px) -->
+  <path d="M 490 307.5 L 575 307.5" fill="none" stroke="#287E7C" stroke-width="2.2" stroke-dasharray="5,4" marker-end="url(#arrow-sketch)" />
 
-  <!-- NÓ 2: O FIM DO MÚSCULO ISOLADO (X: 590, Y: 215) -->
-  <g transform="translate(590, 215)" filter="url(#soft-shadow)">
-    <rect x="0" y="0" width="365" height="185" rx="22" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2" />
-    <rect x="18" y="14" width="70" height="24" rx="12" fill="#F1F5F9" />
-    <text x="53" y="30" class="badge-text" text-anchor="middle" fill="#475569">PASSO 2</text>
-    <text x="18" y="68" class="node-title">🦴 O Fim do Músculo Isolado</text>
-    <text x="18" y="98" class="node-desc">Tese do Dr. Tom Myers: não há 600</text>
-    <text x="18" y="120" class="node-desc">músculos, mas 1 músculo contido em</text>
-    <text x="18" y="142" class="node-desc">mais de 600 bolsões fasciais contínuos.</text>
+  <!-- NÓ 2: O FIM DO MÚSCULO ISOLADO (X: 583.3, Y: 220) -->
+  <g transform="translate(583.3, 220)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="330" height="175" rx="20" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.8" />
+    <rect x="18" y="14" width="65" height="22" rx="11" fill="#F1F5F9" />
+    <text x="50.5" y="29" class="badge-text" text-anchor="middle" fill="#475569">PASSO 2</text>
+    <text x="18" y="66" class="node-title">🦴 O Fim do Músculo Isolado</text>
+    <text x="18" y="94" class="node-desc">Tese do Dr. Tom Myers: não há 600</text>
+    <text x="18" y="115" class="node-desc">músculos, mas 1 músculo contido em</text>
+    <text x="18" y="136" class="node-desc">mais de 600 bolsões fasciais contínuos.</text>
   </g>
 
-  <!-- SETA 2 -> 3 -->
-  <path d="M 955 305 C 995 305, 1015 305, 1050 305" fill="none" stroke="#287E7C" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrow-sketch)" />
+  <!-- SETA 2 -> 3 (Comprimento: 88px) -->
+  <path d="M 913.3 307.5 L 998.7 307.5" fill="none" stroke="#287E7C" stroke-width="2.2" stroke-dasharray="5,4" marker-end="url(#arrow-sketch)" />
 
-  <!-- NÓ 3: O MACACÃO FASCIAL (X: 1070, Y: 215) -->
-  <g transform="translate(1070, 215)" filter="url(#soft-shadow)">
-    <rect x="0" y="0" width="360" height="185" rx="22" fill="#FFFFFF" stroke="#70D3C7" stroke-width="2" />
-    <rect x="18" y="14" width="70" height="24" rx="12" fill="#E6FFFA" />
-    <text x="53" y="30" class="badge-text" text-anchor="middle">PASSO 3</text>
-    <text x="18" y="68" class="node-title">👗 O Macacão Fascial (70% Água)</text>
-    <text x="18" y="98" class="node-desc">Se puxar a manga no punho, repuxa a</text>
-    <text x="18" y="120" class="node-desc">nuca. Metáfora da mexerica e alívio do</text>
-    <text x="18" y="142" class="node-desc">ombro tratando o antebraço e abdômen.</text>
+  <!-- NÓ 3: O MACACÃO FASCIAL (X: 1006.7, Y: 220) -->
+  <g transform="translate(1006.7, 220)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="330" height="175" rx="20" fill="#FFFFFF" stroke="#70D3C7" stroke-width="1.8" />
+    <rect x="18" y="14" width="65" height="22" rx="11" fill="#E6FFFA" />
+    <text x="50.5" y="29" class="badge-text" text-anchor="middle">PASSO 3</text>
+    <text x="18" y="66" class="node-title">👗 O Macacão Fascial (70% Água)</text>
+    <text x="18" y="94" class="node-desc">Se puxar a manga no punho, repuxa a</text>
+    <text x="18" y="115" class="node-desc">nuca. Metáfora da mexerica e alívio do</text>
+    <text x="18" y="136" class="node-desc">ombro tratando o antebraço e abdômen.</text>
   </g>
 
-  <!-- SETA 3 -> 4 -->
-  <path d="M 1430 305 C 1470 305, 1490 305, 1530 305" fill="none" stroke="#287E7C" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrow-sketch)" />
+  <!-- SETA 3 -> 4 (Comprimento: 88px) -->
+  <path d="M 1336.7 307.5 L 1422 307.5" fill="none" stroke="#287E7C" stroke-width="2.2" stroke-dasharray="5,4" marker-end="url(#arrow-sketch)" />
 
-  <!-- NÓ 4: INTEROCEPÇÃO (X: 1550, Y: 215) -->
-  <g transform="translate(1550, 215)" filter="url(#soft-shadow)">
-    <rect x="0" y="0" width="330" height="185" rx="22" fill="#FFFFFF" stroke="#F472B6" stroke-width="2" />
-    <rect x="18" y="14" width="70" height="24" rx="12" fill="#FDF2F8" />
-    <text x="53" y="30" class="badge-text" text-anchor="middle" fill="#9B457B">PASSO 4</text>
-    <text x="18" y="68" class="node-title">👁️ Interocepção (8º Sentido)</text>
-    <text x="18" y="98" class="node-desc">80% das terminações nervosas livres</text>
-    <text x="18" y="120" class="node-desc">da fáscia sentem o corpo por dentro:</text>
-    <text x="18" y="142" class="node-desc">peso, calor, respiração e conforto.</text>
+  <!-- NÓ 4: INTEROCEPÇÃO (X: 1430, Y: 220) -->
+  <g transform="translate(1430, 220)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="330" height="175" rx="20" fill="#FFFFFF" stroke="#F472B6" stroke-width="1.8" />
+    <rect x="18" y="14" width="65" height="22" rx="11" fill="#FDF2F8" />
+    <text x="50.5" y="29" class="badge-text" text-anchor="middle" fill="#9B457B">PASSO 4</text>
+    <text x="18" y="66" class="node-title">👁️ Interocepção (8º Sentido)</text>
+    <text x="18" y="94" class="node-desc">80% das terminações nervosas livres</text>
+    <text x="18" y="115" class="node-desc">da fáscia sentem o corpo por dentro:</text>
+    <text x="18" y="136" class="node-desc">peso, calor, respiração e conforto.</text>
   </g>
 
-  <!-- SETA CURVA RETORNO: 4 -> 5 (Fluxo Orgânico contornando e entrando na lateral do Passo 5) -->
-  <path d="M 1715 400 C 1715 550, 50 510, 50 755 L 100 755" fill="none" stroke="#9B457B" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrow-orchid)" />
+  <!-- SETA CURVA RETORNO: 4 -> 5 (Fluxo Curvo com Respiro Amplo) -->
+  <path d="M 1595 395 C 1595 530, 80 500, 80 747.5 L 150 747.5" fill="none" stroke="#9B457B" stroke-width="2.2" stroke-dasharray="6,4" marker-end="url(#arrow-orchid)" />
 
   <!-- ======================================================================
        BALÕES DE FALA DA CAROL (LINHA 2)
        ====================================================================== -->
   
     <!-- Balão de Fala da Carol -->
-    <g transform="translate(185, 612)" filter="url(#bubble-shadow)">
-      <path d="M 17 0 L 203 0 A 17 17 0 0 1 220 17 A 17 17 0 0 1 203 34 L 118.0 34 L 110.0 42 L 102.0 34 L 17 34 A 17 17 0 0 1 0 17 A 17 17 0 0 1 17 0 Z" fill="#F0FDFA" stroke="#287E7C" stroke-width="1.8" />
-      <text x="110.0" y="22" class="bubble-text" fill="#0F766E" text-anchor="middle">"Gotinhas de orvalho!"</text>
+    <g transform="translate(232.5, 615)" filter="url(#bubble-shadow)">
+      <path d="M 16 0 L 169 0 A 16 16 0 0 1 185 16 A 16 16 0 0 1 169 32 L 98.5 32 L 92.5 38 L 86.5 32 L 16 32 A 16 16 0 0 1 0 16 A 16 16 0 0 1 16 0 Z" fill="#F0FDFA" stroke="#319795" stroke-width="1.3" />
+      <text x="92.5" y="21" class="bubble-text" fill="#0F766E" text-anchor="middle">"Gotinhas de orvalho!"</text>
     </g>
   
     <!-- Balão de Fala da Carol -->
-    <g transform="translate(685, 612)" filter="url(#bubble-shadow)">
-      <path d="M 17 0 L 163 0 A 17 17 0 0 1 180 17 A 17 17 0 0 1 163 34 L 98.0 34 L 90.0 42 L 82.0 34 L 17 34 A 17 17 0 0 1 0 17 A 17 17 0 0 1 17 0 Z" fill="#FFFDF8" stroke="#D97706" stroke-width="1.8" />
-      <text x="90.0" y="22" class="bubble-text" fill="#92400E" text-anchor="middle">"Espaço em 360°!"</text>
+    <g transform="translate(668.3, 615)" filter="url(#bubble-shadow)">
+      <path d="M 16 0 L 144 0 A 16 16 0 0 1 160 16 A 16 16 0 0 1 144 32 L 86.0 32 L 80.0 38 L 74.0 32 L 16 32 A 16 16 0 0 1 0 16 A 16 16 0 0 1 16 0 Z" fill="#FFFDF8" stroke="#D97706" stroke-width="1.3" />
+      <text x="80.0" y="21" class="bubble-text" fill="#92400E" text-anchor="middle">"Espaço em 360°!"</text>
     </g>
   
     <!-- Balão de Fala da Carol -->
-    <g transform="translate(1140, 612)" filter="url(#bubble-shadow)">
-      <path d="M 17 0 L 203 0 A 17 17 0 0 1 220 17 A 17 17 0 0 1 203 34 L 118.0 34 L 110.0 42 L 102.0 34 L 17 34 A 17 17 0 0 1 0 17 A 17 17 0 0 1 17 0 Z" fill="#F0FDFA" stroke="#287E7C" stroke-width="1.8" />
-      <text x="110.0" y="22" class="bubble-text" fill="#0F766E" text-anchor="middle">"A fáscia deslizando!"</text>
+    <g transform="translate(1079.2, 615)" filter="url(#bubble-shadow)">
+      <path d="M 16 0 L 169 0 A 16 16 0 0 1 185 16 A 16 16 0 0 1 169 32 L 98.5 32 L 92.5 38 L 86.5 32 L 16 32 A 16 16 0 0 1 0 16 A 16 16 0 0 1 16 0 Z" fill="#F0FDFA" stroke="#319795" stroke-width="1.3" />
+      <text x="92.5" y="21" class="bubble-text" fill="#0F766E" text-anchor="middle">"A fáscia deslizando!"</text>
     </g>
   
     <!-- Balão de Fala da Carol -->
-    <g transform="translate(1590, 612)" filter="url(#bubble-shadow)">
-      <path d="M 17 0 L 223 0 A 17 17 0 0 1 240 17 A 17 17 0 0 1 223 34 L 128.0 34 L 120.0 42 L 112.0 34 L 17 34 A 17 17 0 0 1 0 17 A 17 17 0 0 1 17 0 Z" fill="#1A3C3F" stroke="#70D3C7" stroke-width="1.8" />
-      <text x="120.0" y="22" class="bubble-text" fill="#5EEAD4" text-anchor="middle">"Durmam com os anjinhos!"</text>
+    <g transform="translate(1490.0, 615)" filter="url(#bubble-shadow)">
+      <path d="M 16 0 L 194 0 A 16 16 0 0 1 210 16 A 16 16 0 0 1 194 32 L 111.0 32 L 105.0 38 L 99.0 32 L 16 32 A 16 16 0 0 1 0 16 A 16 16 0 0 1 16 0 Z" fill="#1A3C3F" stroke="#5EEAD4" stroke-width="1.3" />
+      <text x="105.0" y="21" class="bubble-text" fill="#E6FFFA" text-anchor="middle">"Durmam com os anjinhos!"</text>
     </g>
 
   <!-- ======================================================================
-       LINHA INFERIOR (PASSOS 5 A 8)
+       LINHA INFERIOR (PASSOS 5 A 8 - LARGURA: 330px, GAPS: 93px)
        ====================================================================== -->
 
-  <!-- NÓ 5: AS TRÊS CAMADAS FASCIAIS (X: 110, Y: 665) -->
-  <g transform="translate(110, 665)" filter="url(#soft-shadow)">
-    <rect x="0" y="0" width="370" height="190" rx="22" fill="#FFFFFF" stroke="#70D3C7" stroke-width="2" />
-    <rect x="18" y="14" width="70" height="24" rx="12" fill="#E6FFFA" />
-    <text x="53" y="30" class="badge-text" text-anchor="middle">PASSO 5</text>
-    <text x="18" y="68" class="node-title">🔬 As Três Camadas Fasciais</text>
-    <text x="18" y="96" class="node-desc">1. Superficial (sensores térmicos e dor)</text>
-    <text x="18" y="118" class="node-desc">2. Intermediária (algodão doce e orvalho)</text>
-    <text x="18" y="140" class="node-desc">3. Profunda (epimísio e transmissão força)</text>
-    <text x="18" y="166" class="node-desc" font-weight="700" fill="#287E7C">➔ Descoberta de Guimberteau em Bordeaux.</text>
+  <!-- NÓ 5: AS TRÊS CAMADAS FASCIAIS (X: 160, Y: 660) -->
+  <g transform="translate(160, 660)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="330" height="175" rx="20" fill="#FFFFFF" stroke="#70D3C7" stroke-width="1.8" />
+    <rect x="18" y="14" width="65" height="22" rx="11" fill="#E6FFFA" />
+    <text x="50.5" y="29" class="badge-text" text-anchor="middle">PASSO 5</text>
+    <text x="18" y="66" class="node-title">🔬 As Três Camadas Fasciais</text>
+    <text x="18" y="92" class="node-desc">1. Superficial (sensores térmicos e dor)</text>
+    <text x="18" y="113" class="node-desc">2. Intermediária (algodão doce e orvalho)</text>
+    <text x="18" y="134" class="node-desc">3. Profunda (epimísio e transmissão força)</text>
+    <text x="18" y="156" class="node-desc" font-weight="700" fill="#287E7C">➔ Descoberta de Guimberteau.</text>
   </g>
 
-  <!-- SETA 5 -> 6 -->
-  <path d="M 480 760 C 520 760, 540 760, 570 760" fill="none" stroke="#287E7C" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrow-sketch)" />
+  <!-- SETA 5 -> 6 (Comprimento: 88px) -->
+  <path d="M 490 747.5 L 575 747.5" fill="none" stroke="#287E7C" stroke-width="2.2" stroke-dasharray="5,4" marker-end="url(#arrow-sketch)" />
 
-  <!-- NÓ 6: BIOTENSEGRIDADE & ESPIRAIS (X: 590, Y: 665) -->
-  <g transform="translate(590, 665)" filter="url(#soft-shadow)">
-    <rect x="0" y="0" width="370" height="190" rx="22" fill="#FFFDF8" stroke="#EDE1C9" stroke-width="2" />
-    <rect x="18" y="14" width="70" height="24" rx="12" fill="#FEFCBF" />
-    <text x="53" y="30" class="badge-text" text-anchor="middle" fill="#975A16">PASSO 6</text>
-    <text x="18" y="68" class="node-title">🌀 Biotensegridade &amp; Espirais</text>
-    <text x="18" y="96" class="node-desc">Ossos flutuam na rede fascial tensa.</text>
-    <text x="18" y="118" class="node-desc">Cinco filamentos &amp; geometria em</text>
-    <text x="18" y="140" class="node-desc">infinito (∞): movimentos em espiral</text>
-    <text x="18" y="166" class="node-desc" font-weight="700" fill="#975A16">destensionam a rede em 3 dimensões.</text>
+  <!-- NÓ 6: BIOTENSEGRIDADE & ESPIRAIS (X: 583.3, Y: 660) -->
+  <g transform="translate(583.3, 660)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="330" height="175" rx="20" fill="#FFFDF8" stroke="#EDE1C9" stroke-width="1.8" />
+    <rect x="18" y="14" width="65" height="22" rx="11" fill="#FEFCBF" />
+    <text x="50.5" y="29" class="badge-text" text-anchor="middle" fill="#975A16">PASSO 6</text>
+    <text x="18" y="66" class="node-title">🌀 Biotensegridade &amp; Espirais</text>
+    <text x="18" y="92" class="node-desc">Ossos flutuam na rede fascial tensa.</text>
+    <text x="18" y="113" class="node-desc">Cinco filamentos &amp; geometria em</text>
+    <text x="18" y="134" class="node-desc">infinito (∞): movimentos em espiral</text>
+    <text x="18" y="156" class="node-desc" font-weight="700" fill="#975A16">destensionam em 3 dimensões.</text>
   </g>
 
-  <!-- SETA 6 -> 7 -->
-  <path d="M 960 760 C 1000 760, 1020 760, 1050 760" fill="none" stroke="#287E7C" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrow-sketch)" />
+  <!-- SETA 6 -> 7 (Comprimento: 88px) -->
+  <path d="M 913.3 747.5 L 998.7 747.5" fill="none" stroke="#287E7C" stroke-width="2.2" stroke-dasharray="5,4" marker-end="url(#arrow-sketch)" />
 
-  <!-- NÓ 7: TESTE DA TORÇÃO (X: 1070, Y: 665) -->
-  <g transform="translate(1070, 665)" filter="url(#soft-shadow)">
-    <rect x="0" y="0" width="360" height="190" rx="22" fill="#FFFFFF" stroke="#70D3C7" stroke-width="2" />
-    <rect x="18" y="14" width="70" height="24" rx="12" fill="#E6FFFA" />
-    <text x="53" y="30" class="badge-text" text-anchor="middle">PASSO 7</text>
-    <text x="18" y="68" class="node-title">🪑 Mini-Lab: Torção na Cadeira</text>
-    <text x="18" y="96" class="node-desc">1. Teste a amplitude inicial pelo olhar.</text>
-    <text x="18" y="118" class="node-desc">2. Deslize a pele do abdômen e escápulas.</text>
-    <text x="18" y="140" class="node-desc">3. Reteste: ganho súbito de amplitude</text>
-    <text x="18" y="166" class="node-desc" font-weight="700" fill="#287E7C">sem dor, sem alongamento mecânico!</text>
+  <!-- NÓ 7: TESTE DA TORÇÃO (X: 1006.7, Y: 660) -->
+  <g transform="translate(1006.7, 660)" filter="url(#soft-shadow)">
+    <rect x="0" y="0" width="330" height="175" rx="20" fill="#FFFFFF" stroke="#70D3C7" stroke-width="1.8" />
+    <rect x="18" y="14" width="65" height="22" rx="11" fill="#E6FFFA" />
+    <text x="50.5" y="29" class="badge-text" text-anchor="middle">PASSO 7</text>
+    <text x="18" y="66" class="node-title">🪑 Mini-Lab: Torção na Cadeira</text>
+    <text x="18" y="92" class="node-desc">1. Teste a amplitude inicial pelo olhar.</text>
+    <text x="18" y="113" class="node-desc">2. Deslize a pele do abdômen e escápulas.</text>
+    <text x="18" y="134" class="node-desc">3. Reteste: ganho súbito de amplitude</text>
+    <text x="18" y="156" class="node-desc" font-weight="700" fill="#287E7C">sem dor, sem forçar o músculo!</text>
   </g>
 
-  <!-- SETA 7 -> 8 -->
-  <path d="M 1430 760 C 1470 760, 1490 760, 1520 760" fill="none" stroke="#287E7C" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrow-sketch)" />
+  <!-- SETA 7 -> 8 (Comprimento: 88px) -->
+  <path d="M 1336.7 747.5 L 1422 747.5" fill="none" stroke="#287E7C" stroke-width="2.2" stroke-dasharray="5,4" marker-end="url(#arrow-sketch)" />
 
-  <!-- NÓ 8: SANTUÁRIO DA PRÁTICA (X: 1540, Y: 665) -->
-  <g transform="translate(1540, 665)" filter="url(#soft-shadow)" class="node-dark">
-    <rect x="0" y="0" width="340" height="190" rx="22" fill="#1A3C3F" stroke="#70D3C7" stroke-width="2" />
-    <rect x="18" y="14" width="70" height="24" rx="12" fill="rgba(255,255,255,0.18)" />
-    <text x="53" y="30" class="badge-text" text-anchor="middle">PASSO 8</text>
-    <text x="18" y="68" class="node-title">🤍 sthiram sukham asanam</text>
-    <text x="18" y="96" class="node-desc">Postura firme e simultaneamente</text>
-    <text x="18" y="118" class="node-desc">doce, confortável e acolhedora.</text>
-    <text x="18" y="144" class="node-desc node-highlight">📝 Registro no Diário Somático Privado</text>
-    <text x="18" y="166" class="node-desc node-highlight">🖨️ Estudo em papel &amp; Práticas guiadas.</text>
+  <!-- NÓ 8: SANTUÁRIO DA PRÁTICA (X: 1430, Y: 660) -->
+  <g transform="translate(1430, 660)" filter="url(#soft-shadow)" class="node-dark">
+    <rect x="0" y="0" width="330" height="175" rx="20" fill="#1A3C3F" stroke="#70D3C7" stroke-width="1.8" />
+    <rect x="18" y="14" width="65" height="22" rx="11" fill="rgba(255,255,255,0.18)" />
+    <text x="50.5" y="29" class="badge-text" text-anchor="middle">PASSO 8</text>
+    <text x="18" y="66" class="node-title">🤍 sthiram sukham asanam</text>
+    <text x="18" y="92" class="node-desc">Postura firme e simultaneamente</text>
+    <text x="18" y="113" class="node-desc">doce, confortável e acolhedora.</text>
+    <text x="18" y="136" class="node-desc node-highlight">📝 Registro no Diário Somático Privado</text>
+    <text x="18" y="156" class="node-desc node-highlight">🖨️ Estudo em papel &amp; Práticas guiadas.</text>
   </g>
 
   <!-- ======================================================================
-       RODAPÉ DO SKETCH
+       RODAPÉ DO SKETCH (COM RESPIRO VERTICAL)
        ====================================================================== -->
-  <g transform="translate(960, 1030)" text-anchor="middle">
-    <text class="node-desc" fill="#735645">Cura pelo Movimento • Carol Langowski • Fisioterapia Integrativa &amp; Yoga Fascial</text>
+  <g transform="translate(960, 995)" text-anchor="middle">
+    <text class="node-desc" fill="#735645" font-size="15px">Cura pelo Movimento • Carol Langowski • Fisioterapia Integrativa &amp; Yoga Fascial</text>
   </g>
 </svg>

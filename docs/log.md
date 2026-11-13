@@ -1,23 +1,36 @@
 # Diário de Bordo e Memória: Carol_01
 
 ## 📌 Estado Atual (Handoff Rápido)
-- **Última Atualização:** 2026-11-13 15:51
-- **Status do Projeto:** 🟢 **v1.2.6 Rodapés Sanitizados (Termo Técnico "Design System" Eliminado)** 🌸✨
+- **Última Atualização:** 2026-11-13 16:12
+- **Status do Projeto:** 🟢 **v1.2.7 Área de Respiro Expandida & Responsividade Clean em 8 Viewports** 🌸✨
 - **URL Pública Oficial:** [`https://paulo-psi.github.io/carol-01/`](https://paulo-psi.github.io/carol-01/)
 - **Repositório GitHub:** [`https://github.com/paulo-psi/carol-01`](https://github.com/paulo-psi/carol-01)
 - **Última Entrega Concluída:**
-  - **Eliminação de Jargões Técnicos dos Rodapés:**
-    - O texto técnico *"Design System v2.0 • Daylight Sanctuary & Somatic Watercolor"* foi completamente removido do rodapé do site (`index.html` e `src/index.html`) e do fluxograma somático (`fluxograma-jornada-fascia.svg` e `.png`).
-    - Substituído pela assinatura humanizada e institucional da Carol: *"Cura pelo Movimento • Carol Langowski • Fisioterapia Integrativa & Yoga Fascial"*.
-  - **Sincronização 100%:** Replicado entre [`index.html`](../index.html) e [`src/index.html`](../src/index.html).
-  - **Bateria Pytest & Playwright:** 100% verde.
-- **Próximo Passo Imediato:** Divulgar o guia somático para as alunas da turma.
+  - **Área de Respiro Ampla em Toda a Página:**
+    - Espaçamento vertical das seções ampliado para `clamp(72px, 8.5vw, 112px) 0;`.
+    - `.container` com margem periférica ampliada (`min(100% - 48px, 1200px)`), garantindo que nenhum bloco encoste em bordas de telas.
+    - Card do fluxograma emoldurado com passe-partout cremoso em aquarela (`#FAF7F0`) e padding respirável `clamp(16px, 2.5vw, 36px)`.
+  - **Fluxograma Somático Vetorial Refinado (SVG/PNG 1920x1080):**
+    - 85px de respiro livre entre cabeçalho e cards, citação contida em 20px, balões orgânicos de fala da Carol calibrados e curva 4->5 limpa.
+  - **Navegação Móvel em Pílulas Táteis:**
+    - Barra horizontal suave com pílulas para acesso imediato a todas as seções no mobile e tablet com rolagem de toque.
+  - **Auditoria Automatizada em 8 Viewports:**
+    - 100% aprovada sem overflow horizontal em 1920x1080, 1440x900, 1366x768, 1024x768, 768x1024, 390x844, 360x740 e 320x568.
+  - **Bateria Pytest & Playwright:** 100% verde (passou em 4.85s).
+- **Próximo Passo Imediato:** Divulgar o guia somático oficial para as alunas da turma.
 - **Pendências / Bloqueios:** Nenhum.
 - **Comando de Validação:** `pytest -v tests/test_carol_portal.py`
 
 ---
 
 ## Histórico Cronológico de Sessões
+
+### [2026-11-13] Área de Respiro Expandida & Responsividade em 8 Viewports (v1.2.7)
+- **O que foi feito:**
+  - Inserção de área de respiro generosa no fluxograma somático, passe-partout na seção do mapa e ampliação de espaçamentos em todo o portal.
+  - Adição de pílulas táteis de navegação para smartphones e tablets.
+  - Validação automatizada em 8 viewports via Playwright e bateria Pytest 100% verde.
+  - Deploy no GitHub Pages.
 
 ### [2026-11-13] Sanitização Editorial de Rodapé (v1.2.6)
 - **O que foi feito:**

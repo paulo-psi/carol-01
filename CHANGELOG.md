@@ -2,6 +2,16 @@
 
 Todas as mudanças relevantes deste projeto serão documentadas neste arquivo.
 
+## [1.2.7] - 2026-11-13
+### Adicionado
+- **Passe-Partout e Ampla Área de Respiro no Mapa Somático:** Inclusão de moldura interna cremoso-aquarela (`#FAF7F0`) com padding respirável `clamp(16px, 2.5vw, 36px)` em volta do fluxograma vetorial, conferindo acabamento de galeria de arte e impedindo qualquer sensação de compressão visual contra as bordas do card.
+- **Pílulas de Navegação Rápida para Mobile/Tablet:** Nova sub-barra horizontal de atalhos táteis (`.navbar-mobile-nav`) com rolagem suave (`overflow-x: auto`) para que alunas em smartphones e tablets acessem instantaneamente qualquer seção da aula com um toque leve, mantendo o design limpo e arejado.
+- **Auditoria Automatizada em 8 Viewports com Playwright:** Bateria de testes que valida sistematicamente ausência total de overflow horizontal (`scrollWidth === innerWidth`) em Full HD (1920x1080), MacBook (1440x900), Laptop (1366x768), iPad Paisagem (1024x768), iPad Retrato (768x1024), iPhone (390x844), Galaxy (360x740) e Mobile Compacto (320x568).
+
+### Modificado
+- **Área de Respiro e Espaçamento Periférico em Toda a Página:** Aumento dos paddings verticais das seções (`clamp(72px, 8.5vw, 112px) 0`), gaps generosos nos grids (`clamp(24px, 3vw, 36px)`) e margens laterais seguras no `.container` (`width: min(100% - 48px, 1200px)`), proporcionando ritmo visual calmo, sereno e condizente com a experiência somática do Yoga.
+- **Refinamento do Fluxograma Vetorial (SVG/PNG 1920x1080):** Cabeçalho redesenhado com 85px de respiro vertical livre até os cards, subtítulo de citação calibrado para fonte 20px suave, balões de fala da Carol refinados com cauda e bordas delicadas, e traçado fluido de retorno do Passo 4 ao 5.
+
 ## [1.2.6] - 2026-11-13
 ### Removido
 - **Termo Técnico de Design System nos Rodapés:** Remoção de *"Design System v2.0 • Daylight Sanctuary & Somatic Watercolor"* do rodapé do portal e do fluxograma somático, substituído pela assinatura institucional *"Cura pelo Movimento • Carol Langowski • Fisioterapia Integrativa & Yoga Fascial"*.

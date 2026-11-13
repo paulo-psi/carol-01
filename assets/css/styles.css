@@ -131,18 +131,18 @@ section[id] {
 
 /* 3. LAYOUT CONTAINER */
 .container {
-  width: min(100% - 32px, 1200px);
+  width: min(100% - 48px, 1200px);
   margin-inline: auto;
 }
 
 @media (max-width: 480px) {
   .container {
-    width: min(100% - 20px, 1200px);
+    width: min(100% - 24px, 1200px);
   }
 }
 
 .container-narrow {
-  width: min(100% - 24px, 920px);
+  width: min(100% - 32px, 920px);
   margin-inline: auto;
 }
 
@@ -241,6 +241,55 @@ section[id] {
   align-items: center;
   gap: 12px;
   flex-shrink: 0;
+}
+
+/* Navegação Secundária Mobile com Rolagem Horizontal Suave */
+.navbar-mobile-nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navbar-mobile-nav {
+    display: block;
+    border-top: 1px solid rgba(49, 151, 149, 0.12);
+    padding: 6px 12px 8px;
+    background: rgba(239, 248, 247, 0.98);
+  }
+
+  .navbar-mobile-track {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 2px;
+  }
+
+  .navbar-mobile-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .navbar-mobile-pill {
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 0.82rem;
+    color: var(--carol-deep-teal);
+    background: #FFFFFF;
+    border: 1px solid rgba(49, 151, 149, 0.22);
+    border-radius: var(--radius-pill);
+    padding: 5px 12px;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 4px rgba(15, 23, 42, 0.03);
+  }
+
+  .navbar-mobile-pill:hover,
+  .navbar-mobile-pill:active {
+    background: var(--carol-ice-mint);
+    border-color: var(--carol-vibrant-teal);
+    color: var(--carol-deep-teal);
+  }
 }
 
 /* Indicador de Leitura no Topo */
@@ -788,7 +837,7 @@ section[id] {
 
 /* 8. SEÇÃO 2: A GRANDE TESE (TOM MYERS & O MÚSCULO ÚNICO) */
 .section-tese {
-  padding: clamp(60px, 8vw, 96px) 0;
+  padding: clamp(72px, 8.5vw, 112px) 0;
 }
 
 .quote-myers-box {
@@ -1331,7 +1380,7 @@ section[id] {
 
 /* 17. GLOSSÁRIO VIVO DO CORPO (ACORDEÃO <details>) */
 .section-glossario {
-  padding: clamp(60px, 8vw, 96px) 0;
+  padding: clamp(72px, 8.5vw, 112px) 0;
   background: #FFFFFF;
 }
 
