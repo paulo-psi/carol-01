@@ -2,6 +2,16 @@
 
 Todas as mudanças relevantes deste projeto serão documentadas neste arquivo.
 
+## [1.2.2] - 2026-11-13
+### Adicionado
+- **Fluxograma Somático em Sketch / Aquarela:** Mapa mental de síntese da Aula 1 gerado em SVG vetorial e PNG renderizado em alta definição (1920x1080), contendo os 8 passos somáticos interconectados, botões de ação para download em PNG e visualização em tela cheia com SVG nativo.
+- **Seção 9 (Mapa Somático):** Integrada ao `index.html` e `src/index.html` com container responsivo com proteção contra overflow horizontal em todas as larguras de tela.
+
+### Modificado
+- **Barra de Navegação (Navbar) Blindada:** Redesenho completo para eliminar quebras de linha e colapso de botões espremidos (conforme print da aluna). Links consolidados em 6 itens objetivos (`A Tese`, `Roupa Interna`, `3 Camadas`, `Biotensegridade`, `Glossário`, `Mapa Somático`) e ação primária limpa (`🧘‍♀️ Modo Tapete`).
+- **Áudio Somático Reeditado & Masterizado (58s):** Captura do trecho correto (`00:00:46` a `00:01:44`) com suspiro duplo profundo e mantra védico completo (*Om Sahana Vavatu*) cantado pela Carol, masterizado acusticamente a 192 kbps com EBU R128 (-16 LUFS).
+- **Responsividade e Testes:** Bateria de testes Pytest ampliada cobrindo o mapa somático e testando imunidade a overflow em 1440, 768, 480, 390, 360 e 320px.
+
 ## [1.2.1] - 2026-11-13
 ### Modificado
 - **Acessibilidade & Hierarquia Semântica (WCAG AA):** Hierarquia de headings corrigida para fluxo contínuo (`h1 -> h2 -> h3`), eliminação completa de inversão de escala tipográfica (`heading_scale_issues = 0`).

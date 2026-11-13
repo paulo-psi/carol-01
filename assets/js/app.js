@@ -156,13 +156,13 @@ function initAudioCarol() {
       });
     } else {
       audioEl.pause();
-      audioBtn.innerHTML = '▶ Ouvir Voz da Carol (51s)';
+      audioBtn.innerHTML = '▶ Ouvir Sintonização &amp; Mantra (58s)';
       audioBtn.setAttribute('aria-pressed', 'false');
     }
   });
 
   audioEl.addEventListener('ended', () => {
-    audioBtn.innerHTML = '▶ Ouvir Voz da Carol (51s)';
+    audioBtn.innerHTML = '▶ Ouvir Sintonização &amp; Mantra (58s)';
     audioBtn.setAttribute('aria-pressed', 'false');
   });
 }

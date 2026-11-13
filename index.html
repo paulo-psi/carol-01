@@ -31,19 +31,18 @@
       <nav aria-label="Navegação do Guia">
         <ul class="navbar-nav">
           <li><a href="#tese" class="navbar-link">A Tese</a></li>
-          <li><a href="#roupa-interna" class="navbar-link">A Roupa Interna</a></li>
-          <li><a href="#interocepcao" class="navbar-link">Interocepção</a></li>
+          <li><a href="#roupa-interna" class="navbar-link">Roupa Interna</a></li>
           <li><a href="#camadas" class="navbar-link">3 Camadas</a></li>
-          <li><a href="#colageno" class="navbar-link">Colágeno</a></li>
           <li><a href="#biotensegridade" class="navbar-link">Biotensegridade</a></li>
           <li><a href="#glossario" class="navbar-link">Glossário</a></li>
-          <li><a href="#roteiro" class="navbar-link">Roteiro</a></li>
+          <li><a href="#mapa-jornada" class="navbar-link">Mapa Somático</a></li>
         </ul>
       </nav>
 
       <div class="navbar-actions">
-        <button type="button" id="btn-toggle-tapete" class="btn btn-secondary btn-sm" aria-pressed="false" title="Aumenta as letras e realça os exercícios para ver de longe no tapete">🧘‍♀️ Modo Tapete</button>
-        <a href="#santuario-pratica" class="btn btn-primary btn-sm">Ir para o Tapetinho 🧘‍♀️</a>
+        <button type="button" id="btn-toggle-tapete" class="btn btn-tapete-nav" aria-pressed="false" title="Aumenta as letras e realça os exercícios para ver de longe no tapete">
+          🧘‍♀️ Modo Tapete
+        </button>
       </div>
     </div>
     <div id="scroll-progress" class="scroll-progress-bar" role="progressbar" aria-label="Progresso da leitura da aula"></div>
@@ -79,7 +78,7 @@
             <audio id="audio-sintonizacao" src="./assets/audio/sintonizacao-carol.mp3" preload="none"></audio>
             <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
               <button type="button" id="btn-audio-carol" class="btn btn-orchid btn-sm" aria-pressed="false" aria-label="Ouvir voz e mantra da Carol">
-                ▶ Ouvir Voz da Carol (51s)
+                ▶ Ouvir Sintonização &amp; Mantra (58s)
               </button>
               <button type="button" id="btn-play-suspiro" class="btn btn-secondary btn-sm" aria-label="Iniciar respiração com suspiro guiado">
                 🌬️ Iniciar Respiração Guiada
@@ -749,7 +748,52 @@
   </section>
 
   <!-- ========================================================================
-       9. SANTUÁRIO DA PRÁTICA & ROTEIRO DA TURMA (FECHAMENTO)
+       9. MAPA SOMÁTICO & FLUXOGRAMA VISUAL DA JORNADA
+       ======================================================================== -->
+  <section class="section-mapa-jornada" id="mapa-jornada" style="padding:clamp(60px,8vw,96px) 0;background:var(--carol-bg-mist);">
+    <div class="container">
+      <div style="text-align:center;max-width:780px;margin:0 auto 36px;">
+        <span class="tag-pill tag-orchid">🌸 Síntese Visual em Aquarela</span>
+        <h2 style="font-family:var(--font-title);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--carol-ink-title);margin-top:10px;margin-bottom:12px;">
+          A Jornada Somática da Fáscia: Do Suspiro à Biotensegridade
+        </h2>
+        <p style="font-size:1.08rem;color:var(--carol-ink-body);line-height:1.6;">
+          Um mapa visual desenhado à mão que sintetiza toda a progressão somática da Aula 1 — da sintonização neurovagal e descobertas científicas de Bordeaux até o acolhimento do <em>Sthiram Sukham Asanam</em>.
+        </p>
+      </div>
+
+      <!-- Card do Fluxograma com Moldura Orgânica e Ações -->
+      <div class="mapa-jornada-card" style="background:#FFFFFF;border-radius:var(--radius-lg);padding:clamp(16px,3vw,28px);box-shadow:var(--carol-shadow-card);border:1px solid rgba(112,211,199,0.3);position:relative;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px;">
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-size:1.2rem;">🎨</span>
+            <strong style="color:var(--carol-deep-teal);font-size:0.95rem;">Mapa Conceitual Sketch • 8 Passos Integrados</strong>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap;">
+            <a href="./assets/img/fluxograma-jornada-fascia.png" target="_blank" class="btn btn-outline btn-sm" download="jornada-somatica-carol-langowski.png" style="text-decoration:none;">
+              📥 Baixar Imagem HD (PNG)
+            </a>
+            <a href="./assets/img/fluxograma-jornada-fascia.svg" target="_blank" class="btn btn-orchid btn-sm" style="text-decoration:none;">
+              🔍 Ver em Tela Cheia (SVG)
+            </a>
+          </div>
+        </div>
+
+        <div class="mapa-jornada-wrapper" style="border-radius:var(--radius-md);background:#FAF7F0;border:1px solid rgba(112,211,199,0.2);box-shadow:inset 0 2px 8px rgba(0,0,0,0.02);">
+          <img src="./assets/img/fluxograma-jornada-fascia.svg" alt="Fluxograma Somático da Aula 1 — Da Sintonização e Suspiro à Biotensegridade e Santuário de Prática" style="width:100%;max-width:100%;height:auto;display:block;border-radius:var(--radius-md);" loading="lazy">
+        </div>
+
+        <div style="margin-top:16px;text-align:center;">
+          <small style="color:var(--carol-warm-taupe);font-size:0.88rem;">
+            💡 <em>Dica: Em telas menores ou celulares, deslize lateralmente para explorar todo o mapa ou toque em "Ver em Tela Cheia".</em>
+          </small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       10. SANTUÁRIO DA PRÁTICA & ROTEIRO DA TURMA (FECHAMENTO)
        ======================================================================== -->
   <section class="section-santuario" id="santuario-pratica">
     <div class="container santuario-inner">

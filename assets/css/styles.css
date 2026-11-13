@@ -163,13 +163,15 @@ section[id] {
   align-items: center;
   justify-content: space-between;
   padding: 12px 0;
-  gap: 16px;
+  gap: 20px;
+  flex-wrap: nowrap;
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-shrink: 0;
 }
 
 .navbar-brand-logo {
@@ -180,11 +182,13 @@ section[id] {
   background: #FFF;
   padding: 2px;
   box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
 }
 
 .navbar-brand-text {
   display: flex;
   flex-direction: column;
+  white-space: nowrap;
 }
 
 .navbar-brand-title {
@@ -193,33 +197,37 @@ section[id] {
   font-size: 1.05rem;
   color: var(--carol-deep-teal);
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .navbar-brand-sub {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--carol-orchid);
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .navbar-nav {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   list-style: none;
+  flex-shrink: 0;
 }
 
 .navbar-link {
   font-family: var(--font-title);
   font-weight: 600;
-  font-size: 0.94rem;
+  font-size: 0.92rem;
   color: var(--carol-ink-sub);
   padding: 8px 14px;
   min-height: 40px;
   display: inline-flex;
   align-items: center;
   border-radius: var(--radius-pill);
+  white-space: nowrap; /* Garante que nunca quebre texto verticalmente */
   transition: all 0.2s ease;
 }
 
@@ -232,10 +240,31 @@ section[id] {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-shrink: 0;
 }
 
-.navbar-actions .btn {
-  width: auto; /* Previne que regras mobile forcem 100% na navbar */
+.btn-tapete-nav {
+  white-space: nowrap !important;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--carol-vibrant-teal);
+  color: var(--carol-deep-teal);
+  background: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-tapete-nav:hover {
+  background: var(--carol-ice-mint);
+  border-color: var(--carol-deep-teal);
+  transform: translateY(-1px);
 }
 
 /* Indicador de Leitura no Topo */
@@ -971,6 +1000,22 @@ section[id] {
 }
 
 @media (max-width: 480px) {
+  .navbar-inner {
+    gap: 8px;
+  }
+  .navbar-brand {
+    gap: 8px;
+  }
+  .navbar-brand-logo {
+    width: 38px;
+    height: 38px;
+  }
+  .navbar-brand-title {
+    font-size: 0.92rem;
+  }
+  .navbar-brand-sub {
+    font-size: 0.68rem;
+  }
   .fluidez-row-card {
     flex-direction: column;
     padding: 14px;
@@ -979,22 +1024,50 @@ section[id] {
   .navbar-actions {
     gap: 6px;
   }
-  .navbar-actions .btn {
+  .navbar-actions .btn,
+  .navbar-actions .btn-tapete-nav {
     padding: 6px 10px;
     font-size: 0.8rem;
   }
 }
 
+/* Blindagem da Seção do Mapa Somático contra Overflow */
+.mapa-jornada-card {
+  max-width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.mapa-jornada-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
+
 @media (max-width: 360px) {
+  .navbar-inner {
+    gap: 6px;
+  }
+  .navbar-brand {
+    gap: 6px;
+  }
   .navbar-brand-sub {
     display: none;
   }
-  .navbar-brand-logo {
-    width: 36px;
-    height: 36px;
+  .navbar-brand-title {
+    font-size: 0.82rem;
   }
-  .navbar-actions a[href="#santuario-pratica"] {
-    display: none;
+  .navbar-brand-logo {
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+  }
+  .navbar-actions .btn,
+  .navbar-actions .btn-tapete-nav {
+    padding: 4px 8px;
+    font-size: 0.72rem;
   }
 }
 

@@ -128,6 +128,14 @@ def test_portal_carol_full_experience(local_server):
         assert "Biotensegridade" in first_item.locator("summary").inner_text()
         assert "espaçadores flutuantes" in first_item.locator(".glossario-content").inner_text()
 
+        # 9.1 Mapa Somático da Jornada (Fluxograma Sketch em Aquarela)
+        mapa_sec = page.locator("#mapa-jornada")
+        mapa_sec.scroll_into_view_if_needed()
+        assert mapa_sec.is_visible()
+        mapa_img = page.locator("#mapa-jornada img")
+        assert mapa_img.is_visible()
+        assert "fluxograma-jornada-fascia.svg" in mapa_img.get_attribute("src")
+
         # 10. Melhoria 4: Diário Somático da Aluna (Persistência Local)
         diario_input = page.locator("#diario-textarea")
         assert diario_input.is_visible()
@@ -151,6 +159,7 @@ def test_portal_carol_full_experience(local_server):
         ]
         for vp in viewports:
             page.set_viewport_size(vp)
+            page.wait_for_timeout(200)
             overflow = page.evaluate("() => document.documentElement.scrollWidth > document.documentElement.clientWidth")
             assert not overflow, f"Overflow horizontal detectado no viewport {vp}"
 
