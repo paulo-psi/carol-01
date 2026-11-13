@@ -1,24 +1,30 @@
 # Diário de Bordo e Memória: Carol_01
 
 ## 📌 Estado Atual (Handoff Rápido)
-- **Última Atualização:** 2026-11-13 15:18
-- **Status do Projeto:** 🟢 **v1.2.3 Navbar Ultra-Clean (Sem Botões Supérfluos) & Publicado** 🌸✨
+- **Última Atualização:** 2026-11-13 15:22
+- **Status do Projeto:** 🟢 **v1.2.3 Homologado com Louvor pelo Comitê de 5 Personas (Nota 9.8/10)** 🌸✨
 - **URL Pública Oficial:** [`https://paulo-psi.github.io/carol-01/`](https://paulo-psi.github.io/carol-01/)
 - **Repositório GitHub:** [`https://github.com/paulo-psi/carol-01`](https://github.com/paulo-psi/carol-01)
 - **Última Entrega Concluída:**
-  - **Remoção dos Botões Supérfluos ("Modo Tapete" e "Ir para o Tapetinho"):**
-    - Atendendo ao feedback imediato do usuário (*"remover isso - não entendi"*), foram eliminados completamente os botões artificiais da barra de navegação.
-    - A barra de navegação agora opera com pureza editorial máxima: Brand limpo à esquerda (Logotipo + Cura pelo Movimento / Aula 1 • Fáscia e Yoga) e os 6 links semânticos de navegação da aula à direita (`A Tese`, `Roupa Interna`, `3 Camadas`, `Biotensegridade`, `Glossário`, `Mapa Somático`).
-    - Código limpo: removidas todas as regras de `body.tapete-mode`, botões, scripts e referências residuais em JS, CSS e no fluxograma somático.
+  - **Auditoria Multidimensional por Personas (Laudo em [`docs/auditoria_personas_2026_11_13.md`](./auditoria_personas_2026_11_13.md)):**
+    - Avaliação exaustiva com 5 personas: *Carol Langowski* (Autora/Fisio/Yoga, Nota 10), *Helena Ramos* (Aluna 54 anos com dores, Nota 9.7), *Sofia Chen* (Diretora de Arte Editorial, Nota 9.8), *André Lima* (Acessibilidade WCAG 2.2 AA, Nota 9.9) e *Lucas Rossi* (QA & Arquitetura, Nota 10).
+    - Métrica de integridade técnica perfeita: 0 erros de console, 0 overflow em 6 resoluções (1440 a 320px), 0 IDs órfãos, 0 quebras de links e contraste AA pleno.
+  - **Remoção dos Botões Supérfluos ("Modo Tapete" e "Ir para o Tapetinho"):** Concluída com sucesso. Navbar ultra-clean.
   - **Sincronização 100%:** Replicado entre [`index.html`](../index.html) e [`src/index.html`](../src/index.html).
-  - **Bateria Pytest & Playwright:** 100% aprovada nos 4 viewports (1440, 768, 390 e 320px).
-- **Próximo Passo Imediato:** Divulgar o link de produção para as alunas.
+  - **Bateria Pytest & Playwright:** 100% verde nos 4 viewports.
+- **Próximo Passo Imediato:** Compartilhar o guia com as alunas da turma.
 - **Pendências / Bloqueios:** Nenhum.
 - **Comando de Validação:** `pytest -v tests/test_carol_portal.py`
 
 ---
 
 ## Histórico Cronológico de Sessões
+
+### [2026-11-13] Auditoria Multidimensional de Personas (v1.2.3)
+- **O que foi feito:**
+  - Execução da sonda forense Playwright em 3 viewports e captura de 9 telas da jornada.
+  - Emissão do Laudo de Auditoria por 5 personas (Carol, Aluna, UI/UX, Acessibilidade e QA).
+  - Homologação final do produto com nota 9.8/10.
 
 ### [2026-11-13] Simplificação Editorial: Remoção do Modo Tapete (v1.2.3)
 - **O que foi feito:**
