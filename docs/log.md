@@ -1,26 +1,35 @@
 # Diário de Bordo e Memória: Carol_01
 
 ## 📌 Estado Atual (Handoff Rápido)
-- **Última Atualização:** 2026-11-13 10:25
-- **Status do Projeto:** 🟢 **Fase 2 Concluída com Rigor Total — Análise Integral dos 190 Minutos & Design System v2.0 Consolidado**
+- **Última Atualização:** 2026-11-13 10:55
+- **Status do Projeto:** 🟢 **v1.0.0 Entregue e Validado com Sucesso — Guia Digital de Apoio (Aula 1)** 🌸✨
 - **Última Entrega Concluída:**
-  - Transcrição completa dos 190 minutos de aula das gravações `cura.mp4` e `cura 1.mp4` via Whisper.
-  - Extração do repertório didático real da Carol: as 4 grandes analogias (tangerina, disco de algodão, macacão, biotensegridade), as dicas manuscritas ("Ter prazer no movimento!", "Ativar em vez de contrair") e o laboratório prático da torção na cadeira.
-  - Auditoria dos 18 slides revelando o registro duplo (Daylight Sanctuary limpo + Aquarelas Botânicas e o logo em orquídea/turquesa).
-  - Cálculo e correção de contrastes WCAG AA/AAA nos tokens de cor.
-  - Publicação de [`docs/design_system_carol.md`](./docs/design_system_carol.md) v2.0 com suporte estético para encantar a turma.
-  - Confirmação do usuário: material é de apoio para a turma (foco em encantamento) e todos os direitos de uso das aquarelas estão assegurados.
-- **Próximo Passo Imediato:** Apresentar a proposta da Arquitetura v2.0 (8 seções imersivas) e, com a aprovação explícita do Paulo, iniciar a codificação do HTML, CSS e JavaScript na Fase 3.
+  - Implementação completa do portal HTML5 semântico ([`index.html`](../index.html) e [`src/index.html`](../src/index.html)).
+  - Estilização responsiva em [`assets/css/styles.css`](../assets/css/styles.css) baseada no Design System v2.0 (*Daylight Sanctuary & Watercolor Botanical*).
+  - Interatividades somáticas em [`assets/js/app.js`](../assets/js/app.js):
+    1. *Ritual do Suspiro Guiado:* Ciclo de respiração e relaxamento no Hero.
+    2. *Abas das 3 Camadas Fasciais:* Superficial, Intermediária e Profunda com as abordagens práticas de Carol (Rolo suave, Espreguiçar, Balanceio elástico).
+    3. *Mini-Laboratório 1:* Revelação interativa do Disco de Algodão Doce e as gotinhas de orvalho.
+    4. *Mini-Laboratório 2:* Teste Somático de Torção na Cadeira com checklist passo a passo e feedback de amplitude aumentada.
+    5. *Termômetro Térmico/Mental da Fluidez:* Tabela comparativa (Frio vs. Calor, Sedentarismo vs. Movimento/Meditação).
+    6. *Santuário Noturno:* Seção Deep Teal com mantra *sthiram sukham asanam*, guia do aplicativo e trilhos anatômicos.
+  - Suíte Pytest end-to-end com Playwright ([`tests/test_carol_portal.py`](../tests/test_carol_portal.py)) **100% verde**:
+    - 11 imagens e aquarelas oficiais verificadas e carregadas sem falha.
+    - Zero erros de console e de página.
+    - Imunidade matemática a overflow horizontal em 4 viewports (Desktop 1440px, Tablet 768px, Mobile 390px e Mobile compacto 320px).
+  - Screenshots de alta fidelidade capturados em [`assets/screenshots/`](../assets/screenshots/).
+  - Conformidade total com `project_doctor` (arquivos > 50 MB devidamente ignorados no Git).
+- **Próximo Passo Imediato:** Apresentar a entrega ao usuário para visualização no navegador e preparar deploy (ex.: GitHub Pages ou servidor local).
 - **Pendências / Bloqueios:** Nenhum.
-- **Comando de Validação:** `python "$HOME/.gemini/config/skills/salvar-checkpoint/scripts/project_doctor.py" --check-project C:\Users\Paulo\Antigravity\Sites\Carol_01`
+- **Comando de Validação:** `cd C:\Users\Paulo\Antigravity\Sites\Carol_01; pytest tests`
 
 ---
 
 ## Histórico Cronológico de Sessões
 
-### [2026-11-13] Consolidação do Design System v2.0 & Análise Integral dos Áudios
+### [2026-11-13] Implementação e Validação do Guia Digital de Apoio (v1.0.0)
 - **O que foi feito:**
-  - Transcrição integral dos dois áudios em segundo plano e mapeamento dos pontos de encantamento pedagógico da Carol.
-  - Ajuste de governança em `design_system_carol.md` e `plan.md` com a inclusão de biotensegridade, interocepção e aquarelas originais.
-  - Validação de que o projeto Replit está sendo cuidado em outro chat e não interfere aqui.
-- **Decisões:** Foco total em um material de apoio sensorial, afetuoso e cientificamente embasado, com design duplo (Daylight + Aquarela).
+  - Transcrição integral das duas aulas e consolidação do Design System v2.0.
+  - Construção do HTML, CSS e JS modular com todas as 8 seções narrativas de encantamento.
+  - Bateria automatizada Playwright passando com 100% de sucesso.
+- **Decisões:** Design duplo (Daylight e Aquarela), tipografia `Quicksand` + `Nunito` + `Caveat`, WCAG AAA/AA em todos os textos.

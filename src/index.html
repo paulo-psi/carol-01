@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guia Digital de Apoio: Cura pelo Movimento • Aula 1: Fáscia e Yoga com Carol Langowski. Material imersivo de estudo, anatomia viva e somática.">
+  <title>Cura pelo Movimento • Fáscia e Yoga | Carol Langowski</title>
+
+  <!-- Google Fonts Oficiais do Design System v2.0 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@1,400;1,600&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       BARRA DE NAVEGAÇÃO DAYLIGHT GLASS
+       ======================================================================== -->
+  <header class="navbar-sanctuary">
+    <div class="container navbar-inner">
+      <div class="navbar-brand">
+        <img src="../assets/img/logo-cura-pelo-movimento.png" alt="Logo Cura pelo Movimento — Carol Langowski" class="navbar-brand-logo">
+        <div class="navbar-brand-text">
+          <span class="navbar-brand-title">Cura pelo Movimento</span>
+          <span class="navbar-brand-sub">Aula 1 • Fáscia e Yoga</span>
+        </div>
+      </div>
+
+      <nav aria-label="Navegação do Guia">
+        <ul class="navbar-nav">
+          <li><a href="#tese" class="navbar-link">A Tese</a></li>
+          <li><a href="#roupa-interna" class="navbar-link">A Roupa Interna</a></li>
+          <li><a href="#interocepcao" class="navbar-link">Interocepção</a></li>
+          <li><a href="#camadas" class="navbar-link">3 Camadas</a></li>
+          <li><a href="#colageno" class="navbar-link">Colágeno</a></li>
+          <li><a href="#biotensegridade" class="navbar-link">Biotensegridade</a></li>
+          <li><a href="#roteiro" class="navbar-link">Roteiro da Turma</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar-actions">
+        <a href="#santuario-pratica" class="btn btn-primary btn-sm">Ir para o Tapetinho 🧘‍♀️</a>
+      </div>
+    </div>
+    <div id="scroll-progress" class="scroll-progress-bar" role="progressbar" aria-label="Progresso da leitura da aula"></div>
+  </header>
+
+  <!-- ========================================================================
+       1. HERO SECTION: SINTONIZAÇÃO & ACOLHIMENTO
+       ======================================================================== -->
+  <section class="hero-section" id="sintonizacao">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+          <span class="tag-pill tag-orchid">🌸 Espaço Sagrado da Turma</span>
+          <span class="tag-pill tag-mint">🌿 Anatomia Viva &amp; Somática</span>
+        </div>
+
+        <h1 class="hero-title">
+          Um mergulho no fascinante <span>universo da fáscia.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Bem-vinda ao seu guia digital de apoio da <strong>Aula 1</strong>. Aqui você encontra as pontes entre a fisioterapia integrativa, o acolhimento do Yoga e a inteligência viva da sua rede corporal.
+        </p>
+
+        <!-- Ritual do Suspiro Guiado -->
+        <div class="ritual-suspiro-card">
+          <div class="ritual-suspiro-icon">🌬️</div>
+          <div class="ritual-suspiro-text">
+            <h4>Ritual de Abertura: Solte o ar com um suspiro</h4>
+            <p id="suspiro-status-text">
+              <em>"Mãos unidas em frente ao coração... Solte o ar com um suspiro relaxando o peito e a mandíbula."</em>
+            </p>
+            <div style="margin-top:10px;">
+              <button type="button" id="btn-play-suspiro" class="btn btn-secondary btn-sm" aria-label="Iniciar respiração com suspiro guiado">
+                🌬️ Iniciar Respiração Guiada
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-visual-card">
+          <img src="../assets/img/sistema-fascial-corpo-luminoso.png" alt="Ilustração do corpo luminoso envolto pela rede fascial contínua" class="hero-visual-img">
+          <div class="hero-badge-floating">
+            <span style="font-size:1.4rem;">🤍</span>
+            <div>
+              <strong style="font-size:0.88rem;color:var(--carol-deep-teal);display:block;">Carol Langowski</strong>
+              <small style="color:var(--carol-terracotta);">Fisioterapia &amp; Especialista em Fáscia</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       2. A GRANDE TESE: O FIM DO MÚSCULO ISOLADO
+       ======================================================================== -->
+  <section class="section-tese" id="tese">
+    <div class="container">
+      <div class="quote-myers-box">
+        <p class="quote-myers-text">
+          "Não temos 600 músculos no corpo, mas sim um único músculo contido em mais de 600 bolsões fasciais."
+        </p>
+        <div class="quote-myers-author">
+          <span>— Dr. Tom Myers</span>
+          <small style="font-weight:400;color:var(--carol-ink-muted);">(Pioneiro nos Trilhos Anatômicos &amp; Pesquisa da Fáscia)</small>
+        </div>
+      </div>
+
+      <div style="text-align:center;max-width:680px;margin:0 auto 40px;">
+        <span class="tag-pill tag-mint">Componentes do Movimento</span>
+        <h2 style="font-family:var(--font-title);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--carol-ink-title);margin-top:8px;">
+          Como o seu corpo realmente se organiza
+        </h2>
+      </div>
+
+      <div class="grid-3-col">
+        <!-- Card 1 -->
+        <article class="card-bento">
+          <div class="card-header-clean">
+            <div class="card-icon-circle">🦴</div>
+            <h3 class="card-title">Estruturas Rígidas</h3>
+          </div>
+          <p style="font-size:0.98rem;color:var(--carol-ink-body);">
+            Ossos e cartilagens articuladas. Não funcionam como colunas empilhadas de concreto, mas como espaçadores flutuantes na tensegridade.
+          </p>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card-bento">
+          <div class="card-header-clean">
+            <div class="card-icon-circle orchid">⚡</div>
+            <h3 class="card-title">Motores Ativos</h3>
+          </div>
+          <p style="font-size:0.98rem;color:var(--carol-ink-body);">
+            Músculos e tendões dinâmicos. Eles geram a força motriz e precisam de contração e relaxamento pontual.
+          </p>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card-bento card-bento-sand">
+          <div class="card-header-clean">
+            <div class="card-icon-circle amber">🕸️</div>
+            <h3 class="card-title">Tecido Conjuntivo</h3>
+          </div>
+          <p style="font-size:0.98rem;color:var(--carol-ink-body);">
+            <strong>A grande rede:</strong> é aqui onde moram as dores crônicas, as tensões acumuladas, mas também onde mora a <em>cura pelo movimento</em>.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       3. A NOSSA ROUPA INTERNA (O SISTEMA FASCIAL)
+       ======================================================================== -->
+  <section id="roupa-interna" style="padding:clamp(56px,7vw,84px) 0;background:#FFFFFF;">
+    <div class="container">
+      <div style="text-align:center;max-width:720px;margin:0 auto 48px;">
+        <span class="tag-pill tag-orchid">Definição Estrutural</span>
+        <h2 style="font-family:var(--font-title);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--carol-ink-title);margin-top:8px;">
+          A Nossa Roupa Interna: Uma Teia Contínua
+        </h2>
+        <p style="margin-top:12px;color:var(--carol-ink-body);">
+          Pense na fáscia como um macacão de tecido elástico de corpo inteiro. Se você puxa a manga no punho, você sente a tensão refletir nas costas e na nuca. Onde dói quase nunca é onde o problema começou.
+        </p>
+      </div>
+
+      <div class="grid-2-col" style="align-items:center;">
+        <div style="display:flex;flex-direction:column;gap:18px;">
+          <div class="card-bento" style="padding:22px;">
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <span style="font-size:1.6rem;">💧</span>
+              <div>
+                <strong style="font-size:1.1rem;color:var(--carol-deep-teal);display:block;">Estrutura 70% Líquida</strong>
+                <p style="font-size:0.92rem;margin-top:4px;">Um verdadeiro oceano interno. Sem hidratação celular e deslizamento, a fáscia cola como velcro seco.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-bento" style="padding:22px;">
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <span style="font-size:1.6rem;">🕸️</span>
+              <div>
+                <strong style="font-size:1.1rem;color:var(--carol-deep-teal);display:block;">Rede Tridimensional Sem Fim</strong>
+                <p style="font-size:0.92rem;margin-top:4px;">Recobre nervos, vasos, vísceras, músculos e cápsulas articulares em perfeita continuidade.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-bento" style="padding:22px;">
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <span style="font-size:1.6rem;">🌊</span>
+              <div>
+                <strong style="font-size:1.1rem;color:var(--carol-deep-teal);display:block;">Tecido Viscoelástico</strong>
+                <p style="font-size:0.92rem;margin-top:4px;">A fáscia não responde a impactos bruscos; ela responde à deformação lenta, respeitosa e prazerosa no ásana.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-bento" style="padding:22px;">
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <span style="font-size:1.6rem;">🤍</span>
+              <div>
+                <strong style="font-size:1.1rem;color:var(--carol-deep-teal);display:block;">Abrigo das Emoções &amp; Meridianos</strong>
+                <p style="font-size:0.92rem;margin-top:4px;">É onde o estresse se cristaliza fisicamente e onde a respiração profunda promove a autorregulação.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mini-Laboratório 1: O Disco de Algodão Doce -->
+        <div class="mini-lab-card">
+          <span class="mini-lab-badge">Laboratório Prático da Carol</span>
+          <h3 style="font-family:var(--font-title);font-size:1.35rem;color:var(--carol-deep-teal);margin-bottom:12px;">
+            A Experiência do Disco de Algodão
+          </h3>
+          <p style="font-size:0.95rem;color:var(--carol-ink-body);">
+            A lição de casa que a Carol ensinou na aula: pegue um disco de algodão cosmético e tente separar as duas faces devagar, sem rasgar.
+          </p>
+
+          <div id="cotton-interactive-visual" style="background:var(--carol-sand-surface);padding:20px;border-radius:14px;border:var(--border-sand);margin:20px 0;font-size:0.95rem;color:var(--carol-ink-title);font-weight:600;">
+            1. Disco fechado: A pele e o músculo parecem estar colados diretamente.
+          </div>
+
+          <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <button type="button" class="btn btn-secondary btn-sm" data-cotton-step="0">Etapa 1: Fechado</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-cotton-step="1">Etapa 2: Puxando</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-cotton-step="2">Etapa 3: Teia Revelada</button>
+          </div>
+
+          <p style="font-size:0.86rem;color:var(--carol-ink-muted);margin-top:16px;">
+            💡 <em>"Entre a face colada na pele e a face colada no músculo surge um algodão doce tridimensional com gotinhas de orvalho: é a sua fáscia intermediária!"</em>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       4. INTEROCEPÇÃO: A NOSSA ESCUTA INTERNA
+       ======================================================================== -->
+  <section id="interocepcao" style="padding:clamp(60px,8vw,96px) 0;background:var(--carol-sand-bg);">
+    <div class="container">
+      <div class="grid-2-col" style="align-items:center;">
+        <div>
+          <img src="../assets/img/aquarela-interocepcao.png" alt="Aquarela oficial da mulher em meditação com os órgãos de interocepção destacados" style="border-radius:24px;box-shadow:var(--shadow-organic);background:#FFF;padding:12px;border:var(--border-sand);">
+        </div>
+
+        <div>
+          <span class="tag-pill tag-orchid">O Sexto Órgão dos Sentidos</span>
+          <h2 style="font-family:var(--font-title);font-size:clamp(2rem,3.5vw,2.6rem);color:var(--carol-ink-title);margin:12px 0 16px;">
+            INTEROCEPÇÃO: A nossa escuta interna!
+          </h2>
+          <p style="font-size:1.02rem;color:var(--carol-ink-body);margin-bottom:24px;">
+            Perdemos o hábito de ouvir o corpo porque prestamos atenção demais no mundo externo (barulho, telas, exigências). A fáscia superficial é o rádio receptor que nos avisa quando precisamos de pausa, calor, água ou carinho.
+          </p>
+
+          <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px;">
+            <div style="display:flex;gap:12px;align-items:center;">
+              <span style="color:var(--carol-orchid);font-size:1.3rem;">💓</span>
+              <span><strong>Sentir batimentos cardíacos</strong> e a cadência suave da respiração.</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:center;">
+              <span style="color:var(--carol-vibrant-teal);font-size:1.3rem;">🌡️</span>
+              <span><strong>Perceber alterações sutis</strong> de temperatura e tônus corporal.</span>
+            </div>
+            <div style="display:flex;gap:12px;align-items:center;">
+              <span style="color:var(--carol-amber);font-size:1.3rem;">🌿</span>
+              <span><strong>Sentir vísceras relaxadas</strong> (bexiga, digestão e abdômen macio).</span>
+            </div>
+          </div>
+
+          <!-- Assinatura Manuscrita da Carol -->
+          <div class="hand-note" style="background:#FFF;padding:16px 24px;border-radius:18px;border:1px dashed var(--carol-terracotta);box-shadow:var(--shadow-sm);">
+            <span>✨</span>
+            <span>DICA IMPORTANTE DA CAROL: Ter prazer no movimento!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       5. RAIO-X ANATÔMICO: AS 3 CAMADAS FASCIAIS
+       ======================================================================== -->
+  <section id="camadas" style="padding:clamp(60px,8vw,96px) 0;background:#FFFFFF;">
+    <div class="container">
+      <div style="text-align:center;max-width:740px;margin:0 auto 40px;">
+        <span class="tag-pill tag-mint">Organização Anatômica</span>
+        <h2 style="font-family:var(--font-title);font-size:clamp(1.9rem,3.2vw,2.5rem);color:var(--carol-ink-title);margin-top:8px;">
+          As Três Camadas Fasciais &amp; Suas Abordagens
+        </h2>
+        <p style="color:var(--carol-ink-body);margin-top:8px;">
+          Cada camada pede um tipo específico de carinho e estímulo. Clique nas abas para ver o que fazer:
+        </p>
+      </div>
+
+      <!-- Abas Interativas -->
+      <div class="tabs-camadas-wrap" role="tablist" aria-label="Abas das Camadas Fasciais">
+        <button type="button" class="tab-camada-btn active" data-camada-tab="superficial" role="tab" aria-selected="true">
+          1. Camada Superficial (Pele)
+        </button>
+        <button type="button" class="tab-camada-btn" data-camada-tab="intermediaria" role="tab" aria-selected="false">
+          2. Camada Intermediária (Frouxa)
+        </button>
+        <button type="button" class="tab-camada-btn" data-camada-tab="profunda" role="tab" aria-selected="false">
+          3. Camada Profunda (Epimísio)
+        </button>
+      </div>
+
+      <!-- Conteúdo da Aba 1: Superficial -->
+      <div class="camada-pane active" data-camada-pane="superficial">
+        <div>
+          <img src="../assets/img/diagrama-tres-camadas-fasciais.png" alt="Diagrama das camadas fasciais em corte anatômico" style="border-radius:20px;border:var(--border-subtle);box-shadow:var(--shadow-sm);">
+        </div>
+        <div>
+          <span class="tag-pill tag-mint">Rica em Receptores Sensoriais</span>
+          <h3 style="font-family:var(--font-title);font-size:1.6rem;color:var(--carol-deep-teal);margin:12px 0;">
+            1. Fáscia Superficial (Logo Abaixo da Pele)
+          </h3>
+          <p style="color:var(--carol-ink-body);">
+            É a pele interna. Densamente inervada, detecta temperatura, toque, vibração e regula o tônus do sistema nervoso central. Quando está tensa, gera sensações de confinamento e rigidez matinal.
+          </p>
+          <div class="camada-approach-box">
+            <div class="camada-approach-label">Abordagem Prática da Carol:</div>
+            <p style="margin:0;font-weight:600;color:var(--carol-ink-title);">
+              🛋️ <strong>Rolo de liberação suave e automassagem:</strong> Nada de dor excruciante! O estímulo deve ser gentil para convencer o sistema nervoso a soltar a guarda.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conteúdo da Aba 2: Intermediária -->
+      <div class="camada-pane" data-camada-pane="intermediaria">
+        <div>
+          <img src="../assets/img/diagrama-tres-camadas-fasciais.png" alt="Diagrama das camadas fasciais destacando a camada média" style="border-radius:20px;border:var(--border-subtle);box-shadow:var(--shadow-sm);">
+        </div>
+        <div>
+          <span class="tag-pill tag-orchid">O Algodão Doce Hidratado</span>
+          <h3 style="font-family:var(--font-title);font-size:1.6rem;color:var(--carol-deep-teal);margin:12px 0;">
+            2. Fáscia Intermediária (Frouxa)
+          </h3>
+          <p style="color:var(--carol-ink-body);">
+            Recobre os ventres musculares. Rica em <em>fasciacytes</em> que secretam ácido hialurônico de alta viscosidade para garantir que os músculos deslizem suavemente sem atrito mútuo.
+          </p>
+          <div class="camada-approach-box">
+            <div class="camada-approach-label">Abordagem Prática da Carol:</div>
+            <p style="margin:0;font-weight:600;color:var(--carol-ink-title);">
+              🐱 <strong>O Espreguiçar (Pandiculação):</strong> Movimentos lentos e sonoros ao acordar, imitando gatos e cães. Espreguiçar-se com calma hidrata as fibras e desperta a fluidez.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Conteúdo da Aba 3: Profunda -->
+      <div class="camada-pane" data-camada-pane="profunda">
+        <div>
+          <img src="../assets/img/diagrama-tres-camadas-fasciais.png" alt="Diagrama das camadas fasciais com foco no epimísio profundo" style="border-radius:20px;border:var(--border-subtle);box-shadow:var(--shadow-sm);">
+        </div>
+        <div>
+          <span class="tag-pill tag-amber">Transmissão de Força &amp; Colágeno</span>
+          <h3 style="font-family:var(--font-title);font-size:1.6rem;color:var(--carol-deep-teal);margin:12px 0;">
+            3. Fáscia Profunda (Epimísio)
+          </h3>
+          <p style="color:var(--carol-ink-body);">
+            Intimamente conectada aos músculos e ao periósteo ósseo. Muito densa e rica em colágeno, ela transfere a energia mecânica de um segmento para o outro em frações de segundo.
+          </p>
+          <div class="camada-approach-box">
+            <div class="camada-approach-label">Abordagem Prática da Carol:</div>
+            <p style="margin:0;font-weight:600;color:var(--carol-ink-title);">
+              🌀 <strong>Balanceio &amp; Movimento Multidirecional:</strong> Balançar os braços, transferir peso de forma elástica e alongar dinamicamente sem travar a respiração.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Princípio Motor em Faixa de Destaque -->
+      <div style="margin-top:48px;background:var(--carol-bg-mist);border-radius:20px;padding:24px 32px;text-align:center;border:var(--border-subtle);">
+        <p style="font-family:var(--font-serif);font-size:1.35rem;font-style:italic;color:var(--carol-deep-teal);margin:0;">
+          "A forma segue a função. A função altera-se com a forma."
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       6. BIOQUÍMICA & A DINÂMICA DO COLÁGENO
+       ======================================================================== -->
+  <section id="colageno" style="padding:clamp(60px,8vw,96px) 0;background:var(--carol-bg-mist);">
+    <div class="container">
+      <div style="text-align:center;max-width:720px;margin:0 auto 48px;">
+        <span class="tag-pill tag-orchid">Bioquímica Celular</span>
+        <h2 style="font-family:var(--font-title);font-size:clamp(1.9rem,3.2vw,2.5rem);color:var(--carol-ink-title);margin-top:8px;">
+          As Células Operárias &amp; O Relógio do Colágeno
+        </h2>
+        <p style="color:var(--carol-ink-body);">
+          A fáscia não é estática: é uma fábrica celular viva em constante regeneração tecidual.
+        </p>
+      </div>
+
+      <!-- As 3 Células Operárias -->
+      <div class="grid-3-col" style="margin-bottom:48px;">
+        <div class="card-bento">
+          <div class="card-header-clean">
+            <span style="font-size:1.8rem;">🧬</span>
+            <h3 class="card-title">Fibroblastos</h3>
+          </div>
+          <p style="font-size:0.95rem;color:var(--carol-ink-body);">
+            Os tecelões do corpo: produtores diretos das fibras de colágeno e elastina que sustentam a arquitetura.
+          </p>
+        </div>
+
+        <div class="card-bento">
+          <div class="card-header-clean">
+            <span style="font-size:1.8rem;">💧</span>
+            <h3 class="card-title">Fasciacytes</h3>
+          </div>
+          <p style="font-size:0.95rem;color:var(--carol-ink-body);">
+            Os hidratadores: produzem ácido hialurônico, criando o lubrificante que impede as camadas de colarem.
+          </p>
+        </div>
+
+        <div class="card-bento">
+          <div class="card-header-clean">
+            <span style="font-size:1.8rem;">🛡️</span>
+            <h3 class="card-title">Miofibroblastos</h3>
+          </div>
+          <p style="font-size:0.95rem;color:var(--carol-ink-body);">
+            Os cirurgiões: responsáveis pela cicatrização e por manter o tônus basal em áreas submetidas a esforço.
+          </p>
+        </div>
+      </div>
+
+      <!-- O Relógio dos 35 e 50 Anos -->
+      <div class="metric-callout-grid">
+        <div class="metric-big-card">
+          <div class="metric-num">35</div>
+          <div class="metric-label">Anos de Idade</div>
+          <p style="font-size:0.92rem;color:var(--carol-ink-body);margin:0;">
+            O início da redução natural na produção de colágeno pelo corpo. É quando os movimentos multidirecionais se tornam essenciais.
+          </p>
+        </div>
+
+        <div class="metric-big-card">
+          <div class="metric-num">35%</div>
+          <div class="metric-label">Volume Produzido aos 50 Anos</div>
+          <p style="font-size:0.92rem;color:var(--carol-ink-body);margin:0;">
+            A produção cai a uma fração do que era. Mas a boa notícia da ciência: <strong>o movimento estimula os fibroblastos a continuarem produzindo!</strong>
+          </p>
+        </div>
+      </div>
+
+      <!-- Termômetro da Fluidez -->
+      <div style="background:#FFFFFF;border-radius:24px;padding:clamp(16px, 4vw, 32px);box-shadow:var(--shadow-organic);border:var(--border-subtle);">
+        <h3 style="font-family:var(--font-title);font-size:1.25rem;color:var(--carol-deep-teal);margin-bottom:20px;text-align:center;">
+          Termômetro da Fluidez Fascial: O que afeta a sua teia?
+        </h3>
+        <div class="fluidez-grid">
+          <div class="fluidez-row-card">
+            <span class="fluidez-tag fluidez-frio">Frio</span>
+            <p style="font-size:0.92rem;margin:0;">Aumenta a viscosidade, deixando a substância fundamental densa e enrijecida.</p>
+          </div>
+          <div class="fluidez-row-card">
+            <span class="fluidez-tag fluidez-calor">Calor</span>
+            <p style="font-size:0.92rem;margin:0;">Liquefaz a matriz, promovendo deslizamento, alívio de dor e abertura.</p>
+          </div>
+          <div class="fluidez-row-card">
+            <span class="fluidez-tag fluidez-mov">Movimento</span>
+            <p style="font-size:0.92rem;margin:0;">Evita o "congestionamento" das vias neurais e hidrata os tecidos.</p>
+          </div>
+          <div class="fluidez-row-card">
+            <span class="fluidez-tag fluidez-med">Meditação</span>
+            <p style="font-size:0.92rem;margin:0;">Libera óxido nítrico, desarmando tensões crônicas e relaxando as paredes vasculares.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       7. BIOTENSEGRIDADE & O YOGA FASCIAL NO TAPETE
+       ======================================================================== -->
+  <section class="section-biotensegridade" id="biotensegridade" style="background:#FFFFFF;">
+    <div class="container">
+      <div style="text-align:center;max-width:760px;margin:0 auto 48px;">
+        <span class="tag-pill tag-mint">Arquitetura Sagrada do Movimento</span>
+        <h2 style="font-family:var(--font-title);font-size:clamp(1.9rem,3.2vw,2.6rem);color:var(--carol-ink-title);margin-top:8px;">
+          Biotensegridade: Como o corpo realmente se sustenta
+        </h2>
+        <p style="color:var(--carol-ink-body);">
+          O modelo dos bastões e elásticos: <strong>os ossos flutuam na fáscia</strong>, distribuindo as forças de sustentação por todo o sistema.
+        </p>
+      </div>
+
+      <div class="biotensegridade-banner">
+        <div class="grid-2-col" style="align-items:center;">
+          <div>
+            <img src="../assets/img/aquarela-trikonasana-expansao.png" alt="Aquarela oficial do Trikonasana demonstrando as forças de expansão tridimensional da fáscia" style="border-radius:20px;box-shadow:var(--shadow-sm);border:var(--border-sand);background:#FFF;padding:8px;">
+          </div>
+          <div>
+            <span class="tag-pill tag-orchid">Biotensegridade no Yoga</span>
+            <h3 style="font-family:var(--font-title);font-size:1.6rem;color:var(--carol-deep-teal);margin:12px 0;">
+              Ganho de Espaço em Todas as Direções
+            </h3>
+            <p style="color:var(--carol-ink-body);font-size:0.98rem;margin-bottom:16px;">
+              No Yoga fascial, não empurramos o chão para travar a articulação. Nós ativamos a rede para flutuar e respirar dentro da postura.
+            </p>
+
+            <div style="background:var(--carol-sand-surface);padding:18px 22px;border-radius:16px;border:var(--border-sand);margin-bottom:20px;">
+              <span class="hand-note" style="font-size:1.35rem;">
+                ✨ DICA PRÁTICA: Utilize "ativar" em vez de "contrair" para gerar expansão e biotensegridade.
+              </span>
+            </div>
+
+            <div style="display:flex;flex-direction:column;gap:10px;font-size:0.94rem;">
+              <div>⚡ <strong>Elasticidade:</strong> Capacidade de alongar e retornar à forma inicial.</div>
+              <div>🌱 <strong>Plasticidade:</strong> Adaptação e ganho contínuo de espaço interno (Yin Yoga).</div>
+              <div>🌊 <strong>Viscoelasticidade:</strong> Deformação lenta e não linear durante o ásana.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mini-Laboratório 2: Teste Somático de Torção na Cadeira -->
+      <div class="torcao-interactive-card">
+        <span class="tag-pill tag-amber">Prática Guiada da Aula</span>
+        <h3 style="font-family:var(--font-title);font-size:1.5rem;color:var(--carol-deep-teal);margin:10px 0;">
+          Mini-Laboratório Somático: Teste da Torção na Cadeira
+        </h3>
+        <p style="color:var(--carol-ink-body);font-size:0.96rem;">
+          Faça agora onde você está sentada! Esse é o teste que a Carol conduziu na aula para comprovar o ganho de amplitude através da fáscia:
+        </p>
+
+        <div class="torcao-steps-list">
+          <div class="torcao-step-item" role="checkbox" aria-checked="false" tabindex="0">
+            <div class="torcao-step-checkbox">✓</div>
+            <div>
+              <strong>1. Torção Teste &amp; Medição:</strong> Sente sobre os ísquios, gire o tronco para trás pelo lado direito e marque com o olhar o ponto máximo que você alcança.
+            </div>
+          </div>
+
+          <div class="torcao-step-item" role="checkbox" aria-checked="false" tabindex="0">
+            <div class="torcao-step-checkbox">✓</div>
+            <div>
+              <strong>2. Deslizar a Fáscia do Abdômen:</strong> Coloque a mão espalmada sobre o abdômen e deslize a pele suavemente de um lado para o outro enquanto move o tronco.
+            </div>
+          </div>
+
+          <div class="torcao-step-item" role="checkbox" aria-checked="false" tabindex="0">
+            <div class="torcao-step-checkbox">✓</div>
+            <div>
+              <strong>3. Soltar Costelas &amp; Escápulas:</strong> Traga as mãos nos ombros, mova os cotovelos em círculos e sinta as escápulas deslizarem pelas costas.
+            </div>
+          </div>
+
+          <div class="torcao-step-item" role="checkbox" aria-checked="false" tabindex="0">
+            <div class="torcao-step-checkbox">✓</div>
+            <div>
+              <strong>4. Ondulação Cervical:</strong> Faça movimentos suaves com o pescoço para um lado e para o outro, trazendo a intenção de desatar nós sem pressa.
+            </div>
+          </div>
+
+          <div class="torcao-step-item" role="checkbox" aria-checked="false" tabindex="0">
+            <div class="torcao-step-checkbox">✓</div>
+            <div>
+              <strong>5. O Reteste:</strong> Volte à postura neutra, respire fundo e repita a mesma torção para o lado direito. Olhe lá atrás de novo!
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;">
+          <span id="torcao-progress-count" style="font-weight:700;color:var(--carol-orchid);font-size:0.95rem;">
+            0 de 5 passos concluídos
+          </span>
+          <div id="torcao-feedback-box" style="display:none;background:var(--carol-ice-mint);color:var(--carol-deep-teal);padding:8px 18px;border-radius:var(--radius-pill);font-weight:700;font-size:0.92rem;">
+            🎉 Incrível! Você notou como a amplitude aumentou sem nenhum esforço ou dor? Isso é a fáscia deslizando!
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       8. SANTUÁRIO DA PRÁTICA & ROTEIRO DA TURMA (FECHAMENTO)
+       ======================================================================== -->
+  <section class="section-santuario" id="santuario-pratica">
+    <div class="container santuario-inner">
+      <div style="display:inline-block;margin-bottom:16px;">
+        <span class="tag-pill" style="background:rgba(255,255,255,0.15);color:#FFFFFF;">Fechamento da Aula 1</span>
+      </div>
+
+      <h2 class="mantra-title">sthiram sukham asanam</h2>
+      <p class="mantra-sub">
+        <em>"A postura deve ser firme, estável e simultaneamente doce, acolhedora e confortável."</em>
+      </p>
+
+      <div class="santuario-cards-grid" id="roteiro">
+        <!-- Card 1: Tarefa da Turma -->
+        <div class="santuario-card">
+          <h4>📱 Roteiro de Estudos no Aplicativo</h4>
+          <p>
+            Carol orientou a assistir aos vídeos do módulo de introdução e se aprofundar no conteúdo até a aula de <strong>Trilhos Anatômicos</strong> antes do nosso próximo encontro ao vivo.
+          </p>
+        </div>
+
+        <!-- Card 2: Partilha e Dúvidas -->
+        <div class="santuario-card">
+          <h4>💬 Comunidade &amp; Partilhas</h4>
+          <p>
+            Traga seus estudos de caso, dúvidas sobre o corpo e sensações para o nosso grupo do curso. O movimento cura quando é compartilhado com afeto.
+          </p>
+        </div>
+      </div>
+
+      <div style="margin-top:40px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="#sintonizacao" class="btn btn-secondary">Voltar ao Topo da Aula ⬆</a>
+      </div>
+
+      <div style="margin-top:36px;font-family:var(--font-hand);font-size:1.6rem;color:var(--carol-soft-mint);">
+        "Durmam com os anjinhos e tenham prazer no movimento!" — Carol Langowski
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       RODAPÉ INSTITUCIONAL
+       ======================================================================== -->
+  <footer class="footer-carol">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="../assets/img/logo-cura-pelo-movimento.png" alt="Logo Carol Langowski" style="width:38px;height:38px;border-radius:8px;background:#FFF;padding:2px;">
+          <div>
+            <strong style="color:#FFF;font-size:1rem;display:block;">Cura pelo Movimento</strong>
+            <small style="color:var(--carol-soft-mint);">Carol Langowski • Fisioterapia &amp; Yoga Fascial</small>
+          </div>
+        </div>
+        <div style="font-size:0.86rem;">
+          <span>Material Didático de Apoio • Turma Oficial</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Carol Langowski • Todos os direitos reservados.
+        </div>
+        <div style="color:rgba(255,255,255,0.5);">
+          Design System v2.0 • Daylight Sanctuary &amp; Somatic Watercolor
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
