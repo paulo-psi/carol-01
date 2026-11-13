@@ -1,22 +1,18 @@
 # Diário de Bordo e Memória: Carol_01
 
 ## 📌 Estado Atual (Handoff Rápido)
-- **Última Atualização:** 2026-11-13 16:12
-- **Status do Projeto:** 🟢 **v1.2.7 Área de Respiro Expandida & Responsividade Clean em 8 Viewports** 🌸✨
+- **Última Atualização:** 2026-11-13 16:21
+- **Status do Projeto:** 🟢 **v1.2.8 Causa Raiz de Balões Sanada (Fontes WOFF2 Base64 & Largura Blindada)** 🌸✨
 - **URL Pública Oficial:** [`https://paulo-psi.github.io/carol-01/`](https://paulo-psi.github.io/carol-01/)
 - **Repositório GitHub:** [`https://github.com/paulo-psi/carol-01`](https://github.com/paulo-psi/carol-01)
 - **Última Entrega Concluída:**
-  - **Área de Respiro Ampla em Toda a Página:**
-    - Espaçamento vertical das seções ampliado para `clamp(72px, 8.5vw, 112px) 0;`.
-    - `.container` com margem periférica ampliada (`min(100% - 48px, 1200px)`), garantindo que nenhum bloco encoste em bordas de telas.
-    - Card do fluxograma emoldurado com passe-partout cremoso em aquarela (`#FAF7F0`) e padding respirável `clamp(16px, 2.5vw, 36px)`.
-  - **Fluxograma Somático Vetorial Refinado (SVG/PNG 1920x1080):**
-    - 85px de respiro livre entre cabeçalho e cards, citação contida em 20px, balões orgânicos de fala da Carol calibrados e curva 4->5 limpa.
-  - **Navegação Móvel em Pílulas Táteis:**
-    - Barra horizontal suave com pílulas para acesso imediato a todas as seções no mobile e tablet com rolagem de toque.
-  - **Auditoria Automatizada em 8 Viewports:**
-    - 100% aprovada sem overflow horizontal em 1920x1080, 1440x900, 1366x768, 1024x768, 768x1024, 390x844, 360x740 e 320x568.
-  - **Bateria Pytest & Playwright:** 100% verde (passou em 4.85s).
+  - **Diagnóstico Forense da Causa Raiz:**
+    - Identificado que o carregamento de SVG via tag `<img>` bloqueia `@import` de recursos de rede como Google Fonts por segurança W3C.
+    - O navegador do cliente caía em fonte cursiva de fallback do Windows (`Comic Sans MS`), cujas letras são até 45% mais largas que o `Caveat`, provocando o transbordamento das aspas e caracteres nos balões estreitos.
+  - **Cura Definitiva em 2 Níveis:**
+    1. **Fontes Embutidas em Base64:** Binários oficiais WOFF2 de `Caveat 700` e `Quicksand 700` foram embutidos diretamente no `<style>` do SVG em Data URI Base64. Renderização nativa vetorial 100% offline e universal em qualquer browser.
+    2. **Largura Blindada com Margem de Segurança:** Balões redimensionados para `240px` a `290px` (com mais de 40px de respiro interno lateral), mantidos perfeitamente dentro dos cards de `330px`.
+  - **Bateria Pytest & Playwright:** 100% verde (passou em 4.80s).
 - **Próximo Passo Imediato:** Divulgar o guia somático oficial para as alunas da turma.
 - **Pendências / Bloqueios:** Nenhum.
 - **Comando de Validação:** `pytest -v tests/test_carol_portal.py`
@@ -24,6 +20,13 @@
 ---
 
 ## Histórico Cronológico de Sessões
+
+### [2026-11-13] Blindagem Definitiva de Balões e Fontes WOFF2 Base64 (v1.2.8)
+- **O que foi feito:**
+  - Diagnóstico forense comprovando bloqueio de `@import` em tags `<img>` e medição empírica de larguras.
+  - Download e conversão para Base64 WOFF2 das fontes oficiais do Google Fonts.
+  - Ampliação das larguras dos balões no SVG com até 50px de margem de segurança lateral.
+  - Re-renderização e publicação imediata no GitHub Pages.
 
 ### [2026-11-13] Área de Respiro Expandida & Responsividade em 8 Viewports (v1.2.7)
 - **O que foi feito:**

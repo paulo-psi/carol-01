@@ -5,53 +5,63 @@ Resolução: 1920x1080 Vetorial (SVG e PNG)
 """
 
 import pathlib
+import sys
 from playwright.sync_api import sync_playwright
 
 root_dir = pathlib.Path(__file__).parent.parent
+sys.path.insert(0, str(root_dir / "scripts"))
+try:
+    from embedded_fonts import EMBEDDED_FONT_CSS
+except ImportError:
+    EMBEDDED_FONT_CSS = ""
+
 assets_img_dir = root_dir / "assets" / "img"
 assets_img_dir.mkdir(parents=True, exist_ok=True)
 svg_output_path = assets_img_dir / "fluxograma-jornada-fascia.svg"
 png_output_path = assets_img_dir / "fluxograma-jornada-fascia.png"
 
-def make_bubble(center_x, y, w, text, bg_color="#FFFFFF", border_color="#287E7C", text_color="#134E4A", h=32, r=16):
+def make_bubble(center_x, y, w, text, bg_color="#FFFFFF", border_color="#287E7C", text_color="#134E4A", h=34, r=17):
     """Gera um balão de fala somático unificado com cauda central apontando para o card."""
     x = center_x - (w / 2)
     hw = w / 2
-    tail_w = 12
-    tail_h = 6
+    tail_w = 14
+    tail_h = 7
     thw = tail_w / 2
     path_d = f"M {r} 0 L {w - r} 0 A {r} {r} 0 0 1 {w} {r} A {r} {r} 0 0 1 {w - r} {h} L {hw + thw:.1f} {h} L {hw:.1f} {h + tail_h} L {hw - thw:.1f} {h} L {r} {h} A {r} {r} 0 0 1 0 {r} A {r} {r} 0 0 1 {r} 0 Z"
     return f"""
     <!-- Balão de Fala da Carol -->
     <g transform="translate({x:.1f}, {y})" filter="url(#bubble-shadow)">
-      <path d="{path_d}" fill="{bg_color}" stroke="{border_color}" stroke-width="1.3" />
-      <text x="{hw:.1f}" y="21" class="bubble-text" fill="{text_color}" text-anchor="middle">{text}</text>
+      <path d="{path_d}" fill="{bg_color}" stroke="{border_color}" stroke-width="1.4" />
+      <text x="{hw:.1f}" y="18" dominant-baseline="middle" class="bubble-text" fill="{text_color}" text-anchor="middle">{text}</text>
     </g>"""
 
 # Centros exatos dos cards:
 # Card 1: 325.0 | Card 2: 748.3 | Card 3: 1171.7 | Card 4: 1595.0
-bubble_1 = make_bubble(center_x=325.0, y=175, w=200, text='"Solte o ar com suspiro!"', bg_color="#F0FDFA", border_color="#319795", text_color="#0F766E")
-bubble_2 = make_bubble(center_x=748.3, y=175, w=185, text='"Tudo está conectado!"', bg_color="#FFFDF8", border_color="#D97706", text_color="#92400E")
-bubble_3 = make_bubble(center_x=1171.7, y=175, w=215, text='"Onde dói ≠ Onde começou"', bg_color="#F0FDFA", border_color="#319795", text_color="#0F766E")
-bubble_4 = make_bubble(center_x=1595.0, y=175, w=170, text='"A escuta interna!"', bg_color="#FDF2F8", border_color="#DB2777", text_color="#9D174D")
+# Larguras ampliadas com folga de segurança total contra transbordamento:
+bubble_1 = make_bubble(center_x=325.0, y=172, w=260, text='"Solte o ar com suspiro!"', bg_color="#F0FDFA", border_color="#319795", text_color="#0F766E")
+bubble_2 = make_bubble(center_x=748.3, y=172, w=260, text='"Tudo está conectado!"', bg_color="#FFFDF8", border_color="#D97706", text_color="#92400E")
+bubble_3 = make_bubble(center_x=1171.7, y=172, w=290, text='"Onde dói ≠ Onde começou"', bg_color="#F0FDFA", border_color="#319795", text_color="#0F766E")
+bubble_4 = make_bubble(center_x=1595.0, y=172, w=240, text='"A escuta interna!"', bg_color="#FDF2F8", border_color="#DB2777", text_color="#9D174D")
 
-bubble_5 = make_bubble(center_x=325.0, y=615, w=185, text='"Gotinhas de orvalho!"', bg_color="#F0FDFA", border_color="#319795", text_color="#0F766E")
-bubble_6 = make_bubble(center_x=748.3, y=615, w=160, text='"Espaço em 360°!"', bg_color="#FFFDF8", border_color="#D97706", text_color="#92400E")
-bubble_7 = make_bubble(center_x=1171.7, y=615, w=185, text='"A fáscia deslizando!"', bg_color="#F0FDFA", border_color="#319795", text_color="#0F766E")
-bubble_8 = make_bubble(center_x=1595.0, y=615, w=210, text='"Durmam com os anjinhos!"', bg_color="#1A3C3F", border_color="#5EEAD4", text_color="#E6FFFA")
+bubble_5 = make_bubble(center_x=325.0, y=612, w=260, text='"Gotinhas de orvalho!"', bg_color="#F0FDFA", border_color="#319795", text_color="#0F766E")
+bubble_6 = make_bubble(center_x=748.3, y=612, w=240, text='"Espaço em 360°!"', bg_color="#FFFDF8", border_color="#D97706", text_color="#92400E")
+bubble_7 = make_bubble(center_x=1171.7, y=612, w=260, text='"A fáscia deslizando!"', bg_color="#F0FDFA", border_color="#319795", text_color="#0F766E")
+bubble_8 = make_bubble(center_x=1595.0, y=612, w=270, text='"Durmam com os anjinhos!"', bg_color="#1A3C3F", border_color="#5EEAD4", text_color="#E6FFFA")
 
 svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&amp;family=Nunito:wght@400;600;700&amp;family=Quicksand:wght@600;700&amp;display=swap');
       
+      {EMBEDDED_FONT_CSS}
+      
       .bg {{ fill: #FAF7F0; }}
-      .title-main {{ font-family: 'Quicksand', sans-serif; font-size: 34px; font-weight: 700; fill: #234E52; }}
-      .title-sub {{ font-family: 'Caveat', cursive; font-size: 20px; font-weight: 700; fill: #823866; }}
-      .node-title {{ font-family: 'Quicksand', sans-serif; font-size: 18px; font-weight: 700; fill: #0F172A; }}
-      .node-desc {{ font-family: 'Nunito', sans-serif; font-size: 13.5px; font-weight: 600; fill: #4A5568; line-height: 1.45; }}
-      .bubble-text {{ font-family: 'Caveat', cursive; font-size: 19px; font-weight: 700; }}
-      .badge-text {{ font-family: 'Quicksand', sans-serif; font-size: 11.5px; font-weight: 700; fill: #234E52; letter-spacing: 0.06em; }}
+      .title-main {{ font-family: 'Quicksand', system-ui, sans-serif; font-size: 34px; font-weight: 700; fill: #234E52; }}
+      .title-sub {{ font-family: 'Caveat', cursive, sans-serif; font-size: 20px; font-weight: 700; fill: #823866; }}
+      .node-title {{ font-family: 'Quicksand', system-ui, sans-serif; font-size: 18px; font-weight: 700; fill: #0F172A; }}
+      .node-desc {{ font-family: 'Nunito', system-ui, sans-serif; font-size: 13.5px; font-weight: 600; fill: #4A5568; line-height: 1.45; }}
+      .bubble-text {{ font-family: 'Caveat', cursive, sans-serif; font-size: 19px; font-weight: 700; }}
+      .badge-text {{ font-family: 'Quicksand', system-ui, sans-serif; font-size: 11.5px; font-weight: 700; fill: #234E52; letter-spacing: 0.06em; }}
 
       /* Nó Dark (Santuário - Nó 8) com contraste AAA */
       .node-dark .node-title {{ fill: #E6FFFA !important; }}

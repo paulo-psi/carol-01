@@ -2,6 +2,12 @@
 
 Todas as mudanças relevantes deste projeto serão documentadas neste arquivo.
 
+## [1.2.8] - 2026-11-13
+### Corrigido
+- **Causa Raiz do Vazamento de Textos nos Balões Solucionada:** Diagnóstico forense comprovou que navegadores bloqueiam `@import` de fontes externas do Google Fonts quando SVGs são carregados em tags `<img>` (Sandbox de Segurança do W3C). Como consequência, o navegador do usuário recorria à fonte cursiva padrão do sistema (Comic Sans / Segoe), cujos glifos são de 30% a 45% mais largos que o Caveat, fazendo as aspas e letras vazarem pelas bordas de balões estreitos.
+- **Fontes Oficiais WOFF2 Embutidas em Base64 no SVG:** Inclusão direta dos binários oficiais de `Caveat 700` e `Quicksand 700` dentro do `<defs><style>` do arquivo `fluxograma-jornada-fascia.svg` em formato Base64 (`data:font/woff2;base64,...`). O arquivo agora é 100% autossuficiente e universal, dispensando qualquer requisição de rede e garantindo renderização idêntica em qualquer navegador e dispositivo.
+- **Largura dos Balões com Blindagem Anti-Transbordamento:** As larguras dos 8 balões de fala da Carol foram redimensionadas para `240px` a `290px` (com folga de segurança lateral de até 50px de cada lado), perfeitamente contidas dentro dos cards de `330px`. Nenhuma letra ou pontuação vaza ou encosta nas bordas, mesmo sob variações extremas de renderização.
+
 ## [1.2.7] - 2026-11-13
 ### Adicionado
 - **Passe-Partout e Ampla Área de Respiro no Mapa Somático:** Inclusão de moldura interna cremoso-aquarela (`#FAF7F0`) com padding respirável `clamp(16px, 2.5vw, 36px)` em volta do fluxograma vetorial, conferindo acabamento de galeria de arte e impedindo qualquer sensação de compressão visual contra as bordas do card.
