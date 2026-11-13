@@ -19,3 +19,9 @@ mcp_config.json
 .playwright-mcp/
 .DS_Store
 Thumbs.db
+
+# Mídia pesada e temporários de renderização
+assets/video/*.mp4
+assets/video/*.wav
+assets/slides/*.pptx
+assets/slides/rendered/
