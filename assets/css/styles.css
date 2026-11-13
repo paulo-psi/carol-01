@@ -20,17 +20,17 @@
   --carol-bg-card: #FFFFFF;
 
   /* Identidade do Selo (Aquarela & Afeto) */
-  --carol-orchid: #B1558D;
-  --carol-orchid-hover: #9A4377;
+  --carol-orchid: #9B457B;
+  --carol-orchid-hover: #823866;
   --carol-orchid-soft: #FDF2F8;
   --carol-turquoise: #70D3C7;
   --carol-sand-bg: #F9F5E9;
   --carol-sand-surface: #FFFDF8;
   --carol-sand-border: #EDE1C9;
-  --carol-terracotta: #907868;
+  --carol-terracotta: #735645;
 
   /* Acentos Solares & Quentes */
-  --carol-amber: #D69E2E;
+  --carol-amber: #975A16;
   --carol-amber-soft: #FEFCBF;
   --carol-amber-dark: #744210;
 
@@ -53,13 +53,13 @@
   --radius-card: 22px;
   --radius-pill: 999px;
 
-  /* Sombras Difusas Orgânicas */
-  --shadow-sm: 0 2px 8px rgba(35, 78, 82, 0.04);
-  --shadow-organic: 0 4px 20px rgba(35, 78, 82, 0.05), 0 12px 32px rgba(35, 78, 82, 0.04);
-  --shadow-hover: 0 8px 30px rgba(35, 78, 82, 0.12), 0 18px 48px rgba(35, 78, 82, 0.08);
+  /* Sombras Difusas Orgânicas e Neutras */
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
+  --shadow-organic: 0 4px 20px rgba(15, 23, 42, 0.05), 0 12px 32px rgba(15, 23, 42, 0.04);
+  --shadow-hover: 0 8px 30px rgba(15, 23, 42, 0.10), 0 18px 48px rgba(15, 23, 42, 0.06);
   --shadow-modal: 0 24px 64px rgba(15, 23, 42, 0.22);
   --border-subtle: 1px solid rgba(49, 151, 149, 0.14);
-  --border-sand: 1px solid rgba(144, 120, 104, 0.18);
+  --border-sand: 1px solid rgba(115, 86, 69, 0.18);
 }
 
 /* 2. RESET GLOBAL & FUNDAÇÃO */
@@ -101,6 +101,13 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+/* Hierarquia Tipográfica Harmônica (Escala semântica controlada) */
+h2:not(.mantra-title) {
+  font-family: var(--font-title);
+  font-size: clamp(1.45rem, 2.6vw, 2.1rem) !important;
+  line-height: 1.25;
 }
 
 button {
@@ -208,7 +215,10 @@ section[id] {
   font-weight: 600;
   font-size: 0.94rem;
   color: var(--carol-ink-sub);
-  padding: 6px 12px;
+  padding: 8px 14px;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
   border-radius: var(--radius-pill);
   transition: all 0.2s ease;
 }
@@ -387,25 +397,14 @@ section[id] {
 /* Ritual do Suspiro (Card Afetuoso no Hero) */
 .ritual-suspiro-card {
   background: var(--carol-sand-surface);
-  border: var(--border-sand);
+  border: 1.5px solid rgba(49, 151, 149, 0.22);
   border-radius: var(--radius-card);
-  padding: 20px 24px;
+  padding: 22px 26px;
   display: flex;
   align-items: center;
-  gap: 16px;
-  box-shadow: var(--shadow-sm);
+  gap: 18px;
+  box-shadow: 0 4px 18px rgba(35, 78, 82, 0.05);
   position: relative;
-  overflow: hidden;
-}
-
-.ritual-suspiro-card::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 5px;
-  background: linear-gradient(180deg, var(--carol-turquoise), var(--carol-orchid));
 }
 
 .ritual-suspiro-icon {
@@ -413,9 +412,11 @@ section[id] {
   flex-shrink: 0;
 }
 
+.ritual-suspiro-text h2,
+.ritual-suspiro-text h3,
 .ritual-suspiro-text h4 {
   font-family: var(--font-title);
-  font-size: 1.05rem;
+  font-size: 1.12rem;
   font-weight: 700;
   color: var(--carol-deep-teal);
   margin-bottom: 4px;
@@ -495,30 +496,23 @@ section[id] {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .card-icon-circle {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  background: var(--carol-ice-mint);
-  color: var(--carol-deep-teal);
-  display: flex;
+  font-size: 1.6rem;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
   flex-shrink: 0;
 }
 
 .card-icon-circle.orchid {
-  background: var(--carol-orchid-soft);
   color: var(--carol-orchid);
 }
 
 .card-icon-circle.amber {
-  background: var(--carol-amber-soft);
-  color: var(--carol-amber-dark);
+  color: var(--carol-amber);
 }
 
 .card-title {
@@ -651,7 +645,7 @@ section[id] {
   background: var(--carol-deep-teal);
   color: #FFFFFF;
   border-color: var(--carol-deep-teal);
-  box-shadow: 0 4px 16px rgba(35, 78, 82, 0.25);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.18);
 }
 
 .camada-pane {
@@ -851,7 +845,7 @@ section[id] {
 
 .mantra-title {
   font-family: var(--font-title);
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   font-style: italic;
   font-weight: 600;
   color: var(--carol-ice-mint);
@@ -1257,7 +1251,7 @@ body.tapete-mode #btn-toggle-tapete {
     color: #111111 !important;
   }
 
-  .santuario-card h4, .santuario-card p {
+  .santuario-card h3, .santuario-card h4, .santuario-card p {
     color: #111111 !important;
   }
 
@@ -1266,7 +1260,7 @@ body.tapete-mode #btn-toggle-tapete {
     color: #111111 !important;
   }
 
-  .diario-header h4 {
+  .diario-header h3, .diario-header h4, .diario-status-badge, .diario-actions {
     color: #111111 !important;
   }
 

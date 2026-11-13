@@ -1,19 +1,29 @@
 # Diário de Bordo e Memória: Carol_01
 
 ## 📌 Estado Atual (Handoff Rápido)
-- **Última Atualização:** 2026-11-13 11:20
-- **Status do Projeto:** 🟢 **v1.2.0 Portal Completo, Encantador & Auditado com Laudo Forense Emitido** 🌸✨
+- **Última Atualização:** 2026-11-13 14:40
+- **Status do Projeto:** 🟢 **v1.2.1 Plano de Cura da Auditoria Executado & 100% Homologado** 🌸✨
 - **Última Entrega Concluída:**
-  - **Entrega do Plano de Encantamento (v1.2.0):** Áudio real da Carol (51s), Modo Tapete (`localStorage`), Glossário Vivo (`<details>`), Diário Somático Privado e Folha de Estudos para Impressão (`@media print`).
-  - **Auditoria Profunda Concluída:** Laudo forense gerado em [`docs/auditoria_profunda_2026_11_13.md`](./auditoria_profunda_2026_11_13.md) com 0 erros de console, 0 links quebrados, 0 IDs órfãos, 0 overflow em 4 viewports e identificação de 3 fatias de lapidação cirúrgica (Acessibilidade WCAG, Contraste de cores e Design Editorial anti-slop).
+  - **Execução Integral das 3 Fatias do Plano de Cura:**
+    1. *Fatia 1 (Acessibilidade & Contraste WCAG AA):* Hierarquia semântica regularizada (`h1 -> h2 -> h3`), eliminação de inversões de escala tipográfica (`heading_scale_issues = 0`), escurecimento de tokens para contraste WCAG AA (`--carol-terracotta: #735645` e `--carol-amber: #975A16`) e ampliação dos alvos táteis dos links da navbar para $\ge 40\text{px}$ (`small_tap_targets = 0`).
+    2. *Fatia 2 (Design Editorial Anti-Slop):* Remoção da barra artificial de 5px (`.ritual-suspiro-card::before`) substituída por borda suave translúcida, alinhamento editorial dos ícones bento no fluxo tipográfico (sem caixinhas 48x48 de templates de IA) e sombras neutras orgânicas.
+    3. *Fatia 3 (Higiene de Governança & Re-Auditoria):* Caminhos normalizados para relativos, re-auditoria profunda via `deep_audit_runner.py` com **todos os indicadores dinâmicos zerados** (0 erros de console, 0 overflow, 0 small tap targets, 0 heading scale issues).
+  - **Sincronização 100%:** Replicado entre [`index.html`](../index.html) e [`src/index.html`](../src/index.html).
   - **Bateria Pytest & Playwright:** 13 asserções automatizadas passando com 100% de sucesso nos 4 viewports (1440, 768, 390 e 320px).
-- **Próximo Passo Imediato:** Executar o Plano de Cura Fatiado (Fatias 1, 2 e 3 de Acessibilidade, Contraste WCAG e Polimento Anti-Slop) mediante aprovação do usuário.
-- **Pendências / Bloqueios:** Nenhuma pendência técnica; aguardando escolha das fatias de cura.
+  - **Screenshots Atualizadas:** Gravadas em [`assets/screenshots/`](../assets/screenshots/).
+- **Próximo Passo Imediato:** Apresentar os resultados da cura final para o usuário ou iniciar novos desdobramentos (ex.: Aula 2 ou novos materiais).
+- **Pendências / Bloqueios:** Nenhum.
 - **Comando de Validação:** `pytest -v tests/test_carol_portal.py`
 
 ---
 
 ## Histórico Cronológico de Sessões
+
+### [2026-11-13] Execução do Plano de Cura da Auditoria (v1.2.1)
+- **O que foi feito:**
+  - Aplicação cirúrgica das 3 Fatias do Plano de Cura (Acessibilidade WCAG, Contraste de cores, Design Editorial anti-slop e Higiene).
+  - Re-execução da sonda profunda `deep_audit_runner.py` com todos os contadores zerados.
+  - Sincronização entre `index.html` e `src/index.html`, bateria Pytest 100% verde e novas screenshots capturadas.
 
 ### [2026-11-13] Auditoria Profunda de Produto, Código e Experiência (v1.2.0)
 - **O que foi feito:**

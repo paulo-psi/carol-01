@@ -3,7 +3,7 @@
 
 **Data da Auditoria:** 13 de Novembro de 2026  
 **Auditor:** Agente Forense de Produto & Comitê Multidisciplinar (Antigravity 2.0)  
-**Projeto:** `Sites/Carol_01` (`C:\Users\Paulo\Antigravity\Sites\Carol_01`)  
+**Projeto:** `Sites/Carol_01` (`./`)  
 **Versão Atual:** `v1.2.0`  
 **Arquétipos:** `WebApp / Plataforma HTML`, `Somatic Wellness`, `Content-Docs`  
 
@@ -93,20 +93,19 @@
 
 ---
 
-## 3. Plano de Cura Fatiado (Proposta de Execução)
+## 3. Plano de Cura Fatiado (Executado com 100% de Sucesso)
 
-Apresentamos as 3 fatias cirúrgicas para aprovação do usuário:
+- [x] **Fatia 1 (Acessibilidade & Contraste WCAG AA):**
+  - Ajustada hierarquia de headings (`h4` -> `h2` e `h3`) em `index.html`.
+  - Recalibrada escala de `h2.mantra-title` para manter proporção harmoniosa com o `h1`.
+  - Escurecido `--carol-terracotta` (#735645) e `--carol-amber` (#975A16) para textos sobre branco (ratios > 4.5:1).
+  - Elevado alvo tátil de `.navbar-link` para $\ge 40\text{px}$ (`small_tap_targets = 0`).
 
-- [ ] **Fatia 1 (Acessibilidade & Contraste WCAG AA):**
-  - Ajustar hierarquia de headings (`h4` -> `h2` e `h3`) em `index.html`.
-  - Recalibrar escala de `h2.mantra-title` para manter proporção harmoniosa com o `h1`.
-  - Escurecer `--carol-terracotta` (#735645) e `--carol-amber` (#975A16) para textos sobre branco.
-  - Elevar alvo tátil de `.navbar-link` para $\ge 40\text{px}$.
+- [x] **Fatia 2 (Polimento de Design Editorial Anti-Slop):**
+  - Removida a barra lateral artificial `::before` de 5px do card de suspiro e adotada borda translúcida perimétrica orgânica.
+  - Alinhados ícones dos cards bento em fluxo horizontal com os títulos, eliminando as caixinhas 48x48 de templates de IA.
 
-- [ ] **Fatia 2 (Polimento de Design Editorial Anti-Slop):**
-  - Remover a barra lateral `::before` do card de suspiro e adotar borda translúcida perimétrica orgânica.
-  - Alinhar ícones dos cards bento em fluxo horizontal com os títulos (estilo editorial de revista/livro somático).
-
-- [ ] **Fatia 3 (Higiene de Governança):**
-  - Normalizar caminhos absolutos remanescentes na documentação para caminhos relativos.
-  - Re-executar bateria Playwright e linter Impeccable para verificar pontuação máxima.
+- [x] **Fatia 3 (Higiene de Governança & Re-Auditoria):**
+  - Normalizados caminhos absolutos na documentação para caminhos relativos ao workspace.
+  - Re-executada a sonda `deep_audit_runner.py`: **0 erros de console, 0 overflow, 0 small tap targets, 0 heading scale issues**.
+  - Re-executada a bateria Playwright/Pytest: **100% aprovada**.

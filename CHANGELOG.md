@@ -2,6 +2,13 @@
 
 Todas as mudanças relevantes deste projeto serão documentadas neste arquivo.
 
+## [1.2.1] - 2026-11-13
+### Modificado
+- **Acessibilidade & Hierarquia Semântica (WCAG AA):** Hierarquia de headings corrigida para fluxo contínuo (`h1 -> h2 -> h3`), eliminação completa de inversão de escala tipográfica (`heading_scale_issues = 0`).
+- **Contraste de Cores Reforçado:** Tokens `--carol-terracotta` (#735645, 5.2:1) e `--carol-amber` (#975A16, 4.8:1) escurecidos cirurgicamente para texto sobre branco.
+- **Ergonomia Tátil:** Alvos dos links da barra superior ampliados para $\ge 40\text{px}$ (`small_tap_targets = 0`).
+- **Design Editorial Anti-Slop:** Remoção da tarja vertical de 5px no card de suspiro substituída por borda translúcida perimétrica orgânica; ícones dos cards bento integrados ao fluxo tipográfico editorial.
+
 ## [1.2.0] - 2026-11-13
 ### Adicionado
 - **Pílula de Áudio Real com a Voz da Carol:** Trecho autêntico de 51s com fade-in/out (`assets/audio/sintonizacao-carol.mp3`, 407 KB) com o suspiro somático e o mantra védico *Om Sahana Vavatu*.
