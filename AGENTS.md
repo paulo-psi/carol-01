@@ -5,7 +5,7 @@
 - **Arquétipo:** `software-app`
 - **Stack Prevista:** HTML5 semântico, CSS3 moderno, JavaScript vanilla/modular, Python (suporte à extração e análise de PPTX/mídia).
 - **Data de Criação:** 2026-11-13
-- **Diretório Raiz dos Sites:** `../` (`C:\Users\Paulo\Antigravity\Sites`)
+- **Diretório Raiz dos Sites:** `../` (Hub de Sites)
 
 ## 2. Fontes da Verdade (Caminhos Relativos)
 - **Estado Atual e Handoff Rápido:** [`./docs/log.md`](./docs/log.md) (leia o topo ao iniciar qualquer sessão)

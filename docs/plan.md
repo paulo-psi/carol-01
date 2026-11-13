@@ -6,7 +6,7 @@
 ---
 
 ## Fase 1 — Fundação & Governança (Concluída)
-- [x] **Tarefa 1.1:** Inicializar estrutura física de subprojeto sob o Hub `Sites/` (`C:\Users\Paulo\Antigravity\Sites\Carol_01`)
+- [x] **Tarefa 1.1:** Inicializar estrutura física de subprojeto sob o Hub `Sites/` (`Sites/Carol_01`)
 - [x] **Tarefa 1.2:** Configurar governança proporcional V4.9 (`AGENTS.md`, `brief.md`, `plan.md`, `log.md`, `ADR 0001`, `.gitignore`, `CHANGELOG.md`)
 - [x] **Tarefa 1.3:** Inicializar repositório Git local e registrar no seletor de projetos do Antigravity 2.0
 
