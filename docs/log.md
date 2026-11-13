@@ -1,25 +1,21 @@
 # Diário de Bordo e Memória: Carol_01
 
 ## 📌 Estado Atual (Handoff Rápido)
-- **Última Atualização:** 2026-11-13 10:55
-- **Status do Projeto:** 🟢 **v1.0.0 Entregue e Validado com Sucesso — Guia Digital de Apoio (Aula 1)** 🌸✨
+- **Última Atualização:** 2026-11-13 11:03
+- **Status do Projeto:** 🟢 **v1.1.0 Enriquecimento Epistêmico das Aulas Integrado & Validado com 100% de Sucesso** 🌸✨
 - **Última Entrega Concluída:**
-  - Implementação completa do portal HTML5 semântico ([`index.html`](../index.html) e [`src/index.html`](../src/index.html)).
-  - Estilização responsiva em [`assets/css/styles.css`](../assets/css/styles.css) baseada no Design System v2.0 (*Daylight Sanctuary & Watercolor Botanical*).
-  - Interatividades somáticas em [`assets/js/app.js`](../assets/js/app.js):
-    1. *Ritual do Suspiro Guiado:* Ciclo de respiração e relaxamento no Hero.
-    2. *Abas das 3 Camadas Fasciais:* Superficial, Intermediária e Profunda com as abordagens práticas de Carol (Rolo suave, Espreguiçar, Balanceio elástico).
-    3. *Mini-Laboratório 1:* Revelação interativa do Disco de Algodão Doce e as gotinhas de orvalho.
-    4. *Mini-Laboratório 2:* Teste Somático de Torção na Cadeira com checklist passo a passo e feedback de amplitude aumentada.
-    5. *Termômetro Térmico/Mental da Fluidez:* Tabela comparativa (Frio vs. Calor, Sedentarismo vs. Movimento/Meditação).
-    6. *Santuário Noturno:* Seção Deep Teal com mantra *sthiram sukham asanam*, guia do aplicativo e trilhos anatômicos.
-  - Suíte Pytest end-to-end com Playwright ([`tests/test_carol_portal.py`](../tests/test_carol_portal.py)) **100% verde**:
-    - 11 imagens e aquarelas oficiais verificadas e carregadas sem falha.
-    - Zero erros de console e de página.
-    - Imunidade matemática a overflow horizontal em 4 viewports (Desktop 1440px, Tablet 768px, Mobile 390px e Mobile compacto 320px).
-  - Screenshots de alta fidelidade capturados em [`assets/screenshots/`](../assets/screenshots/).
-  - Conformidade total com `project_doctor` (arquivos > 50 MB devidamente ignorados no Git).
-- **Próximo Passo Imediato:** Apresentar a entrega ao usuário para visualização no navegador e preparar deploy (ex.: GitHub Pages ou servidor local).
+  - **Zero Vídeos Pesados no HTML:** Alinhado com a diretriz do usuário, nenhum arquivo de vídeo pesado é disponibilizado no site. Em vez disso, todo o repertório conceitual, clínico e anedótico dos 190 minutos de aula foi transposto para o código e para a experiência interativa.
+  - **Novos Blocos Epistêmicos Enriquecidos no HTML:**
+    1. *A Descoberta da Fáscia Viva pelo Dr. Guimberteau:* A microcâmera em cirurgia viva em Bordeaux revelando as gotinhas de orvalho e os microvacúolos.
+    2. *A Metáfora da Mexerica (Tangerina):* O gominho como músculo e cada gotinha interna de suco como célula envolvida por película fascial.
+    3. *O Caso Clínico do Aluno do Tênis:* Por que nunca tratamos apenas onde dói? A liberação fascial distal no antebraço e abdômen curando a dor do ombro.
+    4. *A Ciência do Bocejo e do Suspiro:* A autorregulação do sistema nervoso parassimpático e do nervo vago ativando a hidratação fascial.
+    5. *Cicatrizes Cirúrgicas & Miofibroblastos:* O cuidado com cesáreas, mastectomias e cirurgias articulares para soltar as âncoras de tração na roupa interna.
+    6. *O Método dos Cinco Filamentos & As Espirais:* A geometria sagrada da lemniscata ($\infty$) e o movimento não-linear no Yoga.
+  - Sincronização rigorosa entre [`index.html`](../index.html) e [`src/index.html`](../src/index.html).
+  - Bateria Pytest com Playwright **100% aprovada** nos 4 viewports (1440, 768, 390 e 320px).
+  - Screenshots atualizados em [`assets/screenshots/`](../assets/screenshots/).
+- **Próximo Passo Imediato:** Compartilhar o HTML enriquecido com o usuário para validação final.
 - **Pendências / Bloqueios:** Nenhum.
 - **Comando de Validação:** `cd C:\Users\Paulo\Antigravity\Sites\Carol_01; pytest tests`
 
@@ -27,9 +23,7 @@
 
 ## Histórico Cronológico de Sessões
 
-### [2026-11-13] Implementação e Validação do Guia Digital de Apoio (v1.0.0)
+### [2026-11-13] Enriquecimento Conceitual e Clínico das Aulas (v1.1.0)
 - **O que foi feito:**
-  - Transcrição integral das duas aulas e consolidação do Design System v2.0.
-  - Construção do HTML, CSS e JS modular com todas as 8 seções narrativas de encantamento.
-  - Bateria automatizada Playwright passando com 100% de sucesso.
-- **Decisões:** Design duplo (Daylight e Aquarela), tipografia `Quicksand` + `Nunito` + `Caveat`, WCAG AAA/AA em todos os textos.
+  - Extração minuciosa das histórias, metáforas e casos clínicos reais dos 190 minutos de aula e integração direta na narrativa do HTML.
+  - Reforço das analogias práticas da Carol sem carregar vídeos no cliente, mantendo o site leve, ultrarrápido e pedagogicamente profundo.
