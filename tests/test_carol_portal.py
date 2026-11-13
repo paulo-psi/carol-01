@@ -90,7 +90,59 @@ def test_portal_carol_full_experience(local_server):
         btn_suspiro.click()
         assert "Pausar" in btn_suspiro.inner_text()
 
-        # 7. Responsividade & Imunidade a Overflow Horizontal em 4 Viewports (1440, 768, 390, 320)
+        # 7. Melhoria 1: Pílula de Áudio da Carol (Sintonização Afetuosa)
+        audio_el = page.locator("#audio-sintonizacao")
+        assert audio_el.count() == 1
+        assert "sintonizacao-carol.mp3" in audio_el.get_attribute("src")
+        btn_audio = page.locator("#btn-audio-carol")
+        assert btn_audio.is_visible()
+        btn_audio.click()
+        page.wait_for_timeout(300)
+        assert btn_audio.get_attribute("aria-pressed") == "true"
+        btn_audio.click()
+        page.wait_for_timeout(200)
+        assert btn_audio.get_attribute("aria-pressed") == "false"
+
+        # 8. Melhoria 2: Modo Ao Lado do Tapete (Tapete Mode & Persistência)
+        btn_tapete = page.locator("#btn-toggle-tapete")
+        assert btn_tapete.is_visible()
+        btn_tapete.click()
+        page.wait_for_timeout(200)
+        assert page.evaluate("() => document.body.classList.contains('tapete-mode')")
+        assert page.evaluate("() => localStorage.getItem('carol_tapete_mode') === 'active'")
+        # Desativar e verificar retorno
+        btn_tapete.click()
+        page.wait_for_timeout(200)
+        assert not page.evaluate("() => document.body.classList.contains('tapete-mode')")
+        assert page.evaluate("() => localStorage.getItem('carol_tapete_mode') === 'inactive'")
+
+        # 9. Melhoria 3: Glossário Vivo do Corpo (Acordeão <details>)
+        glossario_sec = page.locator("#glossario")
+        assert glossario_sec.is_visible()
+        glossario_items = page.locator(".glossario-item")
+        assert glossario_items.count() == 8
+        first_item = glossario_items.first
+        first_item.locator("summary").click()
+        page.wait_for_timeout(200)
+        assert first_item.get_attribute("open") is not None
+        assert "Biotensegridade" in first_item.locator("summary").inner_text()
+        assert "espaçadores flutuantes" in first_item.locator(".glossario-content").inner_text()
+
+        # 10. Melhoria 4: Diário Somático da Aluna (Persistência Local)
+        diario_input = page.locator("#diario-textarea")
+        assert diario_input.is_visible()
+        diario_input.fill("Hoje senti a fáscia do meu pescoço deslizar suavemente após o suspiro!")
+        page.wait_for_timeout(600)  # aguardar debounce de 400ms
+        status_text = page.locator("#diario-status").inner_text()
+        assert "Salvo" in status_text
+        saved_storage = page.evaluate("() => localStorage.getItem('carol_diario_aula1')")
+        assert "pescoço deslizar" in saved_storage
+
+        # 11. Melhoria 5: Botão de Impressão de Folha de Estudos
+        btn_print = page.locator("#btn-print-page")
+        assert btn_print.is_visible()
+
+        # 12. Responsividade & Imunidade a Overflow Horizontal em 4 Viewports (1440, 768, 390, 320)
         viewports = [
             {"width": 1440, "height": 900},
             {"width": 768, "height": 1024},
@@ -102,7 +154,7 @@ def test_portal_carol_full_experience(local_server):
             overflow = page.evaluate("() => document.documentElement.scrollWidth > document.documentElement.clientWidth")
             assert not overflow, f"Overflow horizontal detectado no viewport {vp}"
 
-        # 8. Zero erros de console
+        # 13. Zero erros de console
         assert len(console_errors) == 0, f"Erros de console detectados: {console_errors}"
         assert len(page_errors) == 0, f"Erros de página detectados: {page_errors}"
 

@@ -36,11 +36,13 @@
           <li><a href="#camadas" class="navbar-link">3 Camadas</a></li>
           <li><a href="#colageno" class="navbar-link">Colágeno</a></li>
           <li><a href="#biotensegridade" class="navbar-link">Biotensegridade</a></li>
-          <li><a href="#roteiro" class="navbar-link">Roteiro da Turma</a></li>
+          <li><a href="#glossario" class="navbar-link">Glossário</a></li>
+          <li><a href="#roteiro" class="navbar-link">Roteiro</a></li>
         </ul>
       </nav>
 
       <div class="navbar-actions">
+        <button type="button" id="btn-toggle-tapete" class="btn btn-secondary btn-sm" aria-pressed="false" title="Aumenta as letras e realça os exercícios para ver de longe no tapete">🧘‍♀️ Modo Tapete</button>
         <a href="#santuario-pratica" class="btn btn-primary btn-sm">Ir para o Tapetinho 🧘‍♀️</a>
       </div>
     </div>
@@ -66,15 +68,19 @@
           Bem-vinda ao seu guia digital de apoio da <strong>Aula 1</strong>. Aqui você encontra as pontes entre a fisioterapia integrativa, o acolhimento do Yoga e a inteligência viva da sua rede corporal.
         </p>
 
-        <!-- Ritual do Suspiro Guiado -->
+        <!-- Ritual do Suspiro Guiado e Voz da Carol -->
         <div class="ritual-suspiro-card">
           <div class="ritual-suspiro-icon">🌬️</div>
           <div class="ritual-suspiro-text">
-            <h4>Ritual de Abertura: Solte o ar com um suspiro</h4>
+            <h4>Ritual de Abertura: Sintonização &amp; Suspiro</h4>
             <p id="suspiro-status-text">
               <em>"Mãos unidas em frente ao coração... Solte o ar com um suspiro relaxando o peito e a mandíbula."</em>
             </p>
-            <div style="margin-top:10px;">
+            <audio id="audio-sintonizacao" src="../assets/audio/sintonizacao-carol.mp3" preload="none"></audio>
+            <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+              <button type="button" id="btn-audio-carol" class="btn btn-orchid btn-sm" aria-pressed="false" aria-label="Ouvir voz e mantra da Carol">
+                ▶ Ouvir Voz da Carol (51s)
+              </button>
               <button type="button" id="btn-play-suspiro" class="btn btn-secondary btn-sm" aria-label="Iniciar respiração com suspiro guiado">
                 🌬️ Iniciar Respiração Guiada
               </button>
@@ -660,7 +666,90 @@
   </section>
 
   <!-- ========================================================================
-       8. SANTUÁRIO DA PRÁTICA & ROTEIRO DA TURMA (FECHAMENTO)
+       8. GLOSSÁRIO VIVO DO CORPO (DICIONÁRIO DE FÁSCIA)
+       ======================================================================== -->
+  <section class="section-glossario" id="glossario">
+    <div class="container container-narrow">
+      <div style="text-align:center;margin-bottom:36px;">
+        <span class="tag-pill tag-orchid">Dicionário Somático</span>
+        <h2 style="font-family:var(--font-title);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--carol-ink-title);margin-top:8px;">
+          Glossário Vivo da Fáscia
+        </h2>
+        <p style="color:var(--carol-ink-body);max-width:600px;margin:8px auto 0;font-size:0.98rem;">
+          Os conceitos científicos da nossa aula traduzidos em linguagem simples e acolhedora para consultar sempre que precisar.
+        </p>
+      </div>
+
+      <div class="glossario-accordion-list">
+        <!-- Item 1 -->
+        <details class="glossario-item">
+          <summary>Biotensegridade</summary>
+          <div class="glossario-content">
+            A arquitetura viva do corpo! Ao contrário de um prédio onde os tijolos se empilham pesadamente, o corpo funciona por equilíbrio: os ossos são espaçadores flutuantes e a rede de fáscia mantém uma tensão contínua e elástica, absorvendo impactos e distribuindo o movimento por todo o organismo.
+          </div>
+        </details>
+
+        <!-- Item 2 -->
+        <details class="glossario-item">
+          <summary>Miofibroblastos</summary>
+          <div class="glossario-content">
+            Células especiais que vivem na fáscia com capacidade de contração mecânica real. Elas reagem diretamente ao estado emocional: em momentos de estresse crônico ou frio, elas aumentam a tensão do tecido; no acolhimento, calor e respiração com suspiro, elas relaxam e amolecem.
+          </div>
+        </details>
+
+        <!-- Item 3 -->
+        <details class="glossario-item">
+          <summary>Pandiculação</summary>
+          <div class="glossario-content">
+            O espreguiçar instintivo e prazeroso! É o mesmo movimento que os gatos e cachorros fazem ao acordar. Ao espreguiçar suavemente em espiral, você reseta os fusos musculares e reidrata a substância fundamental da fáscia após horas de repouso.
+          </div>
+        </details>
+
+        <!-- Item 4 -->
+        <details class="glossario-item">
+          <summary>Fasciacytes (Fasciócitos)</summary>
+          <div class="glossario-content">
+            Células recentemente descobertas pela equipe da anatomista italiana Dra. Carla Stecco. Sua função primária é produzir continuamente o ácido hialurônico de alta viscosidade, criando o "orvalho" que permite que as camadas fasciais deslizem entre si sem atrito ou dor.
+          </div>
+        </details>
+
+        <!-- Item 5 -->
+        <details class="glossario-item">
+          <summary>Trilhos Anatômicos (Anatomy Trains)</summary>
+          <div class="glossario-content">
+            Conceito revolucionário do Dr. Tom Myers que comprovou que os músculos não começam e terminam isolados nos ossos. Eles estão conectados em longas linhas contínuas de fáscia (como trilhos de trem) da sola dos pés até o topo da cabeça.
+          </div>
+        </details>
+
+        <!-- Item 6 -->
+        <details class="glossario-item">
+          <summary>Matriz Extracelular (MEC)</summary>
+          <div class="glossario-content">
+            O "oceano biológico" do corpo. É o ambiente tridimensional gelatinoso onde todas as células vivem banhadas. Formada por água, colágeno, elastina e glicosaminoglicanos, é por onde passam os nutrientes, a comunicação elétrica e os estímulos mecânicos.
+          </div>
+        </details>
+
+        <!-- Item 7 -->
+        <details class="glossario-item">
+          <summary>Interocepção (O 8º Sentido)</summary>
+          <div class="glossario-content">
+            A nossa capacidade neurológica de sentir o corpo por dentro: batimentos cardíacos, temperatura interna, respiração, sensação de peso ou leveza. Cerca de 80% das terminações nervosas livres da fáscia são interoceptivas, fazendo dela o nosso maior órgão sensorial.
+          </div>
+        </details>
+
+        <!-- Item 8 -->
+        <details class="glossario-item">
+          <summary>Ácido Hialurônico &amp; Tixotropia</summary>
+          <div class="glossario-content">
+            A fáscia possui uma propriedade mágica chamada tixotropia: quando o corpo fica parado ou frio, o gel fascial fica espesso e rígido; quando aquecemos o corpo com movimentos circulares e respiração, ele se torna líquido, fluido e suave, devolvendo o deslizamento.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       9. SANTUÁRIO DA PRÁTICA & ROTEIRO DA TURMA (FECHAMENTO)
        ======================================================================== -->
   <section class="section-santuario" id="santuario-pratica">
     <div class="container santuario-inner">
@@ -691,6 +780,22 @@
         </div>
       </div>
 
+      <!-- Diário Somático da Aluna (Persistência Local) -->
+      <div class="diario-somatico-card">
+        <div class="diario-header">
+          <h4>📝 Meu Diário Somático (Aula 1)</h4>
+          <span id="diario-status" class="diario-status-badge">Privado • Salvo no seu aparelho</span>
+        </div>
+        <p style="font-size:0.92rem;color:var(--carol-soft-mint);margin-bottom:12px;">
+          O que o seu corpo sentiu durante a prática e o teste da torção? Suas anotações ficam salvas somente no seu navegador.
+        </p>
+        <textarea id="diario-textarea" class="diario-textarea" placeholder="Ex: Senti a escápula direita mais solta após o suspiro... percebi que meu pescoço relaxou quando deslizei o abdômen..."></textarea>
+        <div class="diario-actions">
+          <span>🔒 Seus dados não são enviados para nenhum servidor (privacidade 100% no seu dispositivo).</span>
+          <button type="button" id="btn-limpar-diario" class="btn btn-secondary btn-sm" style="font-size:0.8rem;padding:4px 10px;">Limpar anotação</button>
+        </div>
+      </div>
+
       <div style="margin-top:40px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
         <a href="#sintonizacao" class="btn btn-secondary">Voltar ao Topo da Aula ⬆</a>
       </div>
@@ -714,8 +819,11 @@
             <small style="color:var(--carol-soft-mint);">Carol Langowski • Fisioterapia &amp; Yoga Fascial</small>
           </div>
         </div>
-        <div style="font-size:0.86rem;">
+        <div style="font-size:0.86rem;display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
           <span>Material Didático de Apoio • Turma Oficial</span>
+          <button type="button" id="btn-print-page" class="btn btn-secondary btn-sm" onclick="window.print()" title="Imprimir ou gerar PDF limpo de estudo">
+            🖨️ Imprimir / Salvar em PDF
+          </button>
         </div>
       </div>
 

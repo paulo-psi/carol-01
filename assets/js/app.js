@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initTorcaoMiniLab();
   initCottonMiniLab();
   initBreathingRitual();
+  initAudioCarol();
+  initModoTapete();
+  initDiarioSomatico();
 });
 
 /* 1. Indicador de Progresso de Leitura */
@@ -135,4 +138,97 @@ function initBreathingRitual() {
     runCycle();
     breathingInterval = setInterval(runCycle, 4000);
   });
+}
+
+/* 6. Pílula de Áudio da Carol (Sintonização Afetuosa) */
+function initAudioCarol() {
+  const audioEl = document.getElementById('audio-sintonizacao');
+  const audioBtn = document.getElementById('btn-audio-carol');
+  if (!audioEl || !audioBtn) return;
+
+  audioBtn.addEventListener('click', () => {
+    if (audioEl.paused) {
+      audioEl.play().then(() => {
+        audioBtn.innerHTML = '⏸️ Pausar Voz da Carol';
+        audioBtn.setAttribute('aria-pressed', 'true');
+      }).catch(err => {
+        console.warn('Reprodução de áudio prevenida pelo navegador:', err);
+      });
+    } else {
+      audioEl.pause();
+      audioBtn.innerHTML = '▶ Ouvir Voz da Carol (51s)';
+      audioBtn.setAttribute('aria-pressed', 'false');
+    }
+  });
+
+  audioEl.addEventListener('ended', () => {
+    audioBtn.innerHTML = '▶ Ouvir Voz da Carol (51s)';
+    audioBtn.setAttribute('aria-pressed', 'false');
+  });
+}
+
+/* 7. Modo Ao Lado do Tapete (Tapete Mode) */
+function initModoTapete() {
+  const btnToggle = document.getElementById('btn-toggle-tapete');
+  if (!btnToggle) return;
+
+  const savedState = localStorage.getItem('carol_tapete_mode');
+  if (savedState === 'active') {
+    document.body.classList.add('tapete-mode');
+    btnToggle.setAttribute('aria-pressed', 'true');
+    btnToggle.innerHTML = '🧘‍♀️ Modo Tapete (Ativo)';
+  }
+
+  btnToggle.addEventListener('click', () => {
+    const isActive = document.body.classList.toggle('tapete-mode');
+    btnToggle.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    btnToggle.innerHTML = isActive ? '🧘‍♀️ Modo Tapete (Ativo)' : '🧘‍♀️ Modo Tapete';
+    localStorage.setItem('carol_tapete_mode', isActive ? 'active' : 'inactive');
+  });
+}
+
+/* 8. Diário Somático da Aluna (Persistência Local) */
+function initDiarioSomatico() {
+  const textarea = document.getElementById('diario-textarea');
+  const statusBadge = document.getElementById('diario-status');
+  const btnLimpar = document.getElementById('btn-limpar-diario');
+  if (!textarea) return;
+
+  const savedText = localStorage.getItem('carol_diario_aula1');
+  if (savedText) {
+    textarea.value = savedText;
+    if (statusBadge) {
+      statusBadge.textContent = '✓ Anotações restauradas';
+      statusBadge.classList.add('saved');
+    }
+  }
+
+  let saveTimeout = null;
+  textarea.addEventListener('input', () => {
+    if (statusBadge) {
+      statusBadge.textContent = 'Salvando...';
+      statusBadge.classList.remove('saved');
+    }
+    clearTimeout(saveTimeout);
+    saveTimeout = setTimeout(() => {
+      localStorage.setItem('carol_diario_aula1', textarea.value);
+      if (statusBadge) {
+        statusBadge.textContent = '✓ Salvo no seu aparelho';
+        statusBadge.classList.add('saved');
+      }
+    }, 400);
+  });
+
+  if (btnLimpar) {
+    btnLimpar.addEventListener('click', () => {
+      if (window.confirm('Deseja limpar suas anotações deste diário?')) {
+        textarea.value = '';
+        localStorage.removeItem('carol_diario_aula1');
+        if (statusBadge) {
+          statusBadge.textContent = 'Anotação limpa';
+          statusBadge.classList.remove('saved');
+        }
+      }
+    });
+  }
 }

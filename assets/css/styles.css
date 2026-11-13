@@ -224,6 +224,10 @@ section[id] {
   gap: 12px;
 }
 
+.navbar-actions .btn {
+  width: auto; /* Previne que regras mobile forcem 100% na navbar */
+}
+
 /* Indicador de Leitura no Topo */
 .scroll-progress-bar {
   position: absolute;
@@ -978,6 +982,26 @@ section[id] {
     padding: 14px;
     gap: 8px;
   }
+  .navbar-actions {
+    gap: 6px;
+  }
+  .navbar-actions .btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar-brand-sub {
+    display: none;
+  }
+  .navbar-brand-logo {
+    width: 36px;
+    height: 36px;
+  }
+  .navbar-actions a[href="#santuario-pratica"] {
+    display: none;
+  }
 }
 
 @media (max-width: 390px) {
@@ -993,7 +1017,7 @@ section[id] {
   .metric-num {
     font-size: 2.6rem;
   }
-  .btn {
+  .btn:not(.navbar-actions .btn) {
     width: 100%;
   }
   .card-bento, .mini-lab-card, .torcao-interactive-card, .ritual-suspiro-card {
@@ -1003,5 +1027,252 @@ section[id] {
     padding: 10px 14px;
     font-size: 0.86rem;
     width: 100%;
+  }
+}
+
+/* 17. MODO TAPETE (LEITURA CONFORTÁVEL A 1,5M) */
+body.tapete-mode {
+  font-size: 1.25rem;
+  line-height: 1.82;
+}
+
+body.tapete-mode .container {
+  width: min(100% - 24px, 1260px);
+}
+
+body.tapete-mode .hero-title {
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+}
+
+body.tapete-mode .ritual-suspiro-card,
+body.tapete-mode .torcao-interactive-card,
+body.tapete-mode .mini-lab-card {
+  border: 3px solid var(--carol-vibrant-teal);
+  box-shadow: 0 0 28px rgba(49, 151, 149, 0.28);
+}
+
+body.tapete-mode .torcao-step-item {
+  padding: 20px 24px;
+  font-size: 1.2rem;
+}
+
+body.tapete-mode #btn-toggle-tapete {
+  background: var(--carol-vibrant-teal);
+  color: #FFFFFF !important;
+  border-color: var(--carol-vibrant-teal);
+  box-shadow: 0 0 14px rgba(49, 151, 149, 0.4);
+}
+
+/* 18. GLOSSÁRIO VIVO DO CORPO (ACORDEÃO <details>) */
+.section-glossario {
+  padding: clamp(60px, 8vw, 96px) 0;
+  background: #FFFFFF;
+}
+
+.glossario-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.glossario-item {
+  background: var(--carol-bg-mist);
+  border: var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.glossario-item[open] {
+  background: #FFFFFF;
+  border-color: var(--carol-vibrant-teal);
+  box-shadow: var(--shadow-sm);
+}
+
+.glossario-item summary {
+  padding: 16px 22px;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.08rem;
+  color: var(--carol-deep-teal);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  user-select: none;
+}
+
+.glossario-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.glossario-item summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  color: var(--carol-orchid);
+  transition: transform 0.25s ease;
+}
+
+.glossario-item[open] summary::after {
+  content: "−";
+  transform: rotate(180deg);
+}
+
+.glossario-content {
+  padding: 0 22px 20px;
+  font-size: 0.96rem;
+  color: var(--carol-ink-body);
+  line-height: 1.65;
+}
+
+/* 19. DIÁRIO SOMÁTICO DA ALUNA */
+.diario-somatico-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-card);
+  padding: clamp(24px, 4vw, 36px);
+  margin-top: 40px;
+  text-align: left;
+  backdrop-filter: blur(10px);
+}
+
+.diario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.diario-header h4 {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  color: var(--carol-ice-mint);
+  margin: 0;
+}
+
+.diario-status-badge {
+  font-size: 0.82rem;
+  color: var(--carol-soft-mint);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.diario-status-badge.saved {
+  color: #81E6D9;
+  background: rgba(49, 151, 149, 0.35);
+}
+
+.diario-textarea {
+  width: 100%;
+  min-height: 120px;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--carol-ink-body);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  padding: 16px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  resize: vertical;
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.diario-textarea:focus {
+  background: #FFFFFF;
+  border-color: var(--carol-vibrant-teal);
+  box-shadow: 0 0 0 3px rgba(49, 151, 149, 0.3);
+}
+
+.diario-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--carol-soft-mint);
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* 20. ESTILO DE IMPRESSÃO LIMPO (@media print) */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  .navbar-sanctuary,
+  .scroll-progress-bar,
+  .hero-badge-floating,
+  .btn,
+  #audio-sintonizacao,
+  #btn-play-suspiro,
+  #btn-audio-carol,
+  #btn-toggle-tapete,
+  #btn-print-page,
+  .diario-actions,
+  .footer-carol {
+    display: none !important;
+  }
+
+  .container, .container-narrow {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .card-bento, .mini-lab-card, .quote-myers-box, .torcao-interactive-card, .glossario-item, .diario-somatico-card {
+    box-shadow: none !important;
+    border: 1px solid #CCCCCC !important;
+    page-break-inside: avoid;
+    margin-bottom: 18px !important;
+  }
+
+  .section-santuario {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+    border-top: 2px solid var(--carol-deep-teal);
+    padding: 24px 0 !important;
+  }
+
+  .mantra-title, .mantra-sub {
+    color: var(--carol-deep-teal) !important;
+  }
+
+  .santuario-card {
+    background: #FFFFFF !important;
+    border: 1px solid #CCCCCC !important;
+    color: #111111 !important;
+  }
+
+  .santuario-card h4, .santuario-card p {
+    color: #111111 !important;
+  }
+
+  .diario-somatico-card {
+    background: #FFFFFF !important;
+    color: #111111 !important;
+  }
+
+  .diario-header h4 {
+    color: #111111 !important;
+  }
+
+  .diario-textarea {
+    background: #FFFFFF !important;
+    border: 1px solid #CCCCCC !important;
+    color: #111111 !important;
   }
 }
