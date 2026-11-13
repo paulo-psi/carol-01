@@ -1,18 +1,16 @@
 # Diário de Bordo e Memória: Carol_01
 
 ## 📌 Estado Atual (Handoff Rápido)
-- **Última Atualização:** 2026-11-13 15:45
-- **Status do Projeto:** 🟢 **v1.2.5 Balões de Fala Somáticos (Speech Bubbles) no Fluxograma Entregues** 🌸✨
+- **Última Atualização:** 2026-11-13 15:51
+- **Status do Projeto:** 🟢 **v1.2.6 Rodapés Sanitizados (Termo Técnico "Design System" Eliminado)** 🌸✨
 - **URL Pública Oficial:** [`https://paulo-psi.github.io/carol-01/`](https://paulo-psi.github.io/carol-01/)
 - **Repositório GitHub:** [`https://github.com/paulo-psi/carol-01`](https://github.com/paulo-psi/carol-01)
 - **Última Entrega Concluída:**
-  - **Balões de Fala Somáticos da Carol (Speech Bubbles) no Fluxograma:**
-    - Causa raiz corrigida: as anotações manuscritas antigas flutuavam soltas no canto superior e vazavam para fora dos cards, cortando palavras (ex: *"Onde dói ≠ Onde começou"* e *"Durmam com os anjinhos"*).
-    - Criados 8 balões de fala orgânicos em vetor SVG (`<path>` contínuo com cantos arredondados `rx="17"` e cauda simétrica apontando diretamente para o card).
-    - Textos manuscritos em `Caveat` 21px 100% contidos e centralizados (`text-anchor="middle"`), com paletas semânticas por nó (Menta, Âmbar, Orquídea e Santuário Noturno).
-    - Traçado orgânico contínuo da seta curva entre o Passo 4 e o Passo 5 (contornando suavemente e entrando pela lateral esquerda do Passo 5), liberando totalmente a área superior para o balão.
-  - **Sincronização 100%:** Arquivos SVG e PNG 1920x1080 regerados com Playwright e integrados ao portal.
-  - **Bateria Pytest & Playwright:** 100% aprovada.
+  - **Eliminação de Jargões Técnicos dos Rodapés:**
+    - O texto técnico *"Design System v2.0 • Daylight Sanctuary & Somatic Watercolor"* foi completamente removido do rodapé do site (`index.html` e `src/index.html`) e do fluxograma somático (`fluxograma-jornada-fascia.svg` e `.png`).
+    - Substituído pela assinatura humanizada e institucional da Carol: *"Cura pelo Movimento • Carol Langowski • Fisioterapia Integrativa & Yoga Fascial"*.
+  - **Sincronização 100%:** Replicado entre [`index.html`](../index.html) e [`src/index.html`](../src/index.html).
+  - **Bateria Pytest & Playwright:** 100% verde.
 - **Próximo Passo Imediato:** Divulgar o guia somático para as alunas da turma.
 - **Pendências / Bloqueios:** Nenhum.
 - **Comando de Validação:** `pytest -v tests/test_carol_portal.py`
@@ -20,6 +18,12 @@
 ---
 
 ## Histórico Cronológico de Sessões
+
+### [2026-11-13] Sanitização Editorial de Rodapé (v1.2.6)
+- **O que foi feito:**
+  - Remoção de jargão de desenvolvimento ("Design System v2.0...") do rodapé do HTML e da imagem do fluxograma.
+  - Substituição por assinatura institucional da Carol Langowski.
+  - Testes executados e homologados.
 
 ### [2026-11-13] Balões de Fala Somáticos no Fluxograma (v1.2.5)
 - **O que foi feito:**

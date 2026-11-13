@@ -2,6 +2,10 @@
 
 Todas as mudanças relevantes deste projeto serão documentadas neste arquivo.
 
+## [1.2.6] - 2026-11-13
+### Removido
+- **Termo Técnico de Design System nos Rodapés:** Remoção de *"Design System v2.0 • Daylight Sanctuary & Somatic Watercolor"* do rodapé do portal e do fluxograma somático, substituído pela assinatura institucional *"Cura pelo Movimento • Carol Langowski • Fisioterapia Integrativa & Yoga Fascial"*.
+
 ## [1.2.5] - 2026-11-13
 ### Modificado
 - **Balões de Fala Somáticos (Speech Bubbles) no Fluxograma:** Redesenho completo das falas da Carol no fluxograma em SVG/PNG 1920x1080. Todas as 8 anotações manuscritas agora residem em balões de fala orgânicos com caudas apontando para seus respectivos cards, com textos perfeitamente centralizados e contidos (zero cortes ou sobreposições).

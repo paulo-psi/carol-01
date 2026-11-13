@@ -238,7 +238,7 @@ svg_content = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080
        RODAPÉ DO SKETCH
        ====================================================================== -->
   <g transform="translate(960, 1030)" text-anchor="middle">
-    <text class="node-desc" fill="#735645">Design System v2.0 • Daylight Sanctuary &amp; Somatic Watercolor • Carol Langowski • Fisioterapia &amp; Yoga Fascial</text>
+    <text class="node-desc" fill="#735645">Cura pelo Movimento • Carol Langowski • Fisioterapia Integrativa &amp; Yoga Fascial</text>
   </g>
 </svg>"""
 
