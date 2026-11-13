@@ -1,19 +1,18 @@
 # Diário de Bordo e Memória: Carol_01
 
 ## 📌 Estado Atual (Handoff Rápido)
-- **Última Atualização:** 2026-11-13 15:35
-- **Status do Projeto:** 🟢 **v1.2.4 Orbe Somático de Respiração & Timer Circular Entregues com Sucesso** 🌸✨
+- **Última Atualização:** 2026-11-13 15:45
+- **Status do Projeto:** 🟢 **v1.2.5 Balões de Fala Somáticos (Speech Bubbles) no Fluxograma Entregues** 🌸✨
 - **URL Pública Oficial:** [`https://paulo-psi.github.io/carol-01/`](https://paulo-psi.github.io/carol-01/)
 - **Repositório GitHub:** [`https://github.com/paulo-psi/carol-01`](https://github.com/paulo-psi/carol-01)
 - **Última Entrega Concluída:**
-  - **Orbe Somático de Respiração Guiada & Suspiro com Timer Circular (Daylight Sanctuary):**
-    - Criado componente interativo ativado pelo botão *"🌬️ Iniciar Respiração Guiada"*, com animação biofílica fluida rodando na GPU (compositor thread).
-    - Orbe central em gradiente aquarela com expansão suave (`scale: 1.15`) na inspiração, sustentação serena com aura translúcida pulsante e relaxamento prolongado no suspiro (`scale: 0.82`).
-    - Timer circular vetorial SVG (`stroke-dashoffset`) sincronizado em tempo real com contador regressivo em segundos e frases somáticas autênticas da Carol nos 3 tempos (Inspira 4s, Sustenta 2s, Suspira 6s).
-    - Indicador de progresso com 3 pérolas somáticas (Ciclos 1, 2 e 3) e mensagem acolhedora de encerramento: *"🌸 Muito bem! Sua rede fascial agradece pelo carinho, relaxamento e hidratação profunda"*.
-    - Suporte a pausa/retomada do exercício e respeito estrito a `@media (prefers-reduced-motion: reduce)`.
-  - **Sincronização 100%:** Replicado entre [`index.html`](../index.html) e [`src/index.html`](../src/index.html).
-  - **Bateria Pytest & Playwright:** 100% verde nos 4 viewports e verificação de 0 overflow horizontal em 6 larguras (1440, 768, 480, 390, 360 e 320px) com o orbe aberto.
+  - **Balões de Fala Somáticos da Carol (Speech Bubbles) no Fluxograma:**
+    - Causa raiz corrigida: as anotações manuscritas antigas flutuavam soltas no canto superior e vazavam para fora dos cards, cortando palavras (ex: *"Onde dói ≠ Onde começou"* e *"Durmam com os anjinhos"*).
+    - Criados 8 balões de fala orgânicos em vetor SVG (`<path>` contínuo com cantos arredondados `rx="17"` e cauda simétrica apontando diretamente para o card).
+    - Textos manuscritos em `Caveat` 21px 100% contidos e centralizados (`text-anchor="middle"`), com paletas semânticas por nó (Menta, Âmbar, Orquídea e Santuário Noturno).
+    - Traçado orgânico contínuo da seta curva entre o Passo 4 e o Passo 5 (contornando suavemente e entrando pela lateral esquerda do Passo 5), liberando totalmente a área superior para o balão.
+  - **Sincronização 100%:** Arquivos SVG e PNG 1920x1080 regerados com Playwright e integrados ao portal.
+  - **Bateria Pytest & Playwright:** 100% aprovada.
 - **Próximo Passo Imediato:** Divulgar o guia somático para as alunas da turma.
 - **Pendências / Bloqueios:** Nenhum.
 - **Comando de Validação:** `pytest -v tests/test_carol_portal.py`
@@ -21,6 +20,13 @@
 ---
 
 ## Histórico Cronológico de Sessões
+
+### [2026-11-13] Balões de Fala Somáticos no Fluxograma (v1.2.5)
+- **O que foi feito:**
+  - Redesenho completo das falas da Carol no fluxograma somático em formato de balões de fala (*speech bubbles*) com caudas apontando para os cards.
+  - Eliminação de qualquer texto cortado ou sobreposto.
+  - Re-renderização dos arquivos vetoriais e PNG 1920x1080 com Playwright.
+  - Testes executados e 100% verdes.
 
 ### [2026-11-13] Entrega do Orbe Somático de Respiração & Timer Circular (v1.2.4)
 - **O que foi feito:**

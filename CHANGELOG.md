@@ -2,6 +2,11 @@
 
 Todas as mudanças relevantes deste projeto serão documentadas neste arquivo.
 
+## [1.2.5] - 2026-11-13
+### Modificado
+- **Balões de Fala Somáticos (Speech Bubbles) no Fluxograma:** Redesenho completo das falas da Carol no fluxograma em SVG/PNG 1920x1080. Todas as 8 anotações manuscritas agora residem em balões de fala orgânicos com caudas apontando para seus respectivos cards, com textos perfeitamente centralizados e contidos (zero cortes ou sobreposições).
+- **Fluxo Orgânico Contínuo:** Curva de retorno do Passo 4 para o Passo 5 redesenhada para contornar suavemente e entrar pela lateral esquerda do Passo 5, desimpedindo completamente o topo do card.
+
 ## [1.2.4] - 2026-11-13
 ### Adicionado
 - **Orbe Somático de Respiração Guiada (Daylight Sanctuary):** Componente interativo de respiração com anéis concêntricos em aquarela, expansão e retração fluida acelerada por hardware na GPU, aura translúcida pulsante e timer circular vetorial SVG (`stroke-dashoffset`).
