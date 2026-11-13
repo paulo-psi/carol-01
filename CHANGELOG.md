@@ -2,6 +2,12 @@
 
 Todas as mudanças relevantes deste projeto serão documentadas neste arquivo.
 
+## [1.2.4] - 2026-11-13
+### Adicionado
+- **Orbe Somático de Respiração Guiada (Daylight Sanctuary):** Componente interativo de respiração com anéis concêntricos em aquarela, expansão e retração fluida acelerada por hardware na GPU, aura translúcida pulsante e timer circular vetorial SVG (`stroke-dashoffset`).
+- **Ritmo Somático de 12 Segundos & 3 Ciclos:** Sincronização da contagem regressiva em segundos com as 3 fases do método da Carol (Inspiração 4s, Sustentação serena 2s e Suspiro Somático 6s) e pérolas indicadoras de progresso.
+- **Acessibilidade e Controle:** Suporte para pausar/retomar o exercício e conformidade com `@media (prefers-reduced-motion: reduce)`.
+
 ## [1.2.3] - 2026-11-13
 ### Removido
 - **Botões Supérfluos da Barra de Navegação:** Remoção definitiva dos botões "Modo Tapete" e "Ir para o Tapetinho", atendendo ao feedback de clareza do usuário.

@@ -85,9 +85,30 @@ def test_portal_carol_full_experience(local_server):
         assert feedback.is_visible()
         assert "Incrível" in feedback.inner_text()
 
-        # 6. Ritual do Suspiro
+        # 6. Ritual do Suspiro Guiado com Orbe Somático e Timer Circular
         btn_suspiro = page.locator("#btn-play-suspiro")
+        widget_respiracao = page.locator("#respiracao-widget")
+        assert not widget_respiracao.is_visible()
+
         btn_suspiro.click()
+        page.wait_for_timeout(200)
+        assert widget_respiracao.is_visible()
+        assert "Pausar" in btn_suspiro.inner_text()
+
+        fase_badge = page.locator("#respiracao-fase-badge")
+        assert fase_badge.is_visible()
+        assert "INSPIRE" in fase_badge.inner_text().upper()
+
+        timer_sec = page.locator("#respiracao-timer-seconds")
+        assert timer_sec.is_visible()
+        assert "s" in timer_sec.inner_text()
+
+        # Pausar e retomar
+        btn_suspiro.click()
+        page.wait_for_timeout(100)
+        assert "Continuar" in btn_suspiro.inner_text()
+        btn_suspiro.click()
+        page.wait_for_timeout(100)
         assert "Pausar" in btn_suspiro.inner_text()
 
         # 7. Melhoria 1: Pílula de Áudio da Carol (Sintonização Afetuosa)

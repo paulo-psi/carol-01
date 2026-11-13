@@ -101,41 +101,179 @@ function initCottonMiniLab() {
   });
 }
 
-/* 5. Ritual do Suspiro Guiado (Breathing Wave) */
+/* 5. Ritual do Suspiro Guiado com Orbe Somático e Timer Circular (Daylight Sanctuary) */
 function initBreathingRitual() {
   const triggerBtn = document.getElementById('btn-play-suspiro');
-  const statusText = document.getElementById('suspiro-status-text');
-  let breathingInterval = null;
+  const widget = document.getElementById('respiracao-widget');
+  const ringProgress = document.getElementById('respiracao-ring-progress');
+  const badgeEl = document.getElementById('respiracao-fase-badge');
+  const timerSecEl = document.getElementById('respiracao-timer-seconds');
+  const cicloTextEl = document.getElementById('respiracao-ciclo-text');
+  const instrucaoTextEl = document.getElementById('respiracao-instrucao-texto');
+  const perolas = document.querySelectorAll('.perola-item');
 
-  if (!triggerBtn || !statusText) return;
+  if (!triggerBtn || !widget || !ringProgress || !timerSecEl) return;
+
+  const RING_CIRCUMFERENCE = 440;
+  const PHASES = [
+    {
+      name: 'Inspire',
+      duration: 4,
+      className: 'fase-inspire',
+      text: 'Inspira grande pelas narinas... sentindo as costelas se abrirem em 360°.'
+    },
+    {
+      name: 'Sustente',
+      duration: 2,
+      className: 'fase-sustente',
+      text: 'Pausa serena... sinta o espaço e o calor interno acolhedor.'
+    },
+    {
+      name: 'Suspire & Solte',
+      duration: 6,
+      className: 'fase-suspire',
+      text: 'Solta o ar com um longo suspiro... "Ahhh" relaxando peito, ombros e mandíbula.'
+    }
+  ];
+
+  const TOTAL_CYCLES = 3;
+  let isRunning = false;
+  let isPaused = false;
+  let currentCycle = 1;
+  let currentPhaseIndex = 0;
+  let remainingSecondsInPhase = 0;
+  let tickerTimer = null;
+
+  function updatePerolas(cycle) {
+    perolas.forEach((p, idx) => {
+      const pCycle = idx + 1;
+      p.classList.remove('active', 'completed');
+      if (pCycle < cycle) {
+        p.classList.add('completed');
+      } else if (pCycle === cycle) {
+        p.classList.add('active');
+      }
+    });
+  }
+
+  function setPhase(phaseIdx, startFromRemaining = null) {
+    currentPhaseIndex = phaseIdx;
+    const phase = PHASES[phaseIdx];
+    remainingSecondsInPhase = startFromRemaining !== null ? startFromRemaining : phase.duration;
+
+    // Atualizar classes visuais do orbe
+    widget.classList.remove('fase-inspire', 'fase-sustente', 'fase-suspire');
+    widget.classList.add(phase.className);
+
+    badgeEl.textContent = phase.name;
+    timerSecEl.textContent = `${remainingSecondsInPhase}s`;
+    cicloTextEl.textContent = `Ciclo ${currentCycle} de ${TOTAL_CYCLES}`;
+
+    instrucaoTextEl.style.opacity = '0';
+    setTimeout(() => {
+      instrucaoTextEl.textContent = phase.text;
+      instrucaoTextEl.style.opacity = '1';
+    }, 150);
+
+    updateRingOffset(remainingSecondsInPhase, phase.duration);
+  }
+
+  function updateRingOffset(remaining, total) {
+    const elapsedRatio = (total - remaining) / total;
+    const offset = RING_CIRCUMFERENCE * (1 - elapsedRatio);
+    ringProgress.style.strokeDashoffset = offset.toFixed(1);
+  }
+
+  function tick() {
+    remainingSecondsInPhase--;
+
+    if (remainingSecondsInPhase > 0) {
+      timerSecEl.textContent = `${remainingSecondsInPhase}s`;
+      const currentPhase = PHASES[currentPhaseIndex];
+      updateRingOffset(remainingSecondsInPhase, currentPhase.duration);
+    } else {
+      // Transição para a próxima fase do ciclo
+      const nextPhaseIndex = currentPhaseIndex + 1;
+      if (nextPhaseIndex < PHASES.length) {
+        setPhase(nextPhaseIndex);
+      } else {
+        // Concluiu um ciclo de 12s
+        if (currentCycle < TOTAL_CYCLES) {
+          currentCycle++;
+          updatePerolas(currentCycle);
+          setPhase(0);
+        } else {
+          // Concluiu os 3 ciclos com sucesso
+          finishBreathing();
+        }
+      }
+    }
+  }
+
+  function startBreathing() {
+    isRunning = true;
+    isPaused = false;
+    widget.style.display = 'block';
+    widget.setAttribute('aria-hidden', 'false');
+    triggerBtn.textContent = '⏸️ Pausar Exercício';
+    triggerBtn.setAttribute('aria-pressed', 'true');
+
+    if (currentCycle > TOTAL_CYCLES) {
+      currentCycle = 1;
+    }
+    updatePerolas(currentCycle);
+    setPhase(currentPhaseIndex, remainingSecondsInPhase > 0 ? remainingSecondsInPhase : null);
+
+    clearInterval(tickerTimer);
+    tickerTimer = setInterval(tick, 1000);
+  }
+
+  function pauseBreathing() {
+    isPaused = true;
+    isRunning = false;
+    clearInterval(tickerTimer);
+    tickerTimer = null;
+    triggerBtn.textContent = '▶ Continuar Exercício';
+    triggerBtn.setAttribute('aria-pressed', 'false');
+  }
+
+  function finishBreathing() {
+    clearInterval(tickerTimer);
+    tickerTimer = null;
+    isRunning = false;
+    isPaused = false;
+
+    widget.classList.remove('fase-inspire', 'fase-sustente', 'fase-suspire');
+    badgeEl.textContent = 'Feito com Amor';
+    timerSecEl.innerHTML = '🌸';
+    cicloTextEl.textContent = '3 Ciclos Concluídos';
+    ringProgress.style.strokeDashoffset = '0';
+    ringProgress.style.stroke = 'var(--carol-orchid)';
+
+    instrucaoTextEl.innerHTML = '<strong>Muito bem!</strong> Sua rede fascial agradece pelo carinho, relaxamento e hidratação profunda.';
+    perolas.forEach(p => {
+      p.classList.remove('active');
+      p.classList.add('completed');
+    });
+
+    triggerBtn.textContent = '🌬️ Praticar Novamente';
+    triggerBtn.setAttribute('aria-pressed', 'false');
+    currentCycle = 1;
+    currentPhaseIndex = 0;
+    remainingSecondsInPhase = 0;
+  }
 
   triggerBtn.addEventListener('click', () => {
-    if (breathingInterval) {
-      clearInterval(breathingInterval);
-      breathingInterval = null;
-      triggerBtn.textContent = '🌬️ Iniciar Respiração Guiada';
-      statusText.textContent = 'Clique para praticar 1 ciclo de respiração e suspiro com a Carol.';
-      return;
+    if (!isRunning && !isPaused) {
+      currentCycle = 1;
+      currentPhaseIndex = 0;
+      remainingSecondsInPhase = 0;
+      startBreathing();
+    } else if (isRunning) {
+      pauseBreathing();
+    } else if (isPaused) {
+      startBreathing();
     }
-
-    triggerBtn.textContent = '⏸️ Pausar';
-    let phase = 0; // 0: inspira (4s), 1: segura (2s), 2: suspiro (6s)
-
-    const runCycle = () => {
-      if (phase === 0) {
-        statusText.innerHTML = '<strong>Inspire profundamente...</strong> preenchendo o peito com suavidade.';
-        phase = 1;
-      } else if (phase === 1) {
-        statusText.innerHTML = '<strong>Pausa serena...</strong> sentindo o espaço interno.';
-        phase = 2;
-      } else {
-        statusText.innerHTML = '<strong>Solte o ar com um suspiro...</strong> <em>"Ahhhh..."</em> relaxando ombros e mandíbula.';
-        phase = 0;
-      }
-    };
-
-    runCycle();
-    breathingInterval = setInterval(runCycle, 4000);
   });
 }
 

@@ -1,24 +1,33 @@
 # Diário de Bordo e Memória: Carol_01
 
 ## 📌 Estado Atual (Handoff Rápido)
-- **Última Atualização:** 2026-11-13 15:22
-- **Status do Projeto:** 🟢 **v1.2.3 Homologado com Louvor pelo Comitê de 5 Personas (Nota 9.8/10)** 🌸✨
+- **Última Atualização:** 2026-11-13 15:35
+- **Status do Projeto:** 🟢 **v1.2.4 Orbe Somático de Respiração & Timer Circular Entregues com Sucesso** 🌸✨
 - **URL Pública Oficial:** [`https://paulo-psi.github.io/carol-01/`](https://paulo-psi.github.io/carol-01/)
 - **Repositório GitHub:** [`https://github.com/paulo-psi/carol-01`](https://github.com/paulo-psi/carol-01)
 - **Última Entrega Concluída:**
-  - **Auditoria Multidimensional por Personas (Laudo em [`docs/auditoria_personas_2026_11_13.md`](./auditoria_personas_2026_11_13.md)):**
-    - Avaliação exaustiva com 5 personas: *Carol Langowski* (Autora/Fisio/Yoga, Nota 10), *Helena Ramos* (Aluna 54 anos com dores, Nota 9.7), *Sofia Chen* (Diretora de Arte Editorial, Nota 9.8), *André Lima* (Acessibilidade WCAG 2.2 AA, Nota 9.9) e *Lucas Rossi* (QA & Arquitetura, Nota 10).
-    - Métrica de integridade técnica perfeita: 0 erros de console, 0 overflow em 6 resoluções (1440 a 320px), 0 IDs órfãos, 0 quebras de links e contraste AA pleno.
-  - **Remoção dos Botões Supérfluos ("Modo Tapete" e "Ir para o Tapetinho"):** Concluída com sucesso. Navbar ultra-clean.
+  - **Orbe Somático de Respiração Guiada & Suspiro com Timer Circular (Daylight Sanctuary):**
+    - Criado componente interativo ativado pelo botão *"🌬️ Iniciar Respiração Guiada"*, com animação biofílica fluida rodando na GPU (compositor thread).
+    - Orbe central em gradiente aquarela com expansão suave (`scale: 1.15`) na inspiração, sustentação serena com aura translúcida pulsante e relaxamento prolongado no suspiro (`scale: 0.82`).
+    - Timer circular vetorial SVG (`stroke-dashoffset`) sincronizado em tempo real com contador regressivo em segundos e frases somáticas autênticas da Carol nos 3 tempos (Inspira 4s, Sustenta 2s, Suspira 6s).
+    - Indicador de progresso com 3 pérolas somáticas (Ciclos 1, 2 e 3) e mensagem acolhedora de encerramento: *"🌸 Muito bem! Sua rede fascial agradece pelo carinho, relaxamento e hidratação profunda"*.
+    - Suporte a pausa/retomada do exercício e respeito estrito a `@media (prefers-reduced-motion: reduce)`.
   - **Sincronização 100%:** Replicado entre [`index.html`](../index.html) e [`src/index.html`](../src/index.html).
-  - **Bateria Pytest & Playwright:** 100% verde nos 4 viewports.
-- **Próximo Passo Imediato:** Compartilhar o guia com as alunas da turma.
+  - **Bateria Pytest & Playwright:** 100% verde nos 4 viewports e verificação de 0 overflow horizontal em 6 larguras (1440, 768, 480, 390, 360 e 320px) com o orbe aberto.
+- **Próximo Passo Imediato:** Divulgar o guia somático para as alunas da turma.
 - **Pendências / Bloqueios:** Nenhum.
 - **Comando de Validação:** `pytest -v tests/test_carol_portal.py`
 
 ---
 
 ## Histórico Cronológico de Sessões
+
+### [2026-11-13] Entrega do Orbe Somático de Respiração & Timer Circular (v1.2.4)
+- **O que foi feito:**
+  - Implementação do Orbe Somático em SVG/CSS no Ritual do Suspiro.
+  - Sincronização do timer de 12s (4s inspiração, 2s pausa, 6s suspiro) em 3 ciclos com contagem regressiva e pérolas.
+  - Testes automatizados Playwright atualizados e 100% aprovados.
+  - Sincronização de `src/index.html` e publicação no GitHub Pages.
 
 ### [2026-11-13] Auditoria Multidimensional de Personas (v1.2.3)
 - **O que foi feito:**

@@ -78,6 +78,43 @@
                 🌬️ Iniciar Respiração Guiada
               </button>
             </div>
+
+            <!-- Orbe Somático de Respiração com Animação e Timer Circular (Daylight Sanctuary) -->
+            <div id="respiracao-widget" class="respiracao-widget" aria-hidden="true" style="display:none;">
+              <div class="respiracao-container">
+                <!-- Aura e Anel Circular de Respiração SVG -->
+                <div class="respiracao-orbe-wrapper">
+                  <div class="respiracao-aura" id="respiracao-aura"></div>
+                  <div class="respiracao-orbe" id="respiracao-orbe">
+                    <svg class="respiracao-svg-ring" viewBox="0 0 160 160" width="160" height="160" aria-hidden="true">
+                      <!-- Trilha do anel de fundo -->
+                      <circle class="ring-track" cx="80" cy="80" r="70" />
+                      <!-- Anel de progresso ativo que preenche/esvazia suavemente -->
+                      <circle class="ring-progress" id="respiracao-ring-progress" cx="80" cy="80" r="70" />
+                    </svg>
+                    <!-- Núcleo de Conteúdo do Timer e Fase -->
+                    <div class="respiracao-core-content">
+                      <span class="respiracao-fase-badge" id="respiracao-fase-badge">Inspire</span>
+                      <span class="respiracao-timer-seconds" id="respiracao-timer-seconds">4s</span>
+                      <span class="respiracao-ciclo-text" id="respiracao-ciclo-text">Ciclo 1 de 3</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frase de Condução Somática Dinâmica -->
+                <div class="respiracao-instrucao-box">
+                  <p class="respiracao-instrucao-texto" id="respiracao-instrucao-texto">
+                    Inspira grande pelas narinas... sentindo as costelas se abrirem em 360°.
+                  </p>
+                  <!-- Pérolas Somáticas de Ciclo (3 bolinhas indicadoras) -->
+                  <div class="respiracao-perolas" id="respiracao-perolas" aria-label="Progresso dos ciclos de respiração">
+                    <span class="perola-item active" data-ciclo="1" title="Ciclo 1"></span>
+                    <span class="perola-item" data-ciclo="2" title="Ciclo 2"></span>
+                    <span class="perola-item" data-ciclo="3" title="Ciclo 3"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
