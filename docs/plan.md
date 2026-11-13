@@ -1,4 +1,5 @@
 # Plano de Execução: Carol_01
+## *Cura pelo Movimento — Guia Digital de Apoio (Aula 1: Fáscia e Yoga)*
 
 > Para atualizar o progresso deste plano e registrar checkpoints, utilize `/salvar-checkpoint`.
 
@@ -11,30 +12,34 @@
 
 ---
 
-## Fase 2 — Análise dos Materiais da Carol (Slides + Áudio) & Design System (Concluída)
+## Fase 2 — Análise Multimodal Completa & Design System v2.0 (Concluída)
 - [x] **Tarefa 2.1:** Baixar e organizar os slides (`apresentacao_carol.pptx` e `.pdf`) e os áudios (`cura.mp4` e `cura 1.mp4`)
-- [x] **Tarefa 2.2:** Realizar análise estética e estrutural dos 18 slides (paleta exata, tipografia `Nunito`/`Quicksand`, grids, ícones e 20 imagens extraídas)
-- [x] **Tarefa 2.3:** Analisar gravações de aula via Whisper (didática, autoridade, mentoria Ana Otsubo, especialização Karen Kirkness, mantras de respiração e tom de voz acolhedor)
-- [x] **Tarefa 2.4:** Elaborar e registrar o documento canônico de padrão visual em [`./docs/design_system_carol.md`](./docs/design_system_carol.md)
-- [x] **Tarefa 2.5:** Apresentar o padrão e a proposta de interface ao usuário para aprovação
+- [x] **Tarefa 2.2:** Renderizar os 18 slides em alta resolução e extrair as 20 imagens originais em `assets/slides/`
+- [x] **Tarefa 2.3:** Transcrição completa dos 190 minutos de aula via Whisper (`cura.txt` e `cura_1.txt`) em `docs/analise/transcricoes/` (protegidas no `.gitignore`)
+- [x] **Tarefa 2.4:** Mapeamento integral da voz da Carol, analogias reais (tangerina, disco de algodão, macacão, biotensegridade), dicas práticas e laboratório de torção
+- [x] **Tarefa 2.5:** Auditoria visual do registro duplo (Daylight Sanctuary + Aquarelas Botânicas) e cálculo de contraste WCAG AA/AAA
+- [x] **Tarefa 2.6:** Publicação do documento canônico [`docs/design_system_carol.md`](./docs/design_system_carol.md) v2.0
+- [ ] **Tarefa 2.7:** Apresentação da Arquitetura v2.0 ao usuário e alinhamento do *Understanding Lock*
 
 ---
 
-## Fase 3 — Arquitetura de Informação & Estrutura HTML (Aguardando Aprovação)
-- [ ] **Tarefa 3.1:** Desenhar o mapa de seções e fluxo de navegação da experiência digital
-- [ ] **Tarefa 3.2:** Estruturar o HTML5 semântico com tokens CSS oficiais
-- [ ] **Tarefa 3.3:** Integrar os ativos visuais oficiais (fotos de microscopia, diagramas anatômicos, imagens de prática)
+## Fase 3 — Arquitetura de Informação & Wireframe Semântico (Próxima)
+- [ ] **Tarefa 3.1:** Criar a estrutura semântica HTML5 (`index.html`) com as 8 seções narrativas de encantamento
+- [ ] **Tarefa 3.2:** Organizar a pasta `assets/img/` com os ativos visuais selecionados (aquarelas de biotensegridade, interocepção, camadas, logo)
+- [ ] **Tarefa 3.3:** Estruturar `assets/css/styles.css` com os tokens CSS oficiais do Design System v2.0 (variáveis Daylight + Watercolor)
 
 ---
 
-## Fase 4 — Implementação Visual & Interatividade
-- [ ] **Tarefa 4.1:** Estilização responsiva completa com CSS moderno (Grid/Flexbox, Daylight Glass/Clean, sem corte de controles)
-- [ ] **Tarefa 4.2:** Implementação dos componentes interativos em JavaScript modular (revelação de camadas, comparador de fluidez, áudio player com trechos da Carol, checklist de prática)
-- [ ] **Tarefa 4.3:** Otimização de acessibilidade (WCAG AA, foco de teclado, alvos de toque >= 44px)
+## Fase 4 — Implementação Visual, Somática & Micro-Interações
+- [ ] **Tarefa 4.1:** Estilização responsiva completa com flexbox/grid, sombras difusas hiper-realistas e tipografia `Quicksand` + `Nunito` + `Caveat`
+- [ ] **Tarefa 4.2:** Implementação dos cartões interativos (Laboratório do Algodão Doce, Abas das 3 Camadas com "Abordagem de Carol", Comparador Térmico de Fluidez)
+- [ ] **Tarefa 4.3:** Implementação do Mini-Laboratório Somático (Guia interativo passo a passo do Teste de Torção na Cadeira)
+- [ ] **Tarefa 4.4:** Áudio player minimalista e opcional de sintonização no Hero com o mantra védico de abertura
+- [ ] **Tarefa 4.5:** Otimização para tablets e celulares (modo ao lado do tapete de Yoga, alvos de toque >= 48px, zero overflow horizontal em 320px)
 
 ---
 
 ## Fase 5 — Verificação, Testes & Revisão Independente
-- [ ] **Tarefa 5.1:** Bateria de testes de integridade local (links, assets, HTML semântico)
+- [ ] **Tarefa 5.1:** Bateria de testes de integridade local (links, assets, HTML semântico, conformidade WCAG AA)
 - [ ] **Tarefa 5.2:** Auditoria independente em sala limpa via subagente `revisor-qualidade` (Gemini 4 Argon)
-- [ ] **Tarefa 5.3:** Checkpoint final e preparação para deploy
+- [ ] **Tarefa 5.3:** Checkpoint final via `/salvar-checkpoint` e preparação para publicação

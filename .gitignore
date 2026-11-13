@@ -25,3 +25,6 @@ assets/video/*.mp4
 assets/video/*.wav
 assets/slides/*.pptx
 assets/slides/rendered/
+
+# Transcricoes brutas das aulas (contem nomes de alunas - nao versionar)
+docs/analise/transcricoes/
